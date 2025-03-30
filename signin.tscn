@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://exkl4xupfkcv"]
+
+[ext_resource type="Script" uid="uid://choa2j4qrf26m" path="res://signin.gd" id="1_upnk3"]
+[ext_resource type="Texture2D" uid="uid://qxjxvvutwbig" path="res://signin-button.png" id="2_io1oo"]
+[ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="3_m105w"]
+
+[node name="Signin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upnk3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 158.0
+offset_right = 799.0
+offset_bottom = 548.0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Sign in or Login "
+
+[node name="UsernameLineEdit" type="LineEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Username"
+
+[node name="EmailLineEdit" type="LineEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Email"
+
+[node name="PasswordLineEdit" type="LineEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Password"
+secret = true
+
+[node name="login" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Login"
+
+[node name="signup" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Sign up"
+
+[node name="signinwithgoogle" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_io1oo")
+
+[node name="StateLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+
+[node name="Sprite3D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(575.25, 322.25)
+scale = Vector2(10.013, 10.0231)
+texture = ExtResource("3_m105w")
+
+[connection signal="pressed" from="VBoxContainer/login" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/signup" to="." method="_on_signup_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/signinwithgoogle" to="." method="_on_signinwithgoogle_pressed"]

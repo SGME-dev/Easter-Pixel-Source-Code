@@ -1,0 +1,66 @@
+name: Build iOS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download Godot
+      run: |
+        wget https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_osx.universal.zip
+        unzip Godot_v3.5.3-stable_osx.universal.zip -d godot
+        sudo mv godot/Godot.app /Applications/Godot.app
+        sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+
+    - name: Download Godot Export Templates
+      run: |
+        mkdir -p ~/Library/Application\ Support/Godot/templates/3.5.3.stable
+        cd ~/Library/Application\ Support/Godot/templates/3.5.3.stable
+        wget https://github.com/godotengine/godot/releases/download/3.5.3-stable/Godot_v3.5.3-stable_export_templates.tpz
+        tar -xzf Godot_v3.5.3-stable_export_templates.tpz -C ~/Library/Application\ Support/Godot/templates/3.5.3.stable
+        cd templates
+        mv * ..
+        cd ..
+        ls
+
+    - name: Create build directory
+      run: mkdir -p build
+
+    - name: Export iOS project
+      run: godot --export "iOS" build/your_project_name.xcodeproj
+      env:
+        DISPLAY: :99.0
+        
+    - name: Set iOS Deployment Target
+      run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' build/your_project_name.xcodeproj/project.pbxproj
+
+
+    - name: Build iOS project
+      run: xcodebuild -project build/your_project_name.xcodeproj -scheme your_project_name -configuration Development -archivePath build/your_project_name.xcarchive archive \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+
+    - name: Export IPA
+      run: | 
+        cd build
+        cd your_project_name.xcarchive
+        cd Products
+        cd Applications
+        mkdir Payload
+        mv your_project_name.app Payload/
+        zip -r App.ipa Payload/
+        mv App.ipa ../../../
+    - name: Upload IPA to GitHub Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: Ipa
+        path: build/App.ipa

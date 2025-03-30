@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmmk31d282i46"]
+
+[ext_resource type="Script" uid="uid://dff4s2fi5dy6i" path="res://CREDITS/GodotCredits.gd" id="1"]
+
+[sub_resource type="Resource" id="Resource_6ql1e"]
+metadata/__load_path__ = "res://main.tscn"
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+to_scene = SubResource("Resource_6ql1e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="CreditsContainer" type="Control" parent="."]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Line" type="Label" parent="CreditsContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 625.0
+offset_bottom = 648.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1

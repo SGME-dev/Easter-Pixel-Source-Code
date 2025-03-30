@@ -1,0 +1,1583 @@
+[gd_scene load_steps=26 format=3 uid="uid://b3ck15dp4fuhq"]
+
+[ext_resource type="Script" uid="uid://bsjljvlhai5t3" path="res://parkore_skills.gd" id="1_hms1p"]
+[ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_iovwy"]
+[ext_resource type="Texture2D" uid="uid://k7iacsfo8puh" path="res://seamless-textured-grass-natural-grass-pattern/Cartoon_green_texture_grass.jpg" id="3_wn5o4"]
+[ext_resource type="Texture2D" uid="uid://dcyjsxagfaiee" path="res://New Piskel (20).png" id="4_5d5jq"]
+[ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="5_h5fcd"]
+[ext_resource type="AudioStream" uid="uid://bx1ww06fett1h" path="res://Screen Recording 2025-03-23 144438.mp3" id="6_hk5eo"]
+[ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="7_o7h4h"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iovwy"]
+
+[sub_resource type="Sky" id="Sky_wn5o4"]
+sky_material = SubResource("ProceduralSkyMaterial_iovwy")
+
+[sub_resource type="Environment" id="Environment_5d5jq"]
+background_mode = 2
+sky = SubResource("Sky_wn5o4")
+glow_enabled = true
+glow_bloom = 0.29
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iovwy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn5o4"]
+albedo_texture = ExtResource("3_wn5o4")
+
+[sub_resource type="BoxMesh" id="BoxMesh_5d5jq"]
+material = SubResource("StandardMaterial3D_wn5o4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5d5jq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5fcd"]
+albedo_color = Color(0.239, 0.437, 100, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hk5eo"]
+material = SubResource("StandardMaterial3D_h5fcd")
+
+[sub_resource type="Animation" id="Animation_53riv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o7h4h"]
+resource_name = "rotate"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ceupg"]
+_data = {
+&"RESET": SubResource("Animation_53riv"),
+&"rotate": SubResource("Animation_o7h4h")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wn5o4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d5jq"]
+albedo_color = Color(1, 0.95, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h5fcd"]
+material = SubResource("StandardMaterial3D_5d5jq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hk5eo"]
+albedo_color = Color(100, 100, 100, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o7h4h"]
+material = SubResource("StandardMaterial3D_hk5eo")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_wn5o4"]
+
+[node name="Parkore_skills" type="Node3D"]
+script = ExtResource("1_hms1p")
+player_scene = ExtResource("2_iovwy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="host" type="Button" parent="CanvasLayer"]
+offset_right = 130.0
+offset_bottom = 68.0
+text = "host"
+metadata/_edit_use_anchors_ = true
+
+[node name="join" type="Button" parent="CanvasLayer"]
+offset_left = 137.0
+offset_top = -1.0
+offset_right = 267.0
+offset_bottom = 67.0
+text = "join"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+offset_top = 77.0
+offset_right = 268.0
+offset_bottom = 108.0
+placeholder_text = "Local IPV4 adress:127.0.0.1"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = -1.0
+offset_top = 115.0
+offset_right = 267.0
+offset_bottom = 146.0
+placeholder_text = "Default Port: 15780"
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5d5jq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6, 0)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
+spawn_path = NodePath("..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -42.2084)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -37.807)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D9"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -59.0103)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -61.5302)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D8"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D8"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -82.288)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -112.811)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D11"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D11"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -129.16)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D12"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D12"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -144.231)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D13"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D13"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D14" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -168.875)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D14"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D14"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -167.215)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D15"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D15"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D17" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -188.162)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D17"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D17"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D20" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -241.614)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D20"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D20"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D22" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -266.749)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D22"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D22"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D23" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -286.157)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D23"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D23"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D24" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -306.227)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D24"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D24"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D34" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -311.048)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D34"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D34"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D26" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -6.17051, -354.149)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D26"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D26"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D27" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -15.4931, -370.88)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D27"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D27"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D28" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -388.276)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D28"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D28"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D33" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -438.977)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D33"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D33"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D36" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -480.862)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D36"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D36"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D69" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -484.526)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D69"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D69"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D39" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -520.168)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D39"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D39"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D40" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -555.144)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D40"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D40"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D41" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -572.98)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D41"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D41"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D42" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -590.93)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D42"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D42"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D43" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -607.098)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D43"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D43"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D44" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -623.302)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D44"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D44"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D45" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -38.9857, -638.315)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D45"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D45"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D46" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, 0, -32.2164, -645.3)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D46"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D46"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D47" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, 0, -18.4349, -645.3)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D47"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D47"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D48" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, 0, -8.05974, -645.3)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D48"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D48"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D49" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, 0, -2.28711, -645.3)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D49"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D49"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D50" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 4.1412, -651.797)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D50"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D50"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D53" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 4.1412, -681.341)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D53"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D53"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D68" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 57.9187, -706.071)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D68"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D68"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D70" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 57.9187, -719.925)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D70"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D70"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D57" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 2.13015, 0, 7.16398, -689.244)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D57"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D57"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D58" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 2.13015, 0, 8.82443, -692.587)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D58"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D58"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D59" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 2.13015, 0, 8.82443, -692.587)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D59"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D59"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D60" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 2.13015, 0, 8.82443, -692.587)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D60"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D60"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D61" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 2.13015, 0, 10.4315, -695.835)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D61"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D61"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D62" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 2.13015, 0, 14.6253, -691.039)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D62"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D62"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D63" type="StaticBody3D" parent="."]
+transform = Transform3D(-10.4555, -0.5, 0, 6.03647, -0.866025, 0, 0, 0, 2.13015, 0, 18.2378, -697.95)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D63"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D63"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D64" type="StaticBody3D" parent="."]
+transform = Transform3D(11.6616, -0.258819, 0, 3.12471, 0.965926, 0, 0, 0, 2.13015, 3.92356, 25.1551, -697.95)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D64"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D64"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D65" type="StaticBody3D" parent="."]
+transform = Transform3D(11.6616, -0.258819, 0, 3.12471, 0.965926, 0, 0, 0, 2.13015, 3.92356, 27.6555, -692.485)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D65"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D65"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D66" type="StaticBody3D" parent="."]
+transform = Transform3D(11.6616, -0.258819, 0, 3.12471, 0.965926, 0, 0, 0, 2.13015, 3.92356, 31.3959, -688.625)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D66"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D66"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D67" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.63862e-07, 3.78552e-08, 2.13015, 10.4555, 0.5, 0, -6.03647, 0.866025, -9.3112e-08, 2.89287, 36.8174, -692.856)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D67"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D67"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D51" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, -5.65198, 11.6585, -660.384)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D51"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D51"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D52" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, -0.582514, 23.6455, -699.316)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D52"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D52"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D56" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, -0.582514, 50.1849, -699.316)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D56"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D56"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D54" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, 4.21407, 11.6585, -693.201)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D54"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D54"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D55" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, 4.21407, 36.4229, -693.201)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D55"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D55"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D35" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -460.042)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D35"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D35"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D35"]
+transform = Transform3D(1.31632, 0, 0, 0, 1, 0, 0, 0, 0.112168, 0, 0.934456, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D35/Area3D"]
+shape = SubResource("BoxShape3D_5d5jq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D35/Area3D"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_hk5eo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D35/Area3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_ceupg")
+}
+autoplay = "rotate"
+
+[node name="StaticBody3D37" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -504.307)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D37"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D37"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D37"]
+transform = Transform3D(1.09815, 0, 0, 0, 1, 0, 0, 0, 0.112168, 0, 0.934456, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D37/Area3D"]
+shape = SubResource("BoxShape3D_5d5jq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D37/Area3D"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_hk5eo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D37/Area3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_ceupg")
+}
+autoplay = "rotate"
+
+[node name="StaticBody3D38" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, -42.082, -537.135)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D38"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D38"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D38"]
+transform = Transform3D(1.12399, 0, 0, 0, 1, 0, 0, 0, 0.112168, 0, 0.934456, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D38/Area3D"]
+shape = SubResource("BoxShape3D_5d5jq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D38/Area3D"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_hk5eo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D38/Area3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_ceupg")
+}
+autoplay = "rotate"
+
+[node name="StaticBody3D30" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, 0, -37.1076, -400.663)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D30"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D30"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D31" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, 0, -37.1076, -414.111)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D31"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D31"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D32" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, 0, -37.1076, -427.585)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D32"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D32"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D25" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -332.931)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D25"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D25"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D29" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 11.5148, -330.147)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D29"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D29"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D18" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 11.7664, 11.5148, -202.155)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D18"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D18"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D19" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, -3.02197, 11.5148, -220.994)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D19"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D19"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -97.2021)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, 0, 5.31872, -89.6427)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, -5.5577, 19.2298, -175.717)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D16"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D16"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D21" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.27725e-07, 1, -6.13961e-07, 0, -4.37114e-08, -14.0458, -12.0729, -4.37114e-08, 2.68371e-14, -5.5577, 19.2298, -253.616)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D21"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D21"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, -4.37114e-08, -14.0458, 0, 1, -6.13961e-07, 0, 5.31872, -105.373)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D10"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D10"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(12.0729, 0, 0, 0, 1, 0, 0, 0, 14.0458, 0, 0, -18.8241)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_iovwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_5d5jq")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, -18.3463)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, -82.901)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D2"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, -96.6098)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D3"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D4" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -127.016)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D4"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D5" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -169.456)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D5"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D6" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -189.597)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D6"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D7" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -239.924)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D7"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D8" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -267.563)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D8"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D8"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D9" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -333.369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D9"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D11" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.8538, -391.631)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D11"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D11"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D12" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.8538, -439.096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D12"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D12"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D13" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63077, -40.8538, -481.6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D13"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D13"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D14" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46736, -40.8538, -481.6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D14"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D14"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D15" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46736, -40.8538, -518.714)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D15"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D16" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46736, -40.8538, -555.278)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D16"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D16"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D17" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95565, 5.72517, -687.165)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D17"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D17"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D18" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15136, 5.72517, -675.303)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D18"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D18"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D19" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43494, 5.72517, -675.704)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D19"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D19"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D20" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15997, 5.72517, -687.309)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D20"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D20"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D21" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57972, 5.72517, -681.519)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D21"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D21"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D22" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21532, 59.0539, -706.695)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D22"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D22"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D23" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21532, 59.0539, -718.566)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D23"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D23"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_o7h4h")
+
+[node name="Label3D" type="Label3D" parent="Area3D23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45669, 0)
+text = "The End(Collect all bible verses from the yellow cubes to end)"
+
+[node name="Area3D10" type="Area3D" parent="."]
+transform = Transform3D(9.89131, 0, 0, 0, 1, 0, 0, 0, 10.6288, 0, 13.063, -350.455)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D10"]
+shape = SubResource("BoxShape3D_wn5o4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D10"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_h5fcd")
+
+[node name="Area3D24" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -112.099, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D24"]
+shape = SubResource("WorldBoundaryShape3D_wn5o4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_right = 1149.0
+offset_bottom = 636.0
+theme_override_colors/default_color = Color(0.631373, 0.529412, 0, 1)
+text = "Read your bible verses:
+The Triumphal Entry:
+Matthew 21:9: \"And the crowds that went before him and that followed him were shouting, “Hosanna to the Son of David! Blessed is he who comes in the name of the Lord! Hosanna in the highest!”\"  
+
+Mark 11:9: \"And those who went before and those who followed were shouting, “Hosanna! Blessed is he who comes in the name of the Lord!\"
+
+Mark 11:10: \"Blessed is the kingdom of our father David that is coming! Hosanna in the highest!”\"
+
+Luke 19:38: \"saying, “Blessed is the King who comes in the name of the Lord! Peace in heaven and glory in the highest!”\"
+
+John 12:13: \"so they took branches of palm trees and went out to meet him, crying out, “Hosanna! Blessed is he who comes in the name of the Lord, even the King of Israel!”\"  
+
+The Last Supper:
+
+Matthew 26:26: \"Now as they were eating, Jesus took bread, and after blessing it broke it and gave it to the disciples, and said, “Take, eat; this is my body.”\"  
+
+Matthew 26:27: \"And he took a cup, and when he had given thanks he gave it to them, saying, “Drink of it, all of you,\"
+
+Matthew 26:28: \"for this is my blood of the covenant, which is poured out for many for the forgiveness of sins.”\"
+
+Luke 22:19: \"And he took bread, and when he had given thanks, he broke it and gave it to them, saying, “This is my body, which is given for you. Do this in remembrance of me.”\"  
+
+Luke 22:20: \"And likewise the cup after they had eaten, saying, “This cup that is poured out for you is the new covenant in my blood, which is poured out for you.\"  
+
+John 13:34: \"A new commandment I give to you, that you love one another: just as I have loved you, you also are to love one another.\"  
+
+John 13:35: \"By this all people will know that you are my disciples, if you have love for one another.”\"
+
+The Garden of Gethsemane:
+
+Matthew 26:39: \"And going a little farther he fell on his face and prayed, saying, “My Father, if it be possible, let this cup pass from me; nevertheless, not as I will, but as you will.”\"  
+
+Mark 14:36: \"And he said, “Abba, Father, all things are possible for you. Remove this cup from me. Yet not what I will, but what you will.”\"  
+
+Luke 22:42: \"saying, “Father, if you are willing, remove this cup from me. Nevertheless, not my will, but yours, be done.”\"
+
+John 18:11: \"So Jesus said to Peter, “Put your sword into its sheath; shall I not drink the cup that the Father has given me?”\"  
+
+The Trial and Crucifixion:
+
+Matthew 27:22: \"Pilate said to them, “Then what should I do with Jesus who is called Christ?” They all said, “Let him be crucified!”\"
+
+Matthew 27:23: \"And he said, “Why? What evil has he done?” But they shouted all the more, “Let him be crucified!”\"
+
+Mark 15:25: \"And it was the third hour when they crucified him.\"
+
+Luke 23:34: \"And Jesus said, “Father, forgive them, for they know not what they do.” And they cast lots to divide his garments.\" 
+
+John 19:30: \"When Jesus had received the sour wine, he said, “It is finished,” and he bowed his head and gave up his spirit.\"  
+
+The Resurrection:  
+
+Matthew 28:5: \"But the angel said to the women, “Do not be afraid, for I know that you seek Jesus who was crucified.\"
+
+Matthew 28:6: \"He is not here, for he has risen, as he said. Come, see the place where he lay.”\"
+
+Mark 16:6: \"And he said to them, “Do not be alarmed. You seek Jesus of Nazareth, who was crucified. He has risen; he is not here. See the place where they laid him.”\"  
+
+Luke 24:6: \"He is not here, but has risen.\"
+
+Luke 24:7: \"Remember how he told you, while he was still in Galilee, that the Son of Man must be delivered into the hands of sinful men and be crucified and on the third day rise.”\"  
+
+John 20:17: \"Jesus said to her, “Do not cling to me, for I have not yet ascended to the Father; but go to my brothers and say to them, ‘I am ascending to my Father and your Father, to my God and your God.’”\"  
+
+Road to Emmaus:
+
+Luke 24:13: \"Now that same day two of them were going to a village called Emmaus, about seven miles from Jerusalem.\"
+
+Luke 24:14: \"They were talking with each other about everything that had happened.\"
+
+Luke 24:15: \"As they talked and discussed these things with each other, Jesus himself came up and walked along with them; but they were kept from recognizing him.\"  
+
+Luke 24:16: \"He asked them, “What are you discussing together as you walk along?”\"
+
+Luke 24:17: \"They stood still, their faces downcast. One of them, named Cleopas, asked him, “Are you the only one visiting Jerusalem who does not know the things that have happened there in these days?”\"  
+
+Luke 24:18: \"“What things?” he asked.\"
+
+Luke 24:19: \"“About Jesus of Nazareth,” they replied. “He was a powerful prophet, powerful in word and deed before God and all the people. The chief priests and our rulers handed him over to be sentenced to death, and they crucified him;\"  
+
+Luke 24:20: \"but we had hoped that he was the one who was going to redeem Israel. And what is more, it is now the third day since all this took place.\"  
+
+Luke 24:21: \"In addition, some of our women amazed us. They went to the tomb early this morning but didn’t find his body. They came and told us that they had seen a vision of angels, who said he was alive.\"  
+
+Luke 24:22: \"Then some of our companions went to the tomb and found it just as the women had said, but they did not see Jesus.”\"
+
+Luke 24:23: \"He said to them, “How foolish you are, and how slow to believe all that the prophets have spoken! Did not the Messiah have to suffer these things and then enter his glory?”\"  
+
+Luke 24:24: \"And beginning with Moses and all the Prophets, he explained to them what was said in all the Scriptures concerning himself.\"  
+
+Luke 24:25: \"As they approached the village to which they were going, Jesus continued on as if he were going farther.\"
+
+Luke 24:26: \"But they urged him strongly, “Stay with us, for it is nearly evening; the day is almost over.” So he went in to stay with them.\"  
+
+Luke 24:27: \"When he was at the table with them, he took bread, gave thanks, broke it and began to give it to them.\"
+
+Luke 24:28: \"Then their eyes were opened and they recognized him, and he disappeared from their sight.\"
+
+Luke 24:29: \"They asked each other, “Were not our hearts burning within us while he talked with us on the road and opened the Scriptures to us?”\"  
+
+Luke 24:30: \"They got up and returned at once to Jerusalem.\"
+
+Luke 24:31: \"Then they found the Eleven and those with them, assembled together and saying, “It is true! The Lord has risen and has appeared to Simon.”\"  
+
+Luke 24:32: \"Then the two told what had happened on the way, and how Jesus was recognized by them when he broke the bread.\"
+
+Luke 24:33: \"They got up and returned at once to Jerusalem. Then they found the Eleven and those with them, assembled together and saying, “It is true! The Lord has risen and has appeared to Simon.”\"  
+
+Luke 24:34: \"and saying, “It is true! The Lord has risen and has appeared to Simon.” \"
+
+Luke 24:35: \"Then the two told what had happened on the way, and how Jesus was recognized by them when he broke the bread.\"
+
+
+"
+
+[node name="Button" type="Button" parent="RichTextLabel"]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 603.0
+offset_right = 1138.0
+offset_bottom = 634.0
+text = "Exit"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -22.8086)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -151.101)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -285.835)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -412.431)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -531.217)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -660.258)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D7" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, -32.6602, 0, -681.052)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -22.8086)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D29" type="Sprite3D" parent="."]
+transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 16.0532, 0, 48.6074)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D30" type="Sprite3D" parent="."]
+transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 16.0532, 0, -750.456)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D9" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -151.101)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D10" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -285.835)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D11" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -412.431)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D12" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -531.217)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D13" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -660.258)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D14" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 60.8896, 0, -681.052)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D15" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -22.8086)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D16" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -151.101)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D17" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -285.835)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D18" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -412.431)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D19" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -531.217)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D20" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -660.258)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D21" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, -43.8788, -681.052)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D22" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -22.8086)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D23" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -151.101)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D24" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -285.835)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D25" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -412.431)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D26" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -531.217)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D27" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -660.258)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D28" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-05, 500, -2.18557e-05, 0, -2.18557e-05, -500, -500, -2.18557e-05, 9.55343e-13, 23.2059, 72.0238, -681.052)
+texture = ExtResource("4_5d5jq")
+
+[node name="Sprite3D38" type="Sprite2D" parent="."]
+position = Vector2(575.25, 322.25)
+scale = Vector2(10.013, 10.0231)
+texture = ExtResource("5_h5fcd")
+
+[node name="Music" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("6_hk5eo")
+volume_db = -10.0
+autoplay = true
+
+[node name="FPS" parent="." instance=ExtResource("7_o7h4h")]
+
+[connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]
+[connection signal="body_entered" from="StaticBody3D35/Area3D" to="." method="_on_laser_3d_body_entered"]
+[connection signal="body_entered" from="StaticBody3D37/Area3D" to="." method="_on_laser_3d_body_entered"]
+[connection signal="body_entered" from="StaticBody3D38/Area3D" to="." method="_on_laser_3d_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]
+[connection signal="body_entered" from="Area3D4" to="." method="_on_area_3d_4_body_entered"]
+[connection signal="body_entered" from="Area3D5" to="." method="_on_area_3d_5_body_entered"]
+[connection signal="body_entered" from="Area3D6" to="." method="_on_area_3d_6_body_entered"]
+[connection signal="body_entered" from="Area3D7" to="." method="_on_area_3d_7_body_entered"]
+[connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d_8_body_entered"]
+[connection signal="body_entered" from="Area3D9" to="." method="_on_area_3d_9_body_entered"]
+[connection signal="body_entered" from="Area3D11" to="." method="_on_area_3d_11_body_entered"]
+[connection signal="body_entered" from="Area3D12" to="." method="_on_area_3d_12_body_entered"]
+[connection signal="body_entered" from="Area3D13" to="." method="_on_area_3d_13_body_entered"]
+[connection signal="body_entered" from="Area3D14" to="." method="_on_area_3d_14_body_entered"]
+[connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]
+[connection signal="body_entered" from="Area3D16" to="." method="_on_area_3d_16_body_entered"]
+[connection signal="body_entered" from="Area3D17" to="." method="_on_area_3d_17_body_entered"]
+[connection signal="body_entered" from="Area3D18" to="." method="_on_area_3d_18_body_entered"]
+[connection signal="body_entered" from="Area3D19" to="." method="_on_area_3d_19_body_entered"]
+[connection signal="body_entered" from="Area3D20" to="." method="_on_area_3d_20_body_entered"]
+[connection signal="body_entered" from="Area3D21" to="." method="_on_area_3d_21_body_entered"]
+[connection signal="body_entered" from="Area3D22" to="." method="_on_area_3d_22_body_entered"]
+[connection signal="body_entered" from="Area3D23" to="." method="_on_area_3d_23_body_entered"]
+[connection signal="body_entered" from="Area3D10" to="." method="_on_area_3d_10_body_entered"]
+[connection signal="body_entered" from="Area3D24" to="." method="_on_area_3d_24_body_entered"]
+[connection signal="pressed" from="RichTextLabel/Button" to="." method="_on_button_pressed"]

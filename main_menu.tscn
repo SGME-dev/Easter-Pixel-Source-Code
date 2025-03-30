@@ -1,0 +1,169 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwd41ws6yd1el"]
+
+[ext_resource type="Script" uid="uid://bd6gq5hkci1mr" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_7vrkn"]
+[ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="3_fu7sn"]
+
+[node name="main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Sprite3D" type="Sprite2D" parent="."]
+position = Vector2(575.25, 322.25)
+scale = Vector2(10.013, 10.0231)
+texture = ExtResource("2_7vrkn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 445.0
+offset_top = 154.0
+offset_right = 724.0
+offset_bottom = 529.0
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.419608, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Easter Pixel"
+
+[node name="play" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "play"
+
+[node name="support" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "support"
+
+[node name="quit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "quit
+"
+
+[node name="settings" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "settings"
+
+[node name="Bible Verses" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Bible Verses"
+
+[node name="website" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Website"
+
+[node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Credits
+"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+visible = false
+offset_right = 1152.0
+offset_bottom = 639.0
+editable = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextEdit"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 305.0
+offset_right = 690.0
+offset_bottom = 406.0
+
+[node name="Button" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+layout_mode = 2
+text = "The Easter Story"
+
+[node name="Parkore" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+layout_mode = 2
+text = "Bible Verse Parkore"
+
+[node name="Quiz" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+layout_mode = 2
+text = "Easter Bible Parkore Quiz"
+
+[node name="back" type="Button" parent="CanvasLayer/TextEdit"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 605.0
+offset_right = 51.0
+offset_bottom = 636.0
+text = "Back"
+
+[node name="settings" type="TextEdit" parent="CanvasLayer"]
+visible = false
+offset_right = 1152.0
+offset_bottom = 639.0
+editable = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings"]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 305.0
+offset_right = 656.0
+offset_bottom = 345.0
+
+[node name="Button" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+layout_mode = 2
+text = "Log out"
+
+[node name="Button2" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+layout_mode = 2
+text = "Delete Account"
+
+[node name="username" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "username"
+
+[node name="Button3" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+layout_mode = 2
+text = "apply username"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "skin texture"
+
+[node name="Button4" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+layout_mode = 2
+text = "save skin"
+
+[node name="back" type="Button" parent="CanvasLayer/settings"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 605.0
+offset_right = 51.0
+offset_bottom = 636.0
+text = "Back"
+
+[node name="FPS" parent="." instance=ExtResource("3_fu7sn")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/support" to="." method="_on_support_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Bible Verses" to="." method="_on_bible_verses_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/website" to="." method="_on_website_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Parkore" to="." method="_on_parkore_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Quiz" to="." method="_on_quiz_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/back" to="." method="_on_back2_pressed"]

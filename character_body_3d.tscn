@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0vuotcp6ec3s"]
+
+[ext_resource type="Script" uid="uid://i8ydn102b2o4" path="res://character_body_3d.gd" id="1_iwpo4"]
+[ext_resource type="Texture2D" uid="uid://6panfgdej7lq" path="res://New Piskel (9) (10).png" id="2_fb3t6"]
+[ext_resource type="Script" uid="uid://81qg48odtf4l" path="res://scripts/touch_screen_joystick.gd" id="3_vd578"]
+[ext_resource type="Texture2D" uid="uid://b4imyx34sic7q" path="res://New Piskel (26).png" id="4_c7tqt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bu0v1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vd578"]
+albedo_texture = ExtResource("2_fb3t6")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_iwpo4"]
+material = SubResource("StandardMaterial3D_vd578")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_iwpo4"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("MeshInstance3D:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:rotation")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("CollisionShape3D:disabled")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+collision_mask = 14
+script = ExtResource("1_iwpo4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_bu0v1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_iwpo4")
+
+[node name="Camera_Controller" type="Node3D" parent="."]
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller"]
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.361185, 0)
+
+[node name="Camera3D2" type="Camera3D" parent="Camera_Controller/Camera_Target"]
+transform = Transform3D(1, 0, 0, 0, 0.981242, 0.192779, 0, -0.192779, 0.981242, 0, 1.2391, 2.96892)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_iwpo4")
+
+[node name="Label" type="TextEdit" parent="."]
+visible = false
+offset_right = 353.0
+offset_bottom = 273.0
+text = "Collected bible verses:"
+editable = false
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 591.0
+offset_top = 15.0
+offset_right = 727.0
+offset_bottom = 89.0
+text = "COLLECT ALL 50 BIBLE VERSES from the yellow cubes"
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.11206, 0.0104508)
+text = "username"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TouchScreenJoystick" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 119.0
+offset_top = 486.0
+offset_right = 159.0
+offset_bottom = 526.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("3_vd578")
+use_input_actions = true
+metadata/_custom_type_script = "uid://81qg48odtf4l"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(929, 438)
+scale = Vector2(0.059375, 0.0575)
+texture_normal = ExtResource("4_c7tqt")
+action = "ui_accept"
