@@ -18,10 +18,10 @@ jobs:
 
     - name: Download Godot
       run: |
-        wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_macos.universal.zip
-        unzip Godot_v4.4-stable_mono_macos.universal.zip -d godot
-        sudo Godot.app Godot.app
-        sudo ln -s Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+        wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_macos.universal.zip
+        unzip Godot_v4.4-stable_macos.universal.zip
+        sudo mv Godot.app /Applications/Godot.app
+        sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
 
     - name: Download Godot Export Templates
       run: |
