@@ -1,2 +1,4 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+iOS/easter-pixel.xcframework/ios-arm64/libgodot.a filter=lfs diff=lfs merge=lfs -text
+iOS/easter-pixel.xcframework/iOS-arm64_x86_64-simulator/libgodot.a filter=lfs diff=lfs merge=lfs -text
