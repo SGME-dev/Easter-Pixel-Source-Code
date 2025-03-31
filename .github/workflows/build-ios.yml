@@ -16,38 +16,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Download Godot
-      run: |
-        wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_macos.universal.zip
-        unzip Godot_v4.4-stable_macos.universal.zip
-        sudo mv Godot.app /Applications/Godot.app
-        sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
-
-    - name: Download Godot Export Templates
-      run: |
-        mkdir -p ~/Library/Application\ Support/Godot/templates/4.4.stable
-        cd ~/Library/Application\ Support/Godot/templates/4.4.stable
-        wget https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_export_templates.tpz
-        tar -xzf Godot_v4.4-stable_mono_export_templates.tpz -C ~/Library/Application\ Support/Godot/templates/4.4.stable
-        cd templates
-        mv * ..
-        cd ..
-        ls
-
-    - name: Create build directory
-      run: mkdir -p build
-
-    - name: Export iOS project
-      run: godot "iOS" --export-release iOS/your_project_name.xcodeproj
-      env:
-        DISPLAY: :99.0
         
     - name: Set iOS Deployment Target
-      run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' build/your_project_name.xcodeproj/project.pbxproj
+      run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
 
 
     - name: Build iOS project
-      run: xcodebuild -project build/your_project_name.xcodeproj -scheme your_project_name -configuration Development -archivePath build/your_project_name.xcarchive archive \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme your_project_name -configuration Development -archivePath iOS/your_project_name.xcarchive archive \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
 
     - name: Export IPA
       run: | 
