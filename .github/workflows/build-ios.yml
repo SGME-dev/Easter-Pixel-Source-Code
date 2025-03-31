@@ -38,4 +38,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Ipa
-        path: build/App.ipa
+        path: iOS/App.ipa
