@@ -22,7 +22,7 @@ jobs:
 
 
     - name: Build iOS project
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme your_project_name -configuration Development -archivePath iOS/your_project_name.xcarchive archive \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme your_project_name -configuration Development -archivePath iOS/easter-pixel.xcarchive archive \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
 
     - name: Export IPA
       run: | 
