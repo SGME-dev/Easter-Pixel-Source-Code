@@ -16,26 +16,25 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-        
     - name: Set iOS Deployment Target
       run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
 
+    - name: List Xcode Schemes
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -list
 
-    - name: Build iOS project
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme easter-pixel -configuration Development -archivePath iOS/easter-pixel.xcarchive archive \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+    - name: Build iOS project for Simulator
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme easter-pixel -configuration Development -archivePath iOS/easter-pixel.xcarchive archive -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
 
     - name: Export IPA
-      run: | 
-        cd build
-        cd your_project_name.xcarchive
-        cd Products
-        cd Applications
-        mkdir Payload
-        mv your_project_name.app Payload/
-        zip -r App.ipa Payload/
-        mv App.ipa ../../../
+      run: |
+        mkdir -p build
+        xcodebuild -exportArchive \
+          -archivePath iOS/easter-pixel.xcarchive \
+          -exportPath build \
+          -exportOptionsPlist ExportOptions.plist
+
     - name: Upload IPA to GitHub Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: Ipa
-        path: iOS/App.ipa
+        path: build/easter-pixel.ipa # Adjust if your app bundle identifier is different
