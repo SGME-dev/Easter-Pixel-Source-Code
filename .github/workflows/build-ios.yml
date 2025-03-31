@@ -37,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Ipa
-        path: build/easter-pixel.ipa # Adjust if your app bundle identifier is different
+        path: iOS/easter-pixel.ipa # Adjust if your app bundle identifier is different
