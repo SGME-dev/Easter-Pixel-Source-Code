@@ -38,7 +38,7 @@ jobs:
       run: mkdir -p build
 
     - name: Export iOS project
-      run: godot --export --export-release "iOS" iOS/your_project_name.xcodeproj
+      run: godot "iOS" --export iOS/your_project_name.xcodeproj
       env:
         DISPLAY: :99.0
         
