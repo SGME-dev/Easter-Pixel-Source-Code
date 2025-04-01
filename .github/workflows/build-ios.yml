@@ -29,13 +29,14 @@ jobs:
       run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
     
     - name: Archive iOS project
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme "easter-pixel" -configuration Release -archivePath iOS/easter-pixel.xcarchive archive -destination "generic/platform=iOS" CODE_SIGN_IDENTITY="Apple Development" PROVISIONING_PROFILE_SPECIFIER="Your Development Profile"
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme "easter-pixel" -configuration Release -archivePath iOS/easter-pixel.xcarchive archive -destination "generic/platform=iOS" CODE_SIGN_IDENTITY="Ezra Goswami"
       id: archive_step
-
+      
+      
     - name: Export IPA (Manual - Not Recommended for Distribution)
       run: |
         # Ensure you are in the root of your repo
-        cd easter-pixel.xcarchive
+        cd iOS/easter-pixel.xcarchive
         cd Products/Applications/easter-pixel.app
         mkdir Payload
         mv iOS/easter-pixel.app Payload/
