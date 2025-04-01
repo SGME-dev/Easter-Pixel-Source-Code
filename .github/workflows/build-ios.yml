@@ -26,7 +26,7 @@ jobs:
       run: xcodebuild -project iOS/easter-pixel.xcodeproj -list
 
     - name: Build iOS project for Simulator
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme easter-pixel -configuration Development -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
+      run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' build/easter-pixel.xcodeproj/project.pbxproj
 
     - name: Export IPA
       run: |
