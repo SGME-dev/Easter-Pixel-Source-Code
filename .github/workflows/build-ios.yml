@@ -29,7 +29,7 @@ jobs:
       run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
     
     - name: Archive iOS project
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme "easter-pixel" -configuration Release -archivePath iOS/easter-pixel.xcarchive archive -destination "generic/platform=iOS" CODE_SIGNING_STYLE=Automatic -allowProvisioningUpdates
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme "easter-pixel" -configuration Release -archivePath iOS/easter-pixel.xcarchive archive -destination "generic/platform=iOS" CODE_SIGNING_STYLE=Automatic CODE_SIGN_IDENTITY="Apple Development" -allowProvisioningUpdates
       id: archive_step
       
       
