@@ -161,7 +161,7 @@
 				ORGANIZATIONNAME = GodotEngine;
 				TargetAttributes = {
 					D0BCFE3318AEBDA2004A7AAE = {
-						DevelopmentTeam = 123456;
+						DevelopmentTeam = 1234567890;
 						
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -268,7 +268,7 @@
 				"LD_CLASSIC_1500" = "-ld_classic";
 				"LD_CLASSIC_1501" = "-ld_classic";
 				"LD_CLASSIC_1510" = "-ld_classic";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(LD_CLASSIC_$(XCODE_VERSION_ACTUAL))  ";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,7 +310,7 @@
 				"LD_CLASSIC_1500" = "-ld_classic";
 				"LD_CLASSIC_1501" = "-ld_classic";
 				"LD_CLASSIC_1510" = "-ld_classic";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(LD_CLASSIC_$(XCODE_VERSION_ACTUAL))  ";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -327,7 +327,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = "Automatic";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = 123456;
+				DEVELOPMENT_TEAM = 1234567890;
 				INFOPLIST_FILE = "easter-pixel/easter-pixel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,7 +363,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = "Automatic";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DEVELOPMENT_TEAM = 123456;
+				DEVELOPMENT_TEAM = 1234567890;
 				INFOPLIST_FILE = "easter-pixel/easter-pixel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
