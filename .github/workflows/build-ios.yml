@@ -24,7 +24,8 @@ jobs:
 
     - name: List Xcode Schemes
       run: xcodebuild -project iOS/easter-pixel.xcodeproj -list
-
+      
+      
     - name: Build iOS project for Simulator
       run: |
         xcodebuild
