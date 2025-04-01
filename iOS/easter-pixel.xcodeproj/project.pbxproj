@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9039D3BD24C093AC0020482C /* MoltenVK.xcframework */,
-				054F8BE52D38852F00B81423 /* MetalFX.framework */,
+				054F8BE52D38852F00B81423 /* MetalFX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054F8BE52D38852F00B81423 /* MetalFX.framework */; settings = {ATTRIBUTES = (Weak, Optional, ); }; };
 				DEADBEEF1F582BE20003B888 /* easter-pixel.xcframework */,
 				
 				589384010000000000000002
