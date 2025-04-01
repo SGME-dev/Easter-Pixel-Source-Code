@@ -30,12 +30,12 @@ jobs:
 
     - name: Export IPA (Manual - Not Recommended for Distribution)
       run: |
-        # Ensure you are in a consistent working directory (e.g., the root of your repo)
+        # Ensure you are in the root of your repo
         cd iOS/easter-pixel.xcarchive
         cd Products/Applications/easter-pixel.app
         mkdir Payload
-        mv easter-pixel.app Payload/
-        cd ../../.. # Back to the directory containing the archive
+        mv iOS/easter-pixel.app Payload/
+        cd ../../.. # Back to the root of your repo
         zip -r iOS/easter-pixel.ipa Payload/
         rm -rf Payload # Clean up the Payload directory
 
