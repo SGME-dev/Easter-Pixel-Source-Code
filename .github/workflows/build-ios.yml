@@ -28,16 +28,16 @@ jobs:
     - name: Build iOS project for Simulator
       run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
 
-    - name: Export IPA
-      run: | 
-        cd build
-        cd easter-pixel.xcarchive
-        cd Products
-        cd Applications
+    - name: Export IPA (Manual - Not Recommended for Distribution)
+      run: |
+        # Ensure you are in a consistent working directory (e.g., the root of your repo)
+        cd iOS/easter-pixel.xcarchive
+        cd Products/Applications/easter-pixel.app
         mkdir Payload
         mv easter-pixel.app Payload/
-        zip -r App.ipa Payload/
-        mv App.ipa ../../../
+        cd ../../.. # Back to the directory containing the archive
+        zip -r iOS/easter-pixel.ipa Payload/
+        rm -rf Payload # Clean up the Payload directory
 
     - name: Upload IPA to GitHub Artifacts
       uses: actions/upload-artifact@v4
