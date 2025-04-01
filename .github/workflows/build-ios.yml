@@ -26,7 +26,7 @@ jobs:
       run: xcodebuild -project iOS/easter-pixel.xcodeproj -list
 
     - name: Build iOS project for Simulator
-      run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' build/easter-pixel.xcodeproj/project.pbxproj
+      run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
 
     - name: Export IPA
       run: |
