@@ -31,7 +31,7 @@ jobs:
     - name: Export IPA (Manual - Not Recommended for Distribution)
       run: |
         # Ensure you are in the root of your repo
-        cd iOS/easter-pixel.xcarchive
+        cd easter-pixel.xcarchive
         cd Products/Applications/easter-pixel.app
         mkdir Payload
         mv iOS/easter-pixel.app Payload/
