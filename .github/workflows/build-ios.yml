@@ -30,7 +30,7 @@ jobs:
       run: |
         xcodebuild
         -project
-        iOS/easter-pixel.xcodeproj
+        iOS/easter-pixel.xcodeproj/project.pbxproj
         -scheme
         "easter-pixel"
         -configuration
