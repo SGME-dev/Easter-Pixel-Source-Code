@@ -29,12 +29,15 @@ jobs:
       run: sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 10.0;/IPHONEOS_DEPLOYMENT_TARGET = 12.0;/' iOS/easter-pixel.xcodeproj/project.pbxproj
 
     - name: Export IPA
-      run: |
-        mkdir -p build
-        xcodebuild -exportArchive \
-          -archivePath iOS/easter-pixel.xcarchive \
-          -exportPath build \
-          -exportOptionsPlist iOS/easter-pixel.xcframework/Info.plist
+      run: | 
+        cd build
+        cd easter-pixel.xcarchive
+        cd Products
+        cd Applications
+        mkdir Payload
+        mv easter-pixel.app Payload/
+        zip -r App.ipa Payload/
+        mv App.ipa ../../../
 
     - name: Upload IPA to GitHub Artifacts
       uses: actions/upload-artifact@v4
