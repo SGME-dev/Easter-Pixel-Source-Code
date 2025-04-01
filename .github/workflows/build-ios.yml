@@ -26,7 +26,7 @@ jobs:
       run: xcodebuild -project iOS/easter-pixel.xcodeproj -list
 
     - name: Build iOS project for Simulator
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme easter-pixel -configuration Development -archivePath iOS/easter-pixel.xcarchive archive -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=YES
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme easter-pixel -configuration Development -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
 
     - name: Export IPA
       run: |
