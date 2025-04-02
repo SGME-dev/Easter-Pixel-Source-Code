@@ -27,13 +27,7 @@ jobs:
       
       
     - name: Build iOS project for Simulator
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj \
-       -scheme "easter-pixel" \
-       -configuration Debug \
-       -sdk iphonesimulator \
-       -destination "platform=iOS Simulator,name=iPhone 15" \
-       OTHER_LDFLAGS="-weak_framework MetalFX -framework MetalFX -Xlinker -delete_unused_symbols" \
-       build
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme "easter-pixel" -configuration Debug -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15" build
       
     - name: Export IPA (Manual - Not Recommended for Distribution)
       run: |
