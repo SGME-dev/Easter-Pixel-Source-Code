@@ -27,16 +27,7 @@ jobs:
       
       
     - name: Build iOS project for Simulator
-      run: xcodebuild -project iOS/easter-pixel.xcodeproj \
-       -scheme "easter-pixel" \
-       -configuration Debug \
-       -sdk iphonesimulator \
-       -destination "platform=iOS Simulator,name=iPhone 15" \
-       ONLY_ACTIVE_ARCH=YES \
-       ARCHS="x86_64 arm64" \
-       VALID_ARCHS="x86_64 arm64" \
-       OTHER_LDFLAGS="-weak_framework MetalFX" \
-       build
+      run: xcodebuild -project iOS/easter-pixel.xcodeproj -scheme "easter-pixel" -configuration Debug -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15" OTHER_LDFLAGS="-weak_framework MetalFX" build
       
     - name: Export IPA (Manual - Not Recommended for Distribution)
       run: |
