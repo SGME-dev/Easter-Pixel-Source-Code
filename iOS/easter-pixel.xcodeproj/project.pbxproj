@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-        054F8BE62D38852F00B81423 /* MetalFX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054F8BE52D38852F00B81423 /* MetalFX.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+        // 054F8BE62D38852F00B81423 /* MetalFX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054F8BE52D38852F00B81423 /* MetalFX.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1F1575721F582BE20003B888 /* dylibs in Resources */ = {isa = PBXBuildFile; fileRef = 1F1575711F582BE20003B888 /* dylibs */; };
 		DEADBEEF2F582BE20003B888 /* easter-pixel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEADBEEF1F582BE20003B888 /* easter-pixel.xcframework */; };
 		
@@ -65,7 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9039D3BE24C093AC0020482C /* MoltenVK.xcframework in Frameworks */,
-				054F8BE62D38852F00B81423 /* MetalFX.framework in Frameworks */,
+				// 054F8BE62D38852F00B81423 /* MetalFX.framework in Frameworks */,
 				DEADBEEF2F582BE20003B888 /* easter-pixel.xcframework */,
 				
 				589384010000000000000001
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9039D3BD24C093AC0020482C /* MoltenVK.xcframework */,
-				054F8BE52D38852F00B81423 /* MetalFX.framework */,
+				// 054F8BE52D38852F00B81423 /* MetalFX.framework */,
 				DEADBEEF1F582BE20003B888 /* easter-pixel.xcframework */,
 				
 				589384010000000000000002
