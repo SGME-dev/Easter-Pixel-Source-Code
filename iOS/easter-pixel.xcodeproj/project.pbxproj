@@ -230,6 +230,11 @@
 		D0BCFE6F18AEBDA3004A7AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+			    "LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited)";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "$(OTHER_LDFLAGS)";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "$(OTHER_LDFLAGS) -weak_framework MetalFX"; // Ensure it's still weak
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "$(OTHER_LDFLAGS) -framework MetalFX"; // Try removing this line if present for simulator
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "arm64";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -277,6 +282,11 @@
 		D0BCFE7018AEBDA3004A7AAE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+			    "LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited)";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "$(OTHER_LDFLAGS)";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "$(OTHER_LDFLAGS) -weak_framework MetalFX"; // Ensure it's still weak
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "$(OTHER_LDFLAGS) -framework MetalFX"; // Try removing this line if present for simulator
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "arm64";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
