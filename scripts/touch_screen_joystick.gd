@@ -386,7 +386,7 @@ func get_deadzoned_vector() -> Vector2:
 
 # returns a position that starts at the center of the rect
 func get_center_pos() -> Vector2:
-	return position + size / 2
+	return position
 
 # returns the distance from center of the joystick to the position of the knob
 func get_distance() -> float:

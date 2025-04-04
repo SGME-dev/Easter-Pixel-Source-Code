@@ -44,8 +44,9 @@ func  _ready() -> void:
 	if skinread == true:
 		$MeshInstance3D.mesh.material.albedo_texture = load(skin)
 		
-	if platform_name == "Android" or platform_name == "iOS" or platform_name == "Web":
-		$CanvasLayer.show()
+	if is_multiplayer_authority():
+		if platform_name == "Android" or platform_name == "iOS" or platform_name == "Web":
+			$CanvasLayer.show()
 
 func jump() -> void:
 	velocity.y = JUMP_VELOCITY
