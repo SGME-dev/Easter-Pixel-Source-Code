@@ -40,7 +40,7 @@ func _on_join_pressed(address: String = str($CanvasLayer/LineEdit.text)) -> void
 	peer.create_client(address, int(%LineEdit2.text))
 	multiplayer.multiplayer_peer = peer
 	$StaticBody3D16/AnimationPlayer.play("move")
-	$AudioStreamPlayer.play()
+	
 	$CanvasLayer/host.hide()
 	$CanvasLayer/join.hide()
 	$CanvasLayer/LineEdit.hide()
