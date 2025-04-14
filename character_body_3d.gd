@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 class_name player
 
-
+@onready var synchronizer = $MultiplayerSynchronizer
 var skinread = FileAccess.open("user://skintrue.save", FileAccess.READ).get_var()
 var skintrue: bool = false
 var skin = FileAccess.open("user://skin.save", FileAccess.READ).get_line()
@@ -37,7 +37,7 @@ func  _ready() -> void:
 	cam.current = is_multiplayer_authority()
 	cam_2.current = is_multiplayer_authority()
 	
-	
+	synchronizer.set_visibility_for(name.to_int(), true)
 	$Label3D.text = str(FileAccess.open("user://username.save", FileAccess.READ).get_line())
 	
 	if skinread == true:
