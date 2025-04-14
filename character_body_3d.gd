@@ -4,7 +4,6 @@ extends CharacterBody3D
 class_name player
 
 
-
 var skinread = FileAccess.open("user://skintrue.save", FileAccess.READ).get_var()
 var skintrue: bool = false
 var skin = FileAccess.open("user://skin.save", FileAccess.READ).get_line()

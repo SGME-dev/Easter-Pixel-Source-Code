@@ -4,7 +4,7 @@ class_name lobby
 
 @onready var world_environment: WorldEnvironment = $WorldEnvironment
 
-
+var actual_port: int = 15780
 var port: int = 15780
 const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
 const MAX_CONNECTIONS: int = 3
@@ -34,10 +34,12 @@ func _on_host_pressed() -> void:
 	
 
 
-func _on_join_pressed(address: String = str($CanvasLayer/LineEdit.text)) -> void:
+func _on_join_pressed(address: String = str($CanvasLayer/LineEdit.text), port: int = int(%LineEdit2.text)) -> void:
 	if address.is_empty() or address == "localhost":
 		address = DEFAULT_SERVER_IP
-	peer.create_client(address, int(%LineEdit2.text))
+	if %LineEdit2.text.is_empty():
+		port = actual_port
+	peer.create_client(address, port)
 	multiplayer.multiplayer_peer = peer
 	$StaticBody3D16/AnimationPlayer.play("move")
 	

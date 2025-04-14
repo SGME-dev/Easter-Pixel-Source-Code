@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqp5pf30o4mqv"]
+
+[ext_resource type="Texture2D" uid="uid://6panfgdej7lq" path="res://New Piskel (9) (10).png" id="1_ae3o0"]
+
+[resource]
+albedo_texture = ExtResource("1_ae3o0")

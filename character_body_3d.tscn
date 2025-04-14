@@ -1,17 +1,15 @@
 [gd_scene load_steps=9 format=3 uid="uid://d0vuotcp6ec3s"]
 
 [ext_resource type="Script" uid="uid://i8ydn102b2o4" path="res://character_body_3d.gd" id="1_iwpo4"]
-[ext_resource type="Texture2D" uid="uid://6panfgdej7lq" path="res://New Piskel (9) (10).png" id="2_fb3t6"]
+[ext_resource type="Material" uid="uid://bqp5pf30o4mqv" path="res://character_body_3d.tres" id="2_c7tqt"]
+[ext_resource type="Script" uid="uid://dm0tucvr3n8rr" path="res://mesh_instance_3d.gd" id="3_nl27k"]
 [ext_resource type="Script" uid="uid://81qg48odtf4l" path="res://scripts/touch_screen_joystick.gd" id="3_vd578"]
 [ext_resource type="Texture2D" uid="uid://b4imyx34sic7q" path="res://New Piskel (26).png" id="4_c7tqt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bu0v1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vd578"]
-albedo_texture = ExtResource("2_fb3t6")
-
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_iwpo4"]
-material = SubResource("StandardMaterial3D_vd578")
+material = ExtResource("2_c7tqt")
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_iwpo4"]
 properties/0/path = NodePath(".:position")
@@ -26,6 +24,12 @@ properties/2/replication_mode = 1
 properties/3/path = NodePath("CollisionShape3D:disabled")
 properties/3/spawn = true
 properties/3/replication_mode = 1
+properties/4/path = NodePath("Label3D:text")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("MeshInstance3D:skeleton")
+properties/5/spawn = true
+properties/5/replication_mode = 1
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 collision_mask = 14
@@ -37,6 +41,7 @@ shape = SubResource("CapsuleShape3D_bu0v1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_iwpo4")
+script = ExtResource("3_nl27k")
 
 [node name="Camera_Controller" type="Node3D" parent="."]
 
