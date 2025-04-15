@@ -16,6 +16,7 @@ config/use_custom_user_dir=true
 config/custom_user_dir_name="easter-pixel"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+config/tags=PackedStringArray("3d", "christ", "god", "jesus", "network")
 
 [autoload]
 
