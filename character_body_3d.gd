@@ -9,6 +9,7 @@ var skintrue: bool = false
 var skin = FileAccess.open("user://skin.save", FileAccess.READ).get_line()
 var Area3d: Area3D
 @onready var label_2: Label = $Label2
+@onready var label_3: TextEdit = $Label3
 @onready var label: TextEdit = $Label
 var id: int = $".".get_multiplayer_authority()
 var checkpoint: Marker3D

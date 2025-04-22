@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqnw8j1634arq"]
+
+[ext_resource type="PackedScene" uid="uid://bb7wevsxibpjq" path="res://jerusalem_1st._temple_period._blmj_museummod.glb" id="1_mwn20"]
+
+[node name="jerusalem_1st__temple_period__blmj_museummod" instance=ExtResource("1_mwn20")]
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(98.8381, 0.349788, 15.1957, -8.77196, -80.332, 58.9051, 12.413, -59.5537, -79.368, 0, 0, 367.577)
+
+[node name="Object_10" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="0"]
+lod_bias = 128.0
+
+[node name="Object_10_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="1"]
+lod_bias = 128.0
+
+[node name="Object_11" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="2"]
+lod_bias = 128.0
+
+[node name="Object_11_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="3"]
+lod_bias = 128.0
+
+[node name="Object_2" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="4"]
+lod_bias = 128.0
+
+[node name="Object_3" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="5"]
+lod_bias = 128.0
+
+[node name="Object_4" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="6"]
+lod_bias = 128.0
+
+[node name="Object_5" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="7"]
+lod_bias = 128.0
+
+[node name="Object_6" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="8"]
+lod_bias = 128.0
+
+[node name="Object_7" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="9"]
+lod_bias = 128.0
+
+[node name="Object_8" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="10"]
+lod_bias = 128.0
+
+[node name="Object_9" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles" index="11"]
+lod_bias = 128.0
+
+[node name="Object_10_002" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="0"]
+collision_layer = 2
+
+[node name="Object_11_002" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="1"]
+collision_layer = 2
+
+[node name="Object_2_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="2"]
+collision_layer = 2
+
+[node name="Object_3_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="3"]
+collision_layer = 2
+
+[node name="Object_4_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="4"]
+collision_layer = 2
+
+[node name="Object_5_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="5"]
+collision_layer = 2
+
+[node name="Object_6_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="6"]
+collision_layer = 2
+
+[node name="Object_7_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="7"]
+collision_layer = 2
+
+[node name="Object_8_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="8"]
+collision_layer = 2
+
+[node name="Object_9_001" parent="Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001" index="9"]
+collision_layer = 2

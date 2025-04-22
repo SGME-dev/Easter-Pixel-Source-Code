@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Easter Pixel"
+config/tags=PackedStringArray("3d", "christ", "god", "jesus", "network")
 run/main_scene="uid://exkl4xupfkcv"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="easter-pixel"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
-config/tags=PackedStringArray("3d", "christ", "god", "jesus", "network")
 
 [autoload]
 
@@ -31,6 +31,10 @@ window/vsync/vsync_mode=0
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

@@ -63,6 +63,13 @@ offset_bottom = 273.0
 text = "Collected bible verses:"
 editable = false
 
+[node name="Label3" type="TextEdit" parent="."]
+visible = false
+offset_right = 353.0
+offset_bottom = 273.0
+text = "Collected easter eggs:"
+editable = false
+
 [node name="Label2" type="Label" parent="."]
 visible = false
 offset_left = 591.0
