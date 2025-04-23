@@ -89,3 +89,7 @@ func _on_quiz_pressed() -> void:
 
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://CREDITS/GodotCredits.tscn")
+
+
+func _on_easteregghunt_pressed() -> void:
+	get_tree().change_scene_to_file("res://easteregghunt.tscn")

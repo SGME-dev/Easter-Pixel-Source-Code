@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b3ck15dp4fuhq"]
+[gd_scene load_steps=27 format=3 uid="uid://b3ck15dp4fuhq"]
 
 [ext_resource type="Script" uid="uid://bsjljvlhai5t3" path="res://parkore_skills.gd" id="1_hms1p"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_iovwy"]
@@ -88,6 +88,14 @@ albedo_color = Color(100, 100, 100, 1)
 material = SubResource("StandardMaterial3D_hk5eo")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_wn5o4"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_o7h4h"]
+properties/0/path = NodePath("Label:text")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Label:visible")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="Parkore_skills" type="Node3D"]
 script = ExtResource("1_hms1p")
@@ -1550,6 +1558,16 @@ volume_db = -10.0
 autoplay = true
 
 [node name="FPS" parent="." instance=ExtResource("7_o7h4h")]
+
+[node name="Label" type="TextEdit" parent="."]
+visible = false
+offset_right = 353.0
+offset_bottom = 273.0
+text = "Collected bible verses:"
+editable = false
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_o7h4h")
 
 [connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]

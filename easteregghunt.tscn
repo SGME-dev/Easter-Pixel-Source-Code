@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c8v51s7im220h"]
+[gd_scene load_steps=34 format=4 uid="uid://c8v51s7im220h"]
 
 [ext_resource type="Script" uid="uid://dpv4jqjrirwyx" path="res://easteregghunt.gd" id="1_o7ytj"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_73b3d"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://de7ob66kd0jdr" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 3_BaseColor.png" id="12_v4co0"]
 [ext_resource type="Texture2D" uid="uid://upo7sv2wc23g" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 3_Metallic-Easter Egg_low_Material 3_Roughness.png" id="13_qwngk"]
 [ext_resource type="Texture2D" uid="uid://dpw1ro3klubiu" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 3_Normal.png" id="14_stuii"]
+[ext_resource type="AudioStream" uid="uid://dhouwenmswiov" path="res://electric-shock-97989.mp3" id="15_stuii"]
+[ext_resource type="AudioStream" uid="uid://bx1ww06fett1h" path="res://Screen Recording 2025-03-23 144438.mp3" id="16_eawch"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pxtyn"]
 
@@ -23,6 +25,7 @@ sky_material = SubResource("ProceduralSkyMaterial_pxtyn")
 [sub_resource type="Environment" id="Environment_t5w83"]
 background_mode = 2
 sky = SubResource("Sky_pbp4j")
+glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pbp4j"]
 
@@ -164,6 +167,28 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3ra04")
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_v4co0"]
+properties/0/path = NodePath("Label3:text")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Label3:visible")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("Label:text")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:easter_egg")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v4co0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwngk"]
+albedo_color = Color(100, 100, 100, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_stuii"]
+material = SubResource("StandardMaterial3D_qwngk")
+
 [node name="easteregghunt" type="Node3D"]
 script = ExtResource("1_o7ytj")
 player_scene = ExtResource("2_pxtyn")
@@ -236,6 +261,48 @@ visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
+[node name="Area3D10" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.403, -178.064, 185.378)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D10"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D10"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
+visibility_range_end_margin = 10.0
+mesh = SubResource("ArrayMesh_kb5wg")
+skeleton = NodePath("")
+
+[node name="Area3D7" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61.8662, 425.857)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D7"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
+visibility_range_end_margin = 10.0
+mesh = SubResource("ArrayMesh_kb5wg")
+skeleton = NodePath("")
+
+[node name="Area3D4" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2601, -233.246, 275.769)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D4"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
+visibility_range_end_margin = 10.0
+mesh = SubResource("ArrayMesh_kb5wg")
+skeleton = NodePath("")
+
 [node name="Area3D2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.52, -101.709, 179.987)
 collision_layer = 2
@@ -245,6 +312,45 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_pbp4j")
 
 [node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D2"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
+mesh = SubResource("ArrayMesh_v4co0")
+skeleton = NodePath("")
+
+[node name="Area3D11" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 352.594, -75.8692, -142.586)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D11"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D11"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
+mesh = SubResource("ArrayMesh_v4co0")
+skeleton = NodePath("")
+
+[node name="Area3D8" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 314.688, -99.7295, 179.987)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D8"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D8"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
+mesh = SubResource("ArrayMesh_v4co0")
+skeleton = NodePath("")
+
+[node name="Area3D5" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.52, -147.243, -83.1735)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D5"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
@@ -262,8 +368,91 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
+[node name="Area3D12" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -105.429, -188.698)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D12"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D12"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
+mesh = SubResource("ArrayMesh_eawch")
+skeleton = NodePath("")
+
+[node name="Area3D9" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 670.331, -152.995, -162.095)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D9"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
+mesh = SubResource("ArrayMesh_eawch")
+skeleton = NodePath("")
+
+[node name="Area3D6" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -101.705, -384.091)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6"]
+shape = SubResource("BoxShape3D_pbp4j")
+
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D6"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
+mesh = SubResource("ArrayMesh_eawch")
+skeleton = NodePath("")
+
+[node name="Label3" type="TextEdit" parent="."]
+visible = false
+offset_right = 353.0
+offset_bottom = 273.0
+text = "Collected easter eggs:"
+editable = false
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_v4co0")
+
+[node name="Area3D13" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -90.5604, -409.461)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D13"]
+shape = SubResource("BoxShape3D_v4co0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D13"]
+mesh = SubResource("BoxMesh_stuii")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+stream = ExtResource("15_stuii")
+volume_db = 20.0
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_eawch")
+volume_db = -5.0
+autoplay = true
+
 [connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D10" to="." method="_on_area_3d_10_body_entered"]
+[connection signal="body_entered" from="Area3D7" to="." method="_on_area_3d_7_body_entered"]
+[connection signal="body_entered" from="Area3D4" to="." method="_on_area_3d_4_body_entered"]
 [connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Area3D11" to="." method="_on_area_3d_11_body_entered"]
+[connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d_8_body_entered"]
+[connection signal="body_entered" from="Area3D5" to="." method="_on_area_3d_5_body_entered"]
 [connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]
+[connection signal="body_entered" from="Area3D12" to="." method="_on_area_3d_12_body_entered"]
+[connection signal="body_entered" from="Area3D9" to="." method="_on_area_3d_9_body_entered"]
+[connection signal="body_entered" from="Area3D6" to="." method="_on_area_3d_6_body_entered"]
+[connection signal="body_entered" from="Area3D13" to="." method="_on_area_3d_13_body_entered"]
