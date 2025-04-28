@@ -15,6 +15,7 @@ static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 func _physics_process(delta: float) -> void:
 	if easter_egg == 12:
 		$Label.text = "Go to the electricity sound!"
+	$Label2.text = str(easter_egg, "/12")
 
 func _on_host_pressed() -> void:
 	

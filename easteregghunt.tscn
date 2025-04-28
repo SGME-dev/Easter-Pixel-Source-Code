@@ -180,6 +180,9 @@ properties/2/replication_mode = 1
 properties/3/path = NodePath(".:easter_egg")
 properties/3/spawn = true
 properties/3/replication_mode = 1
+properties/4/path = NodePath("Label2:text")
+properties/4/spawn = true
+properties/4/replication_mode = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v4co0"]
 
@@ -440,6 +443,13 @@ offset_bottom = 23.0
 stream = ExtResource("16_eawch")
 volume_db = -5.0
 autoplay = true
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+offset_left = 555.0
+offset_top = 3.0
+offset_right = 595.0
+offset_bottom = 26.0
 
 [connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]
