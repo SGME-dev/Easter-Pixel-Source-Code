@@ -445,7 +445,6 @@ volume_db = -5.0
 autoplay = true
 
 [node name="Label2" type="Label" parent="."]
-anchors_preset = -1
 offset_left = 555.0
 offset_top = 3.0
 offset_right = 595.0
