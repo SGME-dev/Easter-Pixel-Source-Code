@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4m27ikace40q"]
+
+[ext_resource type="Texture2D" uid="uid://dbl8oxwl1cdil" path="res://New Piskel (9).png" id="1_yvhtj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq2ne"]
+albedo_texture = ExtResource("1_yvhtj")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_etjlb"]
+material = SubResource("StandardMaterial3D_aq2ne")
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+mesh = SubResource("CapsuleMesh_etjlb")
