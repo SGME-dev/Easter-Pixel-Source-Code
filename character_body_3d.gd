@@ -34,12 +34,24 @@ func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 	
 
+func is_dedicated_server():
+	var args = OS.get_cmdline_args()
+	for arg in args:
+		if arg == "--headless":
+			return true
+	return false
+
+
 func  _ready() -> void:
 	cam.current = is_multiplayer_authority()
 	cam_2.current = is_multiplayer_authority()
 	
 	synchronizer.set_visibility_for(name.to_int(), true)
-	$Label3D.text = str(FileAccess.open("user://username.save", FileAccess.READ).get_line())
+	if !OS.has_feature("dedicated_server"):
+		$Label3D.text = str(FileAccess.open("user://username.save", FileAccess.READ).get_line())
+	else:
+		hide()
+		
 	
 	if skinread == true:
 		$MeshInstance3D.mesh.material.albedo_texture = load(skin)

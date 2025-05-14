@@ -12,7 +12,22 @@ const MAX_CONNECTIONS: int = 3
 static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 @export var player_scene : PackedScene
 
+func is_dedicated_server():
+	var args = OS.get_cmdline_args()
+	for arg in args:
+		if arg == "--headless":
+			return true
+	return false
 
+func _ready() -> void:
+	if OS.has_feature("dedicated_server"):
+		print("Started the server...")
+		_on_host_pressed()
+		$CanvasLayer/host.hide()
+		$CanvasLayer/join.hide()
+		$CanvasLayer/LineEdit.hide()
+		%LineEdit2.hide()
+		$Sprite3D38.hide()
 
 func _on_host_pressed() -> void:
 	
@@ -22,6 +37,9 @@ func _on_host_pressed() -> void:
 	add_player()
 	multiplayer.get_peers()
 	
+	
+		
+		
 	$StaticBody3D16/AnimationPlayer.play("move")
 	$Narrorator/AudioStreamPlayer.play()
 	
