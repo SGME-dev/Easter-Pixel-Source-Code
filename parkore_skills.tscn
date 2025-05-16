@@ -1199,6 +1199,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D9" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -333.369)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9"]
 shape = SubResource("BoxShape3D_wn5o4")
