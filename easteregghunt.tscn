@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://c8v51s7im220h"]
+[gd_scene load_steps=35 format=4 uid="uid://c8v51s7im220h"]
 
 [ext_resource type="Script" uid="uid://dpv4jqjrirwyx" path="res://easteregghunt.gd" id="1_o7ytj"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_73b3d"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://4si3s67c6cr4" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 1_BaseColor.png" id="6_kb5wg"]
 [ext_resource type="Texture2D" uid="uid://cl576hpy5boxy" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 1_Metallic-Easter Egg_low_Material 1_Roughness.png" id="7_ct0fv"]
 [ext_resource type="Texture2D" uid="uid://ctkkr6ub8vdjc" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 1_Normal.png" id="8_5twt3"]
+[ext_resource type="Texture2D" uid="uid://d3ne2rqy0kf31" path="res://New Piskel (27).png" id="9_eawch"]
 [ext_resource type="Texture2D" uid="uid://rilm2cp7qnod" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 2_BaseColor.png" id="9_jsxni"]
 [ext_resource type="Texture2D" uid="uid://ctonmfr4r2i27" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 2_Metallic-Easter Egg_low_Material 2_Roughness.png" id="10_dm00k"]
 [ext_resource type="Texture2D" uid="uid://c6xitfv6lb5pj" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 2_Normal.png" id="11_d3uoq"]
@@ -183,6 +184,42 @@ properties/3/replication_mode = 1
 properties/4/path = NodePath("Label2:text")
 properties/4/spawn = true
 properties/4/replication_mode = 1
+properties/5/path = NodePath("Area3D:visible")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath("Area3D10:visible")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("Area3D7:visible")
+properties/7/spawn = true
+properties/7/replication_mode = 1
+properties/8/path = NodePath("Area3D4:visible")
+properties/8/spawn = true
+properties/8/replication_mode = 1
+properties/9/path = NodePath("Area3D2:visible")
+properties/9/spawn = true
+properties/9/replication_mode = 1
+properties/10/path = NodePath("Area3D11:visible")
+properties/10/spawn = true
+properties/10/replication_mode = 1
+properties/11/path = NodePath("Area3D8:visible")
+properties/11/spawn = true
+properties/11/replication_mode = 1
+properties/12/path = NodePath("Area3D5:visible")
+properties/12/spawn = true
+properties/12/replication_mode = 1
+properties/13/path = NodePath("Area3D3:visible")
+properties/13/spawn = true
+properties/13/replication_mode = 1
+properties/14/path = NodePath("Area3D12:visible")
+properties/14/spawn = true
+properties/14/replication_mode = 1
+properties/15/path = NodePath("Area3D9:visible")
+properties/15/spawn = true
+properties/15/replication_mode = 1
+properties/16/path = NodePath("Area3D6:visible")
+properties/16/spawn = true
+properties/16/replication_mode = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v4co0"]
 
@@ -264,6 +301,11 @@ visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D10" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.403, -178.064, 185.378)
 collision_layer = 2
@@ -277,6 +319,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
 visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D10"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
 
 [node name="Area3D7" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61.8662, 425.857)
@@ -292,6 +339,11 @@ visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D7"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 50.5884, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D4" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2601, -233.246, 275.769)
 collision_layer = 2
@@ -306,6 +358,11 @@ visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D4"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 18.8488, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.52, -101.709, 179.987)
 collision_layer = 2
@@ -318,6 +375,11 @@ shape = SubResource("BoxShape3D_pbp4j")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D2"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
 
 [node name="Area3D11" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 352.594, -75.8692, -142.586)
@@ -332,6 +394,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D11"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D8" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 314.688, -99.7295, 179.987)
 collision_layer = 2
@@ -344,6 +411,11 @@ shape = SubResource("BoxShape3D_pbp4j")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D8"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
 
 [node name="Area3D5" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.52, -147.243, -83.1735)
@@ -358,6 +430,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D5"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D3" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -132.06, 80.2347)
 collision_layer = 2
@@ -370,6 +447,11 @@ shape = SubResource("BoxShape3D_pbp4j")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D3"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
 
 [node name="Area3D12" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -105.429, -188.698)
@@ -384,6 +466,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D12"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D9" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 670.331, -152.995, -162.095)
 collision_layer = 2
@@ -397,6 +484,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
+[node name="Sprite3D" type="Sprite3D" parent="Area3D9"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
+
 [node name="Area3D6" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -101.705, -384.091)
 collision_layer = 2
@@ -409,6 +501,11 @@ shape = SubResource("BoxShape3D_pbp4j")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D6"]
+transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
+layers = 2
+texture = ExtResource("9_eawch")
 
 [node name="Label3" type="TextEdit" parent="."]
 visible = false
@@ -449,6 +546,20 @@ offset_left = 555.0
 offset_top = 3.0
 offset_right = 595.0
 offset_bottom = 26.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 847.0
+offset_top = -4.0
+offset_right = 1147.0
+offset_bottom = 296.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(300, 300)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -0.339723, 0.940526, 0, -0.940526, -0.339723, 221.62, 941.435, -585.045)
 
 [connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]

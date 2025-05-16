@@ -43,6 +43,7 @@ func is_dedicated_server():
 
 
 func  _ready() -> void:
+	$Sprite3D.show()
 	cam.current = is_multiplayer_authority()
 	cam_2.current = is_multiplayer_authority()
 	

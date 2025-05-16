@@ -96,6 +96,81 @@ properties/0/replication_mode = 1
 properties/1/path = NodePath("Label:visible")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+properties/2/path = NodePath(".:bible_verses")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("Area3D:visible")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("Area3D2:visible")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("Area3D3:visible")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath("Area3D4:visible")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath("Area3D5:visible")
+properties/7/spawn = true
+properties/7/replication_mode = 1
+properties/8/path = NodePath("Area3D6:visible")
+properties/8/spawn = true
+properties/8/replication_mode = 1
+properties/9/path = NodePath("Area3D7:visible")
+properties/9/spawn = true
+properties/9/replication_mode = 1
+properties/10/path = NodePath("Area3D8:visible")
+properties/10/spawn = true
+properties/10/replication_mode = 1
+properties/11/path = NodePath("Area3D9:visible")
+properties/11/spawn = true
+properties/11/replication_mode = 1
+properties/12/path = NodePath("Area3D11:visible")
+properties/12/spawn = true
+properties/12/replication_mode = 1
+properties/13/path = NodePath("Area3D12:visible")
+properties/13/spawn = true
+properties/13/replication_mode = 1
+properties/14/path = NodePath("Area3D13:visible")
+properties/14/spawn = true
+properties/14/replication_mode = 1
+properties/15/path = NodePath("Area3D14:visible")
+properties/15/spawn = true
+properties/15/replication_mode = 1
+properties/16/path = NodePath("Area3D15:visible")
+properties/16/spawn = true
+properties/16/replication_mode = 1
+properties/17/path = NodePath("Area3D16:visible")
+properties/17/spawn = true
+properties/17/replication_mode = 1
+properties/18/path = NodePath("Area3D17:visible")
+properties/18/spawn = true
+properties/18/replication_mode = 1
+properties/19/path = NodePath("Area3D18:visible")
+properties/19/spawn = true
+properties/19/replication_mode = 1
+properties/20/path = NodePath("Area3D19:visible")
+properties/20/spawn = true
+properties/20/replication_mode = 1
+properties/21/path = NodePath("Area3D20:visible")
+properties/21/spawn = true
+properties/21/replication_mode = 1
+properties/22/path = NodePath("Area3D21:visible")
+properties/22/spawn = true
+properties/22/replication_mode = 1
+properties/23/path = NodePath("Area3D22:visible")
+properties/23/spawn = true
+properties/23/replication_mode = 1
+properties/24/path = NodePath("Area3D23:visible")
+properties/24/spawn = true
+properties/24/replication_mode = 1
+properties/25/path = NodePath("Area3D10:visible")
+properties/25/spawn = true
+properties/25/replication_mode = 1
+properties/26/path = NodePath("Area3D24:visible")
+properties/26/spawn = true
+properties/26/replication_mode = 1
 
 [node name="Parkore_skills" type="Node3D"]
 script = ExtResource("1_hms1p")
@@ -1568,6 +1643,12 @@ editable = false
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_o7h4h")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 514.0
+offset_top = 9.0
+offset_right = 658.0
+offset_bottom = 32.0
 
 [connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]
