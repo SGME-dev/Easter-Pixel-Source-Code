@@ -92,85 +92,85 @@ material = SubResource("StandardMaterial3D_hk5eo")
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_o7h4h"]
 properties/0/path = NodePath("Label:text")
 properties/0/spawn = true
-properties/0/replication_mode = 1
+properties/0/replication_mode = 2
 properties/1/path = NodePath("Label:visible")
 properties/1/spawn = true
-properties/1/replication_mode = 1
+properties/1/replication_mode = 2
 properties/2/path = NodePath(".:bible_verses")
 properties/2/spawn = true
-properties/2/replication_mode = 1
+properties/2/replication_mode = 2
 properties/3/path = NodePath("Area3D:visible")
 properties/3/spawn = true
-properties/3/replication_mode = 1
+properties/3/replication_mode = 2
 properties/4/path = NodePath("Area3D2:visible")
 properties/4/spawn = true
-properties/4/replication_mode = 1
+properties/4/replication_mode = 2
 properties/5/path = NodePath("Area3D3:visible")
 properties/5/spawn = true
-properties/5/replication_mode = 1
+properties/5/replication_mode = 2
 properties/6/path = NodePath("Area3D4:visible")
 properties/6/spawn = true
-properties/6/replication_mode = 1
+properties/6/replication_mode = 2
 properties/7/path = NodePath("Area3D5:visible")
 properties/7/spawn = true
-properties/7/replication_mode = 1
+properties/7/replication_mode = 2
 properties/8/path = NodePath("Area3D6:visible")
 properties/8/spawn = true
-properties/8/replication_mode = 1
+properties/8/replication_mode = 2
 properties/9/path = NodePath("Area3D7:visible")
 properties/9/spawn = true
-properties/9/replication_mode = 1
+properties/9/replication_mode = 2
 properties/10/path = NodePath("Area3D8:visible")
 properties/10/spawn = true
-properties/10/replication_mode = 1
-properties/11/path = NodePath("Area3D9:visible")
+properties/10/replication_mode = 2
+properties/11/path = NodePath("Area3D11:visible")
 properties/11/spawn = true
-properties/11/replication_mode = 1
-properties/12/path = NodePath("Area3D11:visible")
+properties/11/replication_mode = 2
+properties/12/path = NodePath("Area3D12:visible")
 properties/12/spawn = true
-properties/12/replication_mode = 1
-properties/13/path = NodePath("Area3D12:visible")
+properties/12/replication_mode = 2
+properties/13/path = NodePath("Area3D13:visible")
 properties/13/spawn = true
-properties/13/replication_mode = 1
-properties/14/path = NodePath("Area3D13:visible")
+properties/13/replication_mode = 2
+properties/14/path = NodePath("Area3D14:visible")
 properties/14/spawn = true
-properties/14/replication_mode = 1
-properties/15/path = NodePath("Area3D14:visible")
+properties/14/replication_mode = 2
+properties/15/path = NodePath("Area3D15:visible")
 properties/15/spawn = true
-properties/15/replication_mode = 1
-properties/16/path = NodePath("Area3D15:visible")
+properties/15/replication_mode = 2
+properties/16/path = NodePath("Area3D16:visible")
 properties/16/spawn = true
-properties/16/replication_mode = 1
-properties/17/path = NodePath("Area3D16:visible")
+properties/16/replication_mode = 2
+properties/17/path = NodePath("Area3D17:visible")
 properties/17/spawn = true
-properties/17/replication_mode = 1
-properties/18/path = NodePath("Area3D17:visible")
+properties/17/replication_mode = 2
+properties/18/path = NodePath("Area3D18:visible")
 properties/18/spawn = true
-properties/18/replication_mode = 1
-properties/19/path = NodePath("Area3D18:visible")
+properties/18/replication_mode = 2
+properties/19/path = NodePath("Area3D19:visible")
 properties/19/spawn = true
-properties/19/replication_mode = 1
-properties/20/path = NodePath("Area3D19:visible")
+properties/19/replication_mode = 2
+properties/20/path = NodePath("Area3D20:visible")
 properties/20/spawn = true
-properties/20/replication_mode = 1
-properties/21/path = NodePath("Area3D20:visible")
+properties/20/replication_mode = 2
+properties/21/path = NodePath("Area3D21:visible")
 properties/21/spawn = true
-properties/21/replication_mode = 1
-properties/22/path = NodePath("Area3D21:visible")
+properties/21/replication_mode = 2
+properties/22/path = NodePath("Area3D22:visible")
 properties/22/spawn = true
-properties/22/replication_mode = 1
-properties/23/path = NodePath("Area3D22:visible")
+properties/22/replication_mode = 2
+properties/23/path = NodePath("Area3D23:visible")
 properties/23/spawn = true
-properties/23/replication_mode = 1
-properties/24/path = NodePath("Area3D23:visible")
+properties/23/replication_mode = 2
+properties/24/path = NodePath("Area3D10:visible")
 properties/24/spawn = true
-properties/24/replication_mode = 1
-properties/25/path = NodePath("Area3D10:visible")
+properties/24/replication_mode = 2
+properties/25/path = NodePath("Area3D24:visible")
 properties/25/spawn = true
-properties/25/replication_mode = 1
-properties/26/path = NodePath("Area3D24:visible")
+properties/25/replication_mode = 2
+properties/26/path = NodePath("Area3D9:visible")
 properties/26/spawn = true
-properties/26/replication_mode = 1
+properties/26/replication_mode = 2
 
 [node name="Parkore_skills" type="Node3D"]
 script = ExtResource("1_hms1p")
@@ -880,6 +880,7 @@ mesh = SubResource("BoxMesh_5d5jq")
 
 [node name="Area3D" type="Area3D" parent="StaticBody3D35"]
 transform = Transform3D(1.31632, 0, 0, 0, 1, 0, 0, 0, 0.112168, 0, 0.934456, 0)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D35/Area3D"]
 shape = SubResource("BoxShape3D_5d5jq")
@@ -909,6 +910,7 @@ mesh = SubResource("BoxMesh_5d5jq")
 
 [node name="Area3D" type="Area3D" parent="StaticBody3D37"]
 transform = Transform3D(1.09815, 0, 0, 0, 1, 0, 0, 0, 0.112168, 0, 0.934456, 0)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D37/Area3D"]
 shape = SubResource("BoxShape3D_5d5jq")
@@ -938,6 +940,7 @@ mesh = SubResource("BoxMesh_5d5jq")
 
 [node name="Area3D" type="Area3D" parent="StaticBody3D38"]
 transform = Transform3D(1.12399, 0, 0, 0, 1, 0, 0, 0, 0.112168, 0, 0.934456, 0)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D38/Area3D"]
 shape = SubResource("BoxShape3D_5d5jq")
@@ -1111,6 +1114,7 @@ mesh = SubResource("BoxMesh_5d5jq")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, -18.3463)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1122,6 +1126,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, -82.901)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1133,6 +1138,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D3" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10776, -96.6098)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1144,6 +1150,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D4" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -127.016)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1155,6 +1162,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D5" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -169.456)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1166,6 +1174,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D6" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -189.597)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1177,6 +1186,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D7" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -239.924)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1188,6 +1198,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D8" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -267.563)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D8"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1198,7 +1209,7 @@ visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D9" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -333.369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.063, -331.012)
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9"]
@@ -1211,6 +1222,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D11" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.8538, -391.631)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D11"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1222,6 +1234,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D12" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.8538, -439.096)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D12"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1233,6 +1246,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D13" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63077, -40.8538, -481.6)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D13"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1244,6 +1258,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D14" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46736, -40.8538, -481.6)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D14"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1255,6 +1270,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D15" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46736, -40.8538, -518.714)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1266,6 +1282,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D16" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46736, -40.8538, -555.278)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D16"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1277,6 +1294,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D17" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95565, 5.72517, -687.165)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D17"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1288,6 +1306,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D18" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15136, 5.72517, -675.303)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D18"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1299,6 +1318,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D19" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43494, 5.72517, -675.704)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D19"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1310,6 +1330,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D20" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15997, 5.72517, -687.309)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D20"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1321,6 +1342,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D21" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57972, 5.72517, -681.519)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D21"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1332,6 +1354,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D22" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21532, 59.0539, -706.695)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D22"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1343,6 +1366,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D23" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21532, 59.0539, -718.566)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D23"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1358,6 +1382,7 @@ text = "The End(Collect all bible verses from the yellow cubes to end)"
 
 [node name="Area3D10" type="Area3D" parent="."]
 transform = Transform3D(9.89131, 0, 0, 0, 1, 0, 0, 0, 10.6288, 0, 13.063, -350.455)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D10"]
 shape = SubResource("BoxShape3D_wn5o4")
@@ -1369,6 +1394,7 @@ mesh = SubResource("BoxMesh_h5fcd")
 
 [node name="Area3D24" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -112.099, 0)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D24"]
 shape = SubResource("WorldBoundaryShape3D_wn5o4")

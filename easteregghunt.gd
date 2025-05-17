@@ -7,7 +7,7 @@ class_name easteregghunt
 @export var easter_egg: int = 0
 var port: int = 15780
 const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
-const MAX_CONNECTIONS: int = 3
+const MAX_CONNECTIONS: int = 20
 
 static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 @export var player_scene : PackedScene
