@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://c8v51s7im220h"]
+[gd_scene load_steps=36 format=4 uid="uid://c8v51s7im220h"]
 
 [ext_resource type="Script" uid="uid://dpv4jqjrirwyx" path="res://easteregghunt.gd" id="1_o7ytj"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_73b3d"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dpw1ro3klubiu" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 3_Normal.png" id="14_stuii"]
 [ext_resource type="AudioStream" uid="uid://dhouwenmswiov" path="res://electric-shock-97989.mp3" id="15_stuii"]
 [ext_resource type="AudioStream" uid="uid://bx1ww06fett1h" path="res://Screen Recording 2025-03-23 144438.mp3" id="16_eawch"]
+[ext_resource type="Texture2D" uid="uid://b4imyx34sic7q" path="res://New Piskel (26).png" id="17_kuvxw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pxtyn"]
 
@@ -531,6 +532,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 stream = ExtResource("15_stuii")
 volume_db = 20.0
 autoplay = true
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D13"]
+transform = Transform3D(1.76765, 0, 0, 0, 0.0759039, 0.970624, 0, -1.59066, 0.0463167, 0, 3.76358, 0)
+layers = 2
+texture = ExtResource("17_kuvxw")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
