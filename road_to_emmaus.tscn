@@ -1,0 +1,2536 @@
+[gd_scene load_steps=128 format=3 uid="uid://cbt1p7wl17yaa"]
+
+[ext_resource type="Script" uid="uid://bsmyn08gtmafe" path="res://road_to_emmaus.gd" id="1_fg6nk"]
+[ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_7y0nb"]
+[ext_resource type="Texture2D" uid="uid://b5cuqrlu7vbav" path="res://Screenshot 2025-06-16 181502.png" id="3_ad37w"]
+[ext_resource type="Texture2D" uid="uid://bpwydx7uk482m" path="res://pixel-speech-bubble (1).png" id="7_xtvns"]
+[ext_resource type="Texture2D" uid="uid://chfjpljpye8vj" path="res://pixel-speech-bubble (3).png" id="8_4l5b4"]
+[ext_resource type="Texture2D" uid="uid://d0nl3w1j4l1fq" path="res://New Piskel (2).png" id="8_asbai"]
+[ext_resource type="Texture2D" uid="uid://bxwe44wfbm442" path="res://pixel-speech-bubble.png" id="8_b0g55"]
+[ext_resource type="Texture2D" uid="uid://rw2rgeh0kncw" path="res://pixel-speech-bubble (7).png" id="9_qwspd"]
+[ext_resource type="Texture2D" uid="uid://d0iwodfmg3ho8" path="res://pixel-speech-bubble (4).png" id="10_7hi6u"]
+[ext_resource type="Texture2D" uid="uid://da6v3sco7leey" path="res://pixel-speech-bubble (2).png" id="10_exg8x"]
+[ext_resource type="Texture2D" uid="uid://ck2mwnsp8fmwd" path="res://pixel-speech-bubble (8).png" id="10_lebne"]
+[ext_resource type="Texture2D" uid="uid://b6mfxop4fof6j" path="res://pixel-speech-bubble (6).png" id="11_06dwc"]
+[ext_resource type="Texture2D" uid="uid://c61a32j3o6hcp" path="res://pixel-speech-bubble (10).png" id="11_e3cch"]
+[ext_resource type="Texture2D" uid="uid://cxr0g2u2hcly2" path="res://pixel-speech-bubble (14).png" id="12_r5y25"]
+[ext_resource type="Texture2D" uid="uid://bhvh1rxnrjlax" path="res://New Piskel (8) (1).png" id="13_rp1hg"]
+[ext_resource type="Texture2D" uid="uid://b0ndhv6xry0gc" path="res://pixel-speech-bubble (5).png" id="14_oxfxo"]
+[ext_resource type="Texture2D" uid="uid://hi2tyoee0tut" path="res://pixel-speech-bubble (12).png" id="15_cgyjc"]
+[ext_resource type="Texture2D" uid="uid://b034l8x2vmkgl" path="res://New Piskel (9) (6).png" id="15_s4qhr"]
+[ext_resource type="Texture2D" uid="uid://f5hg3sfuxglx" path="res://New Piskel (9) (7).png" id="16_0hbsl"]
+[ext_resource type="Texture2D" uid="uid://dhq253xylm0qe" path="res://pixel-speech-bubble (15).png" id="17_jihhc"]
+[ext_resource type="Texture2D" uid="uid://b2jcqs8rb4dd8" path="res://New Piskel (9) (8).png" id="17_sspkr"]
+[ext_resource type="Texture2D" uid="uid://dgmypaeysqfaw" path="res://pixel-speech-bubble (9).png" id="19_l5oa4"]
+[ext_resource type="Texture2D" uid="uid://bc3vlg6fsrgoj" path="res://pixel-speech-bubble (11).png" id="20_cgyjc"]
+[ext_resource type="Texture2D" uid="uid://c1xqpeq2ebe6x" path="res://pixel-speech-bubble (13).png" id="22_5d0c8"]
+[ext_resource type="Texture2D" uid="uid://dnwhglrasl5h4" path="res://pixel-speech-bubble (17).png" id="25_w1ljw"]
+[ext_resource type="Texture2D" uid="uid://op7bmgayrfw0" path="res://pixel-speech-bubble (19).png" id="26_rp1hg"]
+[ext_resource type="Texture2D" uid="uid://bbbrk0y0mgroq" path="res://pixel-speech-bubble (16).png" id="26_w4n8t"]
+[ext_resource type="Texture2D" uid="uid://qhebfii8emaf" path="res://pixel-speech-bubble (18).png" id="28_ad37w"]
+[ext_resource type="Texture2D" uid="uid://cwpdtqnsjp36k" path="res://New Piskel (12) (12).png" id="33_1hwkh"]
+[ext_resource type="Texture2D" uid="uid://dbl8oxwl1cdil" path="res://New Piskel (9).png" id="35_d5x1m"]
+[ext_resource type="Texture2D" uid="uid://b8ei6dkiq0yp1" path="res://New Piskel (9) (9).png" id="47_l85di"]
+[ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="48_17gdj"]
+[ext_resource type="AudioStream" uid="uid://dgxl78u4d1uls" path="res://17427356878139nw8z7h-voicemaker.in-speech.mp3" id="49_rn4d8"]
+[ext_resource type="AudioStream" uid="uid://knllsxe1rrnc" path="res://1742735805457fqbx6815-voicemaker.in-speech.mp3" id="50_fcacx"]
+[ext_resource type="Texture2D" uid="uid://dn112v8yutx0" path="res://1976606-200.png" id="50_w4n8t"]
+[ext_resource type="AudioStream" uid="uid://cap5m84e7fmy8" path="res://17427358744982bmfxf7r-voicemaker.in-speech.mp3" id="51_6ihb1"]
+[ext_resource type="AudioStream" uid="uid://cgr2jqiy1k7ph" path="res://1742735926109uij4nh8-voicemaker.in-speech.mp3" id="52_fh6ad"]
+[ext_resource type="AudioStream" uid="uid://dfun35vk4dmoq" path="res://1742735970692jtc9ihoh-voicemaker.in-speech.mp3" id="53_mwmgw"]
+[ext_resource type="AudioStream" uid="uid://dlmue48or71ng" path="res://1742736017516lb08e2i4-voicemaker.in-speech.mp3" id="54_3h3xd"]
+[ext_resource type="AudioStream" uid="uid://cueqis3v4dn5x" path="res://17427361058546r0yysa-voicemaker.in-speech.mp3" id="55_o34lb"]
+[ext_resource type="AudioStream" uid="uid://ck1lkak8pl74m" path="res://1742736361073l0ccqa2q-voicemaker.in-speech.mp3" id="56_2xcay"]
+[ext_resource type="AudioStream" uid="uid://chlhn33cll22o" path="res://1742736419277pfm0im6l-voicemaker.in-speech.mp3" id="57_wuco5"]
+[ext_resource type="AudioStream" uid="uid://4d7n8h8afec0" path="res://1742736482732nbrpnkwh-voicemaker.in-speech.mp3" id="58_escsi"]
+[ext_resource type="AudioStream" uid="uid://ditpoi6ovdw2x" path="res://1742736536148n8bgfmoc-voicemaker.in-speech.mp3" id="59_mfe65"]
+[ext_resource type="AudioStream" uid="uid://csktbyu15txak" path="res://1742736591377agdcnt4xk-voicemaker.in-speech.mp3" id="60_u8v4m"]
+[ext_resource type="AudioStream" uid="uid://b414hd1qruqbj" path="res://1742736647141hh17iykr-voicemaker.in-speech.mp3" id="61_fu6lq"]
+[ext_resource type="AudioStream" uid="uid://rku727dtsmul" path="res://1742736720393lh2hqafe-voicemaker.in-speech.mp3" id="62_5cded"]
+[ext_resource type="AudioStream" uid="uid://dy51powjaot8f" path="res://1742736798184ysav72gs-voicemaker.in-speech.mp3" id="63_oja8s"]
+[ext_resource type="AudioStream" uid="uid://bgctcsba4110h" path="res://1742736856853j6qlo2vi-voicemaker.in-speech.mp3" id="64_opwls"]
+[ext_resource type="AudioStream" uid="uid://bkxbkq5nwk2ff" path="res://17427369036139190u7lr-voicemaker.in-speech.mp3" id="65_of057"]
+[ext_resource type="AudioStream" uid="uid://bcsu42kc1gmoq" path="res://1742737005996zwumfpfs-voicemaker.in-speech.mp3" id="66_r4im7"]
+[ext_resource type="AudioStream" uid="uid://0lkxwja7hcb4" path="res://1742737060189jtju47jh-voicemaker.in-speech.mp3" id="67_e5ph8"]
+[ext_resource type="AudioStream" uid="uid://bx1ww06fett1h" path="res://Screen Recording 2025-03-23 144438.mp3" id="68_g1up5"]
+[ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="69_7o2s4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o6dcp"]
+
+[sub_resource type="Sky" id="Sky_2wvic"]
+sky_material = SubResource("ProceduralSkyMaterial_o6dcp")
+
+[sub_resource type="Environment" id="Environment_tftiq"]
+background_mode = 2
+sky = SubResource("Sky_2wvic")
+
+[sub_resource type="Animation" id="Animation_mcopp"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_up7ya"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nu6hm"]
+_data = {
+&"RESET": SubResource("Animation_mcopp"),
+&"move": SubResource("Animation_up7ya")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bxf5"]
+albedo_texture = ExtResource("15_s4qhr")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qnk3q"]
+material = SubResource("StandardMaterial3D_6bxf5")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7pn7i"]
+
+[sub_resource type="Animation" id="Animation_7pk01"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g5omf"]
+resource_name = "move"
+length = 35.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(30, 35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(1.5506, -1.5708, 3.14159)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pfoi"]
+_data = {
+&"RESET": SubResource("Animation_7pk01"),
+&"move": SubResource("Animation_g5omf")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpbff"]
+albedo_color = Color(0.68, 0.238567, 0.034, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mxp0x"]
+material = SubResource("StandardMaterial3D_xpbff")
+
+[sub_resource type="PrismMesh" id="PrismMesh_7mysc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uk5xf"]
+albedo_texture = ExtResource("16_0hbsl")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cpd56"]
+material = SubResource("StandardMaterial3D_uk5xf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltbjh"]
+albedo_texture = ExtResource("17_sspkr")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4s2kc"]
+material = SubResource("StandardMaterial3D_ltbjh")
+
+[sub_resource type="Animation" id="Animation_n7lo3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(210.086, 0.344773, 15.0291)]
+}
+
+[sub_resource type="Animation" id="Animation_t25p0"]
+resource_name = "move"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(192.042, 0.344773, 15.0291), Vector3(210.086, 0.344773, 15.0291), Vector3(218.063, 0.96408, 13.5219)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1mh2o"]
+_data = {
+&"RESET": SubResource("Animation_n7lo3"),
+&"move": SubResource("Animation_t25p0")
+}
+
+[sub_resource type="Animation" id="Animation_oihhk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1405.39, 1.21155, -488.128)]
+}
+
+[sub_resource type="Animation" id="Animation_uick8"]
+resource_name = "rise_to_heaven"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1405.39, 1.21155, -488.128), Vector3(1405.39, 66.4705, -488.128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pfwlc"]
+_data = {
+&"RESET": SubResource("Animation_oihhk"),
+&"rise_to_heaven": SubResource("Animation_uick8")
+}
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_o6dcp"]
+
+[sub_resource type="Sky" id="Sky_nds6m"]
+sky_material = SubResource("PhysicalSkyMaterial_o6dcp")
+
+[sub_resource type="Environment" id="Environment_g26o6"]
+background_mode = 2
+sky = SubResource("Sky_nds6m")
+
+[sub_resource type="Animation" id="Animation_j0ewg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.547911, -3.14159, 5.33484e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(76.0401, 36.9948, -150.426)]
+}
+
+[sub_resource type="Animation" id="Animation_4yef1"]
+resource_name = "move"
+length = 23.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.06667, 2, 11, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.547911, -3.14159, 5.33484e-08), Vector3(0, -3.14159, 0), Vector3(0.0805818, 1.49283, -1.48972e-08), Vector3(0.0805818, -2.77464, -1.53629e-08), Vector3(0.0805818, -0.11102, -1.36896e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 3.1, 4.1, 5.06667, 6.06667, 7.1, 8.06667, 9.1, 10, 20, 22.1, 23),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(76.0401, 36.9948, -150.426), Vector3(76.0401, 32.9391, -146.832), Vector3(86.0401, 30.9948, -146.426), Vector3(91.0401, 25.9948, -146.426), Vector3(99.0401, 16.9948, -146.426), Vector3(106.04, 8.9948, -146.426), Vector3(113.04, 4.9948, -146.426), Vector3(120.04, 0.994801, -146.426), Vector3(125.04, 0.994801, -146.426), Vector3(41.516, 0.994801, -214.925), Vector3(41.516, 0.994801, -215.476), Vector3(42.5955, 0.994801, -215.845)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rbflv"]
+_data = {
+&"RESET": SubResource("Animation_j0ewg"),
+&"move": SubResource("Animation_4yef1")
+}
+
+[sub_resource type="Animation" id="Animation_uagbv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-204.302, 1.24237, -133.116)]
+}
+
+[sub_resource type="Animation" id="Animation_pfwlc"]
+resource_name = "move"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-204.302, 1.24237, -133.116), Vector3(-227.622, 2.43996, -130.007)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2c7j"]
+_data = {
+&"RESET": SubResource("Animation_uagbv"),
+&"move": SubResource("Animation_pfwlc")
+}
+
+[sub_resource type="Animation" id="Animation_37h6q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-203.333, 1.25863, -133.116)]
+}
+
+[sub_resource type="Animation" id="Animation_sawri"]
+resource_name = "move"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-203.333, 1.25863, -133.116), Vector3(-223.242, 1.25863, -126.016), Vector3(-203.492, 1.25863, -133.116)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5tgoa"]
+_data = {
+&"RESET": SubResource("Animation_37h6q"),
+&"move": SubResource("Animation_sawri")
+}
+
+[sub_resource type="Animation" id="Animation_6bxf5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-90.1008, 1.08641, -441.656)]
+}
+
+[sub_resource type="Animation" id="Animation_cjgvy"]
+resource_name = "move"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-90.1008, 1.08641, -441.656), Vector3(-59.3072, 1.08641, -441.656)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qnk3q"]
+_data = {
+&"RESET": SubResource("Animation_6bxf5"),
+&"move": SubResource("Animation_cjgvy")
+}
+
+[sub_resource type="Animation" id="Animation_uk5xf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-90.1008, 1.08641, -445.501)]
+}
+
+[sub_resource type="Animation" id="Animation_2pfoi"]
+resource_name = "move"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-90.1008, 1.08641, -445.501), Vector3(-59.4, 1.08641, -445.501)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cpd56"]
+_data = {
+&"RESET": SubResource("Animation_uk5xf"),
+&"move": SubResource("Animation_2pfoi")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r5v3i"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7pk01"]
+albedo_color = Color(0.66, 0.3498, 0.0396, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xrgmn"]
+material = SubResource("StandardMaterial3D_7pk01")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nad3d"]
+albedo_color = Color(0.51, 0.255, 0.1275, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cjgvy"]
+material = SubResource("StandardMaterial3D_nad3d")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6bxf5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnk3q"]
+albedo_texture = ExtResource("33_1hwkh")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g5omf"]
+material = SubResource("StandardMaterial3D_qnk3q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hi6u"]
+albedo_texture = ExtResource("13_rp1hg")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_oxfxo"]
+material = SubResource("StandardMaterial3D_7hi6u")
+
+[sub_resource type="Animation" id="Animation_06dwc"]
+resource_name = "move"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-21.4949, 1.56468, -20.5719), Vector3(0.483643, 1.56468, -6.03604)]
+}
+
+[sub_resource type="Animation" id="Animation_qwspd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-21.4949, 1.56468, -20.5719)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_re6rd"]
+_data = {
+&"RESET": SubResource("Animation_qwspd"),
+&"move": SubResource("Animation_06dwc")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oihhk"]
+albedo_texture = ExtResource("47_l85di")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pfwlc"]
+material = SubResource("StandardMaterial3D_oihhk")
+
+[sub_resource type="Animation" id="Animation_st20t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(991.279, 1.09743, -492.342)]
+}
+
+[sub_resource type="Animation" id="Animation_l6n5j"]
+resource_name = "run"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(991.279, 1.09743, -492.342), Vector3(984.675, 1.09743, -492.342)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hvsjf"]
+_data = {
+&"RESET": SubResource("Animation_st20t"),
+&"run": SubResource("Animation_l6n5j")
+}
+
+[sub_resource type="Animation" id="Animation_hbcig"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(991.279, 1.09743, -486.047)]
+}
+
+[sub_resource type="Animation" id="Animation_1mh2o"]
+resource_name = "run"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(991.279, 1.09743, -486.047), Vector3(984.402, 1.09743, -486.047)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t4ch1"]
+_data = {
+&"RESET": SubResource("Animation_hbcig"),
+&"run": SubResource("Animation_1mh2o")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sawri"]
+albedo_texture = ExtResource("35_d5x1m")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_37h6q"]
+material = SubResource("StandardMaterial3D_sawri")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjgvy"]
+albedo_color = Color(0.792371, 0.349701, 0.0594418, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6bxf5"]
+material = SubResource("StandardMaterial3D_cjgvy")
+
+[sub_resource type="Animation" id="Animation_i05at"]
+resource_name = "move"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.409195, 0, -160.959), Vector3(-2.18474, 0, -160.959)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.02269, 0, -160.959), Vector3(2.71925, 0, -160.959)]
+}
+
+[sub_resource type="Animation" id="Animation_rp1hg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.409195, 0, -160.959)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.02269, 0, -160.959)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ad37w"]
+_data = {
+&"RESET": SubResource("Animation_rp1hg"),
+&"move": SubResource("Animation_i05at")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vgmv8"]
+size = Vector3(1.58997, 6.22278, 9.27966)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w4n8t"]
+size = Vector3(1, 14.7339, 38.2999)
+
+[node name="lobby" type="Node3D"]
+script = ExtResource("1_fg6nk")
+player_scene = ExtResource("2_7y0nb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="host" type="Button" parent="CanvasLayer"]
+offset_right = 130.0
+offset_bottom = 68.0
+text = "host"
+metadata/_edit_use_anchors_ = true
+
+[node name="join" type="Button" parent="CanvasLayer"]
+offset_left = 137.0
+offset_top = -1.0
+offset_right = 267.0
+offset_bottom = 67.0
+text = "join"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+offset_top = 77.0
+offset_right = 268.0
+offset_bottom = 108.0
+placeholder_text = "Local IPV4 adress:127.0.0.1"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = -1.0
+offset_top = 115.0
+offset_right = 267.0
+offset_bottom = 146.0
+placeholder_text = "Default Port: 15780"
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="Button" parent="CanvasLayer"]
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next2" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next3" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next4" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next5" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next6" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next7" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next8" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next9" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next10" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next11" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next12" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next13" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next14" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next15" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next16" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Next"
+
+[node name="Next17" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1091.0
+offset_top = 615.0
+offset_right = 1144.0
+offset_bottom = 646.0
+text = "Done"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+visible = false
+offset_right = 1155.0
+offset_bottom = 647.0
+editable = false
+
+[node name="Label" type="Label" parent="CanvasLayer/TextEdit"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 144.0
+offset_right = 872.0
+offset_bottom = 281.0
+theme_override_font_sizes/font_size = 100
+text = "Is this Jesus?"
+
+[node name="Button" type="Button" parent="CanvasLayer/TextEdit"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 304.0
+offset_right = 759.0
+offset_bottom = 335.0
+text = "yes"
+
+[node name="Button2" type="Button" parent="CanvasLayer/TextEdit"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 349.0
+offset_right = 757.0
+offset_bottom = 380.0
+text = "no"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/TextEdit"]
+wait_time = 5.0
+
+[node name="Sprite3D" type="Sprite2D" parent="CanvasLayer/TextEdit"]
+position = Vector2(572, 493)
+texture = ExtResource("3_ad37w")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tftiq")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
+spawn_path = NodePath("..")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -835.567, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D2" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -833.005, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D2"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D3" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -830.089, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D3"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D4" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -844.431, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D4"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D5" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -841.868, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D5"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D6" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -838.953, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D6"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D7" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -827.692, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D7"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D8" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -825.129, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D8"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D9" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -822.214, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D9"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D10" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -819.348, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D10"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D11" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -816.785, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D11"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D12" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -813.87, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D12"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D13" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -870.158, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D13"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D14" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -867.595, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D14"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D15" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -864.68, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D15"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D16" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -879.021, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D16"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D17" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876.459, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D17"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D18" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -873.543, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D18"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D19" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -862.282, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D19"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D20" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -859.72, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D20"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D21" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -856.804, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D21"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D22" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -853.939, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D22"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D23" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -851.376, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D23"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D24" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -848.461, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D24"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D25" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.464, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D25"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D26" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -798.901, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D26"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D27" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -795.985, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D27"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D28" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -810.327, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D28"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D29" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -807.764, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D29"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D30" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -804.849, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D30"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D31" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -793.588, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D31"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D32" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -791.025, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D32"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D33" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -788.11, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D33"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D34" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -785.244, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D34"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D35" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -782.682, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D35"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D36" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -779.766, 1.14606, -24.1026)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D36"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D37" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -835.567, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D37"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D38" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -833.005, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D38"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D39" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -830.089, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D39"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D40" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -844.431, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D40"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D41" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -841.868, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D41"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D42" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -838.953, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D42"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D43" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -827.692, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D43"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D44" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -825.129, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D44"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D45" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -822.214, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D45"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D46" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -819.348, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D46"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D47" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -816.785, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D47"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D48" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -813.87, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D48"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D49" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -870.158, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D49"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D50" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -867.595, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D50"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D51" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -864.68, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D51"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D52" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -879.021, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D52"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D53" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -876.459, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D53"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D54" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -873.543, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D54"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D55" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -862.282, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D55"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D56" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -859.72, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D56"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D57" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -856.804, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D57"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D58" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -853.939, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D58"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D59" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -851.376, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D59"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D60" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -848.461, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D60"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D61" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -801.464, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D61"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D62" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -798.901, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D62"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D63" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -795.985, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D63"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D64" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -810.327, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D64"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D65" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -807.764, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D65"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D66" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -804.849, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D66"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D67" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -793.588, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D67"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D68" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -791.025, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D68"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D69" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -788.11, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D69"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D70" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -785.244, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D70"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D71" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -782.682, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D71"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D72" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -779.766, 1.14606, 8.86328)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D72"]
+libraries = {
+&"": SubResource("AnimationLibrary_nu6hm")
+}
+autoplay = "move"
+
+[node name="AnimatableBody3D73" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -760.721, 16.6723, -2.28712)
+collision_layer = 2
+
+[node name="AnimatableBody3D96" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -688.76, 1.4806, -5.41892)
+collision_layer = 2
+
+[node name="AnimatableBody3D114" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 0.783819, -136.796)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D114"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_qnk3q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D114"]
+shape = SubResource("CapsuleShape3D_7pn7i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D114"]
+libraries = {
+&"": SubResource("AnimationLibrary_2pfoi")
+}
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="AnimatableBody3D114"]
+transform = Transform3D(0.184912, 0, 8.88178e-15, 0, 2.01302, 0, 0, 0, 0.261851, 0.765823, 0.587779, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_mxp0x")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="AnimatableBody3D114"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.765823, 2.06789, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("PrismMesh_7mysc")
+
+[node name="AnimatableBody3D117" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 0.783819, -167.03)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D117"]
+libraries = {
+&"": SubResource("AnimationLibrary_2pfoi")
+}
+
+[node name="AnimatableBody3D115" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 1.08641, -146.101)
+visible = false
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D115"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_cpd56")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D115"]
+shape = SubResource("CapsuleShape3D_7pn7i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D115"]
+libraries = {
+&"": SubResource("AnimationLibrary_2pfoi")
+}
+
+[node name="AnimatableBody3D116" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 1.08641, -149.946)
+visible = false
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D116"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_4s2kc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D116"]
+shape = SubResource("CapsuleShape3D_7pn7i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D116"]
+libraries = {
+&"": SubResource("AnimationLibrary_2pfoi")
+}
+
+[node name="AnimatableBody3D105" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 210.086, 0.344773, 15.0291)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D105"]
+libraries = {
+&"": SubResource("AnimationLibrary_1mh2o")
+}
+
+[node name="AnimatableBody3D97" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -682.867, 1.4806, -5.41892)
+collision_layer = 2
+
+[node name="AnimatableBody3D98" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -685.089, 1.4806, -5.41892)
+collision_layer = 2
+
+[node name="AnimatableBody3D99" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -691.588, 1.4806, -5.41892)
+collision_layer = 2
+
+[node name="AnimatableBody3D100" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -693.585, 1.4806, -5.41892)
+collision_layer = 2
+
+[node name="AnimatableBody3D101" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.77, 0.430739, -0.0066185)
+collision_layer = 2
+
+[node name="AnimatableBody3D102" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.7, 0.430739, -2.22722)
+collision_layer = 2
+
+[node name="AnimatableBody3D103" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.494, 0.430739, -8.72302)
+collision_layer = 2
+
+[node name="AnimatableBody3D104" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.43, 0.430739, -10.7188)
+collision_layer = 2
+
+[node name="AnimatableBody3D74" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -756.822, 16.6723, -2.28712)
+collision_layer = 2
+
+[node name="AnimatableBody3D75" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -764.776, 16.6723, -2.28712)
+collision_layer = 2
+
+[node name="AnimatableBody3D76" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -768.308, 16.6723, -7.33462)
+collision_layer = 2
+
+[node name="AnimatableBody3D77" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -768.308, 16.6723, -10.5409)
+collision_layer = 2
+
+[node name="AnimatableBody3D78" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -764.702, 16.6723, -12.6104)
+collision_layer = 2
+
+[node name="AnimatableBody3D79" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -761.036, 16.6723, -12.6104)
+collision_layer = 2
+
+[node name="AnimatableBody3D80" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -756.53, 16.6723, -12.6104)
+collision_layer = 2
+
+[node name="AnimatableBody3D81" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -10.3506)
+collision_layer = 2
+
+[node name="AnimatableBody3D82" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -7.12162)
+collision_layer = 2
+
+[node name="AnimatableBody3D83" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -4.13022)
+collision_layer = 2
+
+[node name="AnimatableBody3D84" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -13.7862)
+collision_layer = 2
+
+[node name="AnimatableBody3D85" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -768.433, 16.6723, -13.3954)
+collision_layer = 2
+
+[node name="AnimatableBody3D127" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 133.194, 1.21155, -504.938)
+collision_layer = 2
+
+[node name="AnimatableBody3D128" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 125.241, 1.21155, -504.938)
+collision_layer = 2
+
+[node name="AnimatableBody3D129" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 121.708, 1.21155, -509.985)
+collision_layer = 2
+
+[node name="AnimatableBody3D130" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 121.708, 1.21155, -513.192)
+collision_layer = 2
+
+[node name="AnimatableBody3D131" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.314, 1.21155, -515.261)
+collision_layer = 2
+
+[node name="AnimatableBody3D132" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.98, 1.21155, -515.261)
+collision_layer = 2
+
+[node name="AnimatableBody3D133" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.486, 1.21155, -515.261)
+collision_layer = 2
+
+[node name="AnimatableBody3D134" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 137.008, 1.21155, -513.001)
+collision_layer = 2
+
+[node name="AnimatableBody3D135" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 137.008, 1.21155, -509.773)
+collision_layer = 2
+
+[node name="AnimatableBody3D136" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 137.008, 1.21155, -506.781)
+collision_layer = 2
+
+[node name="AnimatableBody3D139" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 572.013, 1.21155, -504.938)
+collision_layer = 2
+
+[node name="AnimatableBody3D140" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 564.063, 1.21155, -504.938)
+collision_layer = 2
+
+[node name="AnimatableBody3D150" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1405.39, 1.21155, -488.128)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D150"]
+libraries = {
+&"": SubResource("AnimationLibrary_pfwlc")
+}
+
+[node name="AnimatableBody3D141" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 560.533, 1.21155, -509.985)
+collision_layer = 2
+
+[node name="AnimatableBody3D142" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 560.533, 1.21155, -513.192)
+collision_layer = 2
+
+[node name="AnimatableBody3D143" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 564.133, 1.21155, -515.261)
+collision_layer = 2
+
+[node name="AnimatableBody3D144" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 567.803, 1.21155, -515.261)
+collision_layer = 2
+
+[node name="AnimatableBody3D145" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.313, 1.21155, -515.261)
+collision_layer = 2
+
+[node name="AnimatableBody3D146" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 575.833, 1.21155, -513.001)
+collision_layer = 2
+
+[node name="AnimatableBody3D147" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 575.833, 1.21155, -509.773)
+collision_layer = 2
+
+[node name="AnimatableBody3D148" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 575.833, 1.21155, -506.781)
+collision_layer = 2
+
+[node name="AnimatableBody3D95" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -793.144, 0.886573, -239.239)
+collision_layer = 2
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g26o6")
+
+[node name="AnimatableBody3D86" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, -1.26724e-06, -2.16407e-06, 4.5539e-08, 0.853614, -0.520905, 2.50739e-06, -0.520905, -0.853614, 76.0401, 36.9948, -150.426)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D86"]
+libraries = {
+&"": SubResource("AnimationLibrary_rbflv")
+}
+
+[node name="AnimatableBody3D87" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -831.293, 0.883191, -25.9056)
+collision_layer = 2
+
+[node name="AnimatableBody3D88" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -829.832, 0.883191, -25.9056)
+collision_layer = 2
+
+[node name="AnimatableBody3D89" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -828.523, 0.883191, -25.9056)
+collision_layer = 2
+
+[node name="AnimatableBody3D90" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -827.203, 0.883191, -25.9056)
+collision_layer = 2
+
+[node name="AnimatableBody3D91" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -795.477, 0.883191, -240.487)
+collision_layer = 2
+
+[node name="AnimatableBody3D92" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -794.016, 0.883191, -240.487)
+collision_layer = 2
+
+[node name="AnimatableBody3D93" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -792.708, 0.883191, -240.487)
+collision_layer = 2
+
+[node name="AnimatableBody3D94" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -791.387, 0.883191, -240.487)
+collision_layer = 2
+
+[node name="AnimatableBody3D106" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -616.122, 0.890708, -8.79392)
+
+[node name="AnimatableBody3D112" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -204.302, 1.24237, -133.116)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D112"]
+libraries = {
+&"": SubResource("AnimationLibrary_p2c7j")
+}
+
+[node name="AnimatableBody3D113" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -203.333, 1.25863, -133.116)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D113"]
+libraries = {
+&"": SubResource("AnimationLibrary_5tgoa")
+}
+
+[node name="AnimatableBody3D118" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -90.1008, 1.08641, -441.656)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D118"]
+libraries = {
+&"": SubResource("AnimationLibrary_2pfoi")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="AnimatableBody3D118"]
+libraries = {
+&"": SubResource("AnimationLibrary_qnk3q")
+}
+
+[node name="AnimatableBody3D119" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -90.1008, 1.08641, -445.501)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D119"]
+libraries = {
+&"": SubResource("AnimationLibrary_2pfoi")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="AnimatableBody3D119"]
+libraries = {
+&"": SubResource("AnimationLibrary_cpd56")
+}
+
+[node name="AnimatableBody3D120" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -875.611, 1.08641, -465.188)
+collision_layer = 2
+
+[node name="StaticBody3D55" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 90.5786, 0, 7.10468)
+collision_layer = 2
+
+[node name="StaticBody3D56" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 8.50928, 0, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D56"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D56"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D56"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D61" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 8.50928, 0, -229.28)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D61"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D61"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D61"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D65" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 48.2778, 27.4295, -229.28)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D65"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D65"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D65"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D67" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 48.2778, -1.22905, -229.28)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D67"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D67"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D67"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D68" type="StaticBody3D" parent="."]
+transform = Transform3D(0.69189, 0, 0, 0, 1, 0, 0, 0, -0.894159, 46.8243, -0.609586, -222.558)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D68"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D68"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D68"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D66" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 48.2778, 27.4295, -229.28)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D66"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D66"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D66"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D62" type="StaticBody3D" parent="."]
+transform = Transform3D(-1.82714e-07, -1, 0, 4.18, -4.37114e-08, 0, 0, 0, 4.3, 69.053, 9.00089, -229.28)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D62"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D62"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D62"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D63" type="StaticBody3D" parent="."]
+transform = Transform3D(7.98667e-15, 4.37114e-08, 4.3, 4.18, -4.37114e-08, 0, 1.82714e-07, 1, -1.87959e-07, 49.646, 9.00089, -249.61)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D63"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D63"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D63"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D64" type="StaticBody3D" parent="."]
+transform = Transform3D(7.98667e-15, 4.37114e-08, 4.3, 4.18, -4.37114e-08, 0, 1.82714e-07, 1, -1.87959e-07, 49.646, 9.00089, -208.284)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D64"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D64"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D64"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+visible = false
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D57" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, -25.0131, 0, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D57"]
+shape = SubResource("BoxShape3D_r5v3i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D57"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_xrgmn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D57"]
+transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_cjgvy")
+
+[node name="StaticBody3D58" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 213.623, 0, 7.10468)
+collision_layer = 2
+
+[node name="StaticBody3D59" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 172.233, 0, 7.10468)
+collision_layer = 2
+
+[node name="StaticBody3D60" type="StaticBody3D" parent="."]
+transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 131.172, 0, 7.10468)
+collision_layer = 2
+
+[node name="AnimatableBody3D121" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.196654, 1.56468, -0.936188)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D121"]
+shape = SubResource("CapsuleShape3D_6bxf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D121"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_g5omf")
+
+[node name="speech" type="Sprite3D" parent="AnimatableBody3D121"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.62943, 2.16102, -7.45058e-08)
+visible = false
+texture = ExtResource("7_xtvns")
+
+[node name="speech2" type="Sprite3D" parent="AnimatableBody3D121"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.62943, 2.16102, -7.45058e-08)
+visible = false
+texture = ExtResource("8_4l5b4")
+
+[node name="speech3" type="Sprite3D" parent="AnimatableBody3D121"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.28635, 2.16102, -5.96046e-08)
+visible = false
+texture = ExtResource("9_qwspd")
+
+[node name="speech4" type="Sprite3D" parent="AnimatableBody3D121"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.28635, 2.16102, -5.96046e-08)
+visible = false
+texture = ExtResource("10_lebne")
+
+[node name="speech5" type="Sprite3D" parent="AnimatableBody3D121"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.28635, 2.16102, -5.96046e-08)
+visible = false
+texture = ExtResource("11_e3cch")
+
+[node name="speech6" type="Sprite3D" parent="AnimatableBody3D121"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.708078, 2.16102, -2.98023e-08)
+visible = false
+texture = ExtResource("12_r5y25")
+
+[node name="AnimatableBody3D123" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.4949, 1.56468, -20.5719)
+visible = false
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D123"]
+shape = SubResource("CapsuleShape3D_6bxf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D123"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_oxfxo")
+
+[node name="speech" type="Sprite3D" parent="AnimatableBody3D123"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.40725, 1.91085, 0)
+visible = false
+texture = ExtResource("10_7hi6u")
+
+[node name="speech2" type="Sprite3D" parent="AnimatableBody3D123"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.415024, 1.70369, 0)
+visible = false
+texture = ExtResource("11_06dwc")
+
+[node name="speech3" type="Sprite3D" parent="AnimatableBody3D123"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.4761, 1.70369, 0)
+visible = false
+texture = ExtResource("15_cgyjc")
+
+[node name="speech4" type="Sprite3D" parent="AnimatableBody3D123"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.42099, 1.70369, 0)
+visible = false
+texture = ExtResource("17_jihhc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D123"]
+libraries = {
+&"": SubResource("AnimationLibrary_re6rd")
+}
+
+[node name="AnimatableBody3D122" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.120648, 1.56468, 2.37603)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D122"]
+shape = SubResource("CapsuleShape3D_6bxf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D122"]
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_pfwlc")
+
+[node name="speech" type="Sprite3D" parent="AnimatableBody3D122"]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.32909, 2.26569, -5.96046e-08)
+texture = ExtResource("8_b0g55")
+
+[node name="speech2" type="Sprite3D" parent="AnimatableBody3D122"]
+transform = Transform3D(-0.25, 0, -3.7749e-08, 0, 0.25, 0, 3.7749e-08, 0, -0.25, -0.917325, 2.26569, -3.72529e-08)
+visible = false
+texture = ExtResource("10_exg8x")
+
+[node name="speech3" type="Sprite3D" parent="AnimatableBody3D122"]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.59555, 2.26569, -6.70552e-08)
+visible = false
+texture = ExtResource("14_oxfxo")
+
+[node name="speech4" type="Sprite3D" parent="AnimatableBody3D122"]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.59555, 2.26569, -6.70552e-08)
+visible = false
+texture = ExtResource("19_l5oa4")
+
+[node name="speech5" type="Sprite3D" parent="AnimatableBody3D122"]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.59555, 2.26569, -6.70552e-08)
+visible = false
+texture = ExtResource("20_cgyjc")
+
+[node name="speech6" type="Sprite3D" parent="AnimatableBody3D122"]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -0.778543, 2.26569, -3.72529e-08)
+visible = false
+texture = ExtResource("22_5d0c8")
+
+[node name="AnimatableBody3D124" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.619, -0.184837, -225.782)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D124"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
+shape = SubResource("CapsuleShape3D_6bxf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D124"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_g5omf")
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatableBody3D124"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.853, 3.12378, 1.62811)
+texture = ExtResource("25_w1ljw")
+
+[node name="Sprite3D2" type="Sprite3D" parent="AnimatableBody3D124"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.853, 3.12378, 1.81677)
+visible = false
+texture = ExtResource("26_rp1hg")
+
+[node name="AnimatableBody3D125" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.619, -0.184837, -219.487)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D125"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
+shape = SubResource("CapsuleShape3D_6bxf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D125"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_pfwlc")
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatableBody3D125"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.252, 1.5452, 0.310486)
+texture = ExtResource("26_w4n8t")
+
+[node name="Sprite3D2" type="Sprite3D" parent="AnimatableBody3D125"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.252, 1.5452, 1.12022)
+visible = false
+texture = ExtResource("28_ad37w")
+
+[node name="AnimatableBody3D137" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 991.279, 1.09743, -492.342)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D137"]
+libraries = {
+&"": SubResource("AnimationLibrary_hvsjf")
+}
+
+[node name="AnimatableBody3D149" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-0.884255, 0, -0.467004, 0, 1, 0, 0.467004, 0, -0.884255, 561.553, 1.09743, -507.55)
+collision_layer = 2
+
+[node name="AnimatableBody3D138" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 991.279, 1.09743, -486.047)
+collision_layer = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D138"]
+libraries = {
+&"": SubResource("AnimationLibrary_t4ch1")
+}
+
+[node name="AnimatableBody3D126" type="AnimatableBody3D" parent="." groups=["jesus_emmaus"]]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -111.719, -0.184837, -222.675)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D126"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-06, 0, -162.489)
+shape = SubResource("CapsuleShape3D_6bxf5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D126"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-06, 0, -162.489)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("CapsuleMesh_37h6q")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="AnimatableBody3D126"]
+transform = Transform3D(1.58275, 1.71347e-09, -2.25544e-10, -7.03724e-09, 0.385377, 0, 3.56977e-10, 3.86459e-19, 1, -0.409195, 0, -160.959)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_6bxf5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="AnimatableBody3D126"]
+transform = Transform3D(1.58275, 1.71347e-09, -2.25544e-10, -7.03724e-09, 0.385377, 0, 3.56977e-10, 3.86459e-19, 1, 1.02269, 0, -160.959)
+lod_bias = 100.0
+visibility_range_end = 100.0
+mesh = SubResource("BoxMesh_6bxf5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D126"]
+libraries = {
+&"": SubResource("AnimationLibrary_ad37w")
+}
+
+[node name="Sprite3D38" type="Sprite2D" parent="."]
+position = Vector2(575.25, 322.25)
+scale = Vector2(10.013, 10.0231)
+texture = ExtResource("48_17gdj")
+
+[node name="Narrorator" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("49_rn4d8")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("50_fcacx")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("51_6ihb1")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("52_fh6ad")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("53_mwmgw")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("54_3h3xd")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("55_o34lb")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("56_2xcay")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("57_wuco5")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("58_escsi")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("59_mfe65")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("60_u8v4m")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("61_fu6lq")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("62_5cded")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("63_oja8s")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer16" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("64_opwls")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer17" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("65_of057")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer18" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("66_r4im7")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer19" type="AudioStreamPlayer" parent="Narrorator"]
+stream = ExtResource("67_e5ph8")
+volume_db = 5.0
+
+[node name="Music" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("68_g1up5")
+volume_db = -10.0
+autoplay = true
+
+[node name="FPS" parent="." instance=ExtResource("69_7o2s4")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.015303, -0.855462, -0.51764, -0.327673, -0.493403, 0.80572, -0.944667, 0.157287, -0.287862, 0, 42.9338, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.928759, 0, 0)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.499914, 2.61139, 1.35614)
+shape = SubResource("BoxShape3D_vgmv8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51955, 2.61139, 1.35614)
+shape = SubResource("BoxShape3D_vgmv8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80842, 2.61139, -6.8899)
+shape = SubResource("BoxShape3D_vgmv8")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80842, 2.61139, 8.48258)
+shape = SubResource("BoxShape3D_vgmv8")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80842, 7.55433, 0.543833)
+shape = SubResource("BoxShape3D_vgmv8")
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.91658, 1.53066, 0)
+visible = false
+texture = ExtResource("50_w4n8t")
+
+[node name="Sprite3D2" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.78895, 1.53066, 0)
+visible = false
+texture = ExtResource("50_w4n8t")
+
+[node name="Sprite3D3" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.0282, 1.53066, 0)
+visible = false
+texture = ExtResource("50_w4n8t")
+
+[node name="Sprite3D4" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.0282, 1.53066, 0)
+visible = false
+texture = ExtResource("50_w4n8t")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8401, 6.24361, -1.76784)
+shape = SubResource("BoxShape3D_w4n8t")
+
+[node name="Area3D2" type="Area3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56994, 1.13698, -225.813)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8401, 6.24361, -1.76784)
+shape = SubResource("BoxShape3D_w4n8t")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-06, 0, 100, 0, 100, 0, -100, 0, -4.37114e-06, 29.3704, 12.8548, -2.5252)
+visible = false
+texture = ExtResource("8_asbai")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-5.55831e-06, 0, 100, 0, 100, 0, -127.159, 0, -4.37114e-06, 29.3704, 12.8548, -228.984)
+texture = ExtResource("8_asbai")
+
+[connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next2" to="." method="_on_next_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next3" to="." method="_on_next_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next4" to="." method="_on_next_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next5" to="." method="_on_next_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next6" to="." method="_on_next_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next7" to="." method="_on_next_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next8" to="." method="_on_next_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next9" to="." method="_on_next_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next10" to="." method="_on_next_10_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next11" to="." method="_on_next_11_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next12" to="." method="_on_next_12_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next13" to="." method="_on_next_13_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next14" to="." method="_on_next_14_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next15" to="." method="_on_next_15_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next16" to="." method="_on_next_16_pressed"]
+[connection signal="pressed" from="CanvasLayer/Next17" to="." method="_on_next_17_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="CanvasLayer/TextEdit/Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="AnimatableBody3D114/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatableBody3D117/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatableBody3D112/AnimationPlayer" to="." method="_on_animation2_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatableBody3D113/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatableBody3D126/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="StaticBody3D/Area3D2" to="." method="_on_area_3d_2_body_entered"]

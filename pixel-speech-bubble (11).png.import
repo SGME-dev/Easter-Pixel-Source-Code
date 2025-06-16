@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biru1pcv8jtv3"
-path.s3tc="res://.godot/imported/New Piskel (8).png-07666d3d89a6fc2237d07a08817f5aa9.s3tc.ctex"
-path.etc2="res://.godot/imported/New Piskel (8).png-07666d3d89a6fc2237d07a08817f5aa9.etc2.ctex"
+uid="uid://bc3vlg6fsrgoj"
+path.s3tc="res://.godot/imported/pixel-speech-bubble (11).png-53f75d4f5dd5a1feb2096952adb9a5a1.s3tc.ctex"
+path.etc2="res://.godot/imported/pixel-speech-bubble (11).png-53f75d4f5dd5a1feb2096952adb9a5a1.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://New Piskel (8).png"
-dest_files=["res://.godot/imported/New Piskel (8).png-07666d3d89a6fc2237d07a08817f5aa9.s3tc.ctex", "res://.godot/imported/New Piskel (8).png-07666d3d89a6fc2237d07a08817f5aa9.etc2.ctex"]
+source_file="res://pixel-speech-bubble (11).png"
+dest_files=["res://.godot/imported/pixel-speech-bubble (11).png-53f75d4f5dd5a1feb2096952adb9a5a1.s3tc.ctex", "res://.godot/imported/pixel-speech-bubble (11).png-53f75d4f5dd5a1feb2096952adb9a5a1.etc2.ctex"]
 
 [params]
 
