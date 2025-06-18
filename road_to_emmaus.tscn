@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://cbt1p7wl17yaa"]
+[gd_scene load_steps=127 format=3 uid="uid://cbt1p7wl17yaa"]
 
 [ext_resource type="Script" uid="uid://bsmyn08gtmafe" path="res://road_to_emmaus.gd" id="1_fg6nk"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_7y0nb"]
@@ -32,7 +32,6 @@
 [ext_resource type="Texture2D" uid="uid://dbl8oxwl1cdil" path="res://New Piskel (9).png" id="35_d5x1m"]
 [ext_resource type="Texture2D" uid="uid://b8ei6dkiq0yp1" path="res://New Piskel (9) (9).png" id="47_l85di"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="48_17gdj"]
-[ext_resource type="AudioStream" uid="uid://dgxl78u4d1uls" path="res://17427356878139nw8z7h-voicemaker.in-speech.mp3" id="49_rn4d8"]
 [ext_resource type="AudioStream" uid="uid://knllsxe1rrnc" path="res://1742735805457fqbx6815-voicemaker.in-speech.mp3" id="50_fcacx"]
 [ext_resource type="Texture2D" uid="uid://dn112v8yutx0" path="res://1976606-200.png" id="50_w4n8t"]
 [ext_resource type="AudioStream" uid="uid://cap5m84e7fmy8" path="res://17427358744982bmfxf7r-voicemaker.in-speech.mp3" id="51_6ihb1"]
@@ -488,6 +487,21 @@ albedo_texture = ExtResource("13_rp1hg")
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oxfxo"]
 material = SubResource("StandardMaterial3D_7hi6u")
 
+[sub_resource type="Animation" id="Animation_qwspd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-21.4949, 1.56468, -20.5719)]
+}
+
 [sub_resource type="Animation" id="Animation_06dwc"]
 resource_name = "move"
 length = 5.0
@@ -502,21 +516,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(-21.4949, 1.56468, -20.5719), Vector3(0.483643, 1.56468, -6.03604)]
-}
-
-[sub_resource type="Animation" id="Animation_qwspd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-21.4949, 1.56468, -20.5719)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_re6rd"]
@@ -617,6 +616,33 @@ albedo_color = Color(0.792371, 0.349701, 0.0594418, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_6bxf5"]
 material = SubResource("StandardMaterial3D_cjgvy")
 
+[sub_resource type="Animation" id="Animation_rp1hg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.409195, 0, -160.959)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.02269, 0, -160.959)]
+}
+
 [sub_resource type="Animation" id="Animation_i05at"]
 resource_name = "move"
 length = 3.0
@@ -643,33 +669,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(1.02269, 0, -160.959), Vector3(2.71925, 0, -160.959)]
-}
-
-[sub_resource type="Animation" id="Animation_rp1hg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.409195, 0, -160.959)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MeshInstance3D3:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1.02269, 0, -160.959)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ad37w"]
@@ -2348,10 +2347,6 @@ scale = Vector2(10.013, 10.0231)
 texture = ExtResource("48_17gdj")
 
 [node name="Narrorator" type="Node" parent="."]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Narrorator"]
-stream = ExtResource("49_rn4d8")
-volume_db = 5.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Narrorator"]
 stream = ExtResource("50_fcacx")

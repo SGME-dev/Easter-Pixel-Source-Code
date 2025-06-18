@@ -41,7 +41,7 @@ func _on_host_pressed() -> void:
 		
 		
 	
-	$Narrorator/AudioStreamPlayer.play()
+	
 	
 	$CanvasLayer/host.hide()
 	$CanvasLayer/join.hide()

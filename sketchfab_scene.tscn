@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://botbve64pa8ht"]
+
+[ext_resource type="PackedScene" uid="uid://curwnbtx8j4wc" path="res://large_tree_voxel.glb" id="1_r57si"]
+[ext_resource type="ArrayMesh" uid="uid://bsrege2kl8wnx" path="res://new_array_mesh.tres" id="2_dhub7"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_r57si")]
+
+[node name="Object_2" parent="Sketchfab_model/Geode" index="0"]
+mesh = ExtResource("2_dhub7")
