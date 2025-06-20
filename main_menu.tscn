@@ -92,6 +92,10 @@ text = "Easter Bible Parkore Quiz"
 layout_mode = 2
 text = "Easter Egg Bible verse with poem hunt"
 
+[node name="roadtoemmaus" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+layout_mode = 2
+text = "Road to emmaus"
+
 [node name="back" type="Button" parent="CanvasLayer/TextEdit"]
 layout_mode = 0
 offset_left = 6.0
@@ -166,6 +170,7 @@ grow_vertical = 1
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Parkore" to="." method="_on_parkore_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Quiz" to="." method="_on_quiz_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/easteregghunt" to="." method="_on_easteregghunt_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/roadtoemmaus" to="." method="_on_roadtoemmaus_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button" to="." method="_on_button1_pressed"]
 [connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

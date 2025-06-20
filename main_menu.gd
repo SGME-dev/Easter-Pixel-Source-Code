@@ -93,3 +93,7 @@ func _on_credits_pressed() -> void:
 
 func _on_easteregghunt_pressed() -> void:
 	get_tree().change_scene_to_file("res://easteregghunt.tscn")
+
+
+func _on_roadtoemmaus_pressed() -> void:
+	get_tree().change_scene_to_file("res://road_to_emmaus.tscn")
