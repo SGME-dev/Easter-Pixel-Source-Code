@@ -2,6 +2,9 @@ extends Node3D
 
 class_name lobby_bible_verses
 
+@onready var lan_ip_label: Label = $CanvasLayer/Label
+@onready var public_ip_label: Label = $CanvasLayer/Label2
+@onready var http_request: HTTPRequest = $CanvasLayer/HTTPRequest
 @onready var label: TextEdit = $Label
 var port: int = 15780
 const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
@@ -26,11 +29,12 @@ func _ready() -> void:
 	if OS.has_feature("dedicated_server"):
 		print("Started the server...")
 		_on_host_pressed()
-		$CanvasLayer/host.hide()
-		$CanvasLayer/join.hide()
-		$CanvasLayer/LineEdit.hide()
+		%host.hide()
+		%join.hide()
+		%LineEdit.hide()
 		%LineEdit2.hide()
 		$Sprite3D38.hide()
+		$CanvasLayer/Panel.hide()
 
 
 func _on_host_pressed() -> void:
@@ -41,26 +45,75 @@ func _on_host_pressed() -> void:
 	add_player()
 	multiplayer.get_peers()
 	
+	# Connect the request_completed signal to our handler function.
+	# This signal is emitted when the HTTP request finishes, whether successful or not.
+	http_request.request_completed.connect(_on_http_request_completed)
+	
+	print("--- Attempting to get Public WAN IPv4 Address ---")
+	public_ip_label.text = "Fetching Public IP..." # Update label to show fetching status
+	
+	# Make an HTTP GET request to a service that returns the public IP.
+	# icanhazip.com is a simple service that returns the IP address as plain text.
+	var error = http_request.request("https://icanhazip.com")
+	
+	if error != OK:
+		# If there was an error initiating the request (e.g., invalid URL, no network interface).
+		print("Failed to start HTTP request: ", error)
+		public_ip_label.text = "Error: Failed to start request."
 	
 	
-	$CanvasLayer/host.hide()
-	$CanvasLayer/join.hide()
-	$CanvasLayer/LineEdit.hide()
+	
+	
+	# --- LAN IP Address Retrieval ---
+	print("--- IPv4 Addresses ---")
+	var local_addresses = IP.get_local_addresses()
+	
+	var found_desired_ipv4 = false
+	var current_lan_ip = "Not Found" 
+	
+	for address in local_addresses:
+		if "." in address and ":" not in address:
+			if address.begins_with("192.168.") or \
+			   address.begins_with("10.") or \
+			   (address.begins_with("172.") and int(address.split(".")[1]) >= 16 and int(address.split(".")[1]) <= 31):
+				
+				print("Lan IPV4 address: " + address)
+				lan_ip_label.text = str("(Use For LAN)Private IPv4 Address: ", address)
+				current_lan_ip = address
+				found_desired_ipv4 = true
+				break
+	
+	if not found_desired_ipv4:
+		print("No suitable local IPv4 address found (e.g., not in common private ranges).")
+		lan_ip_label.text = "Lan IPV4 address: Not Found"
+	if local_addresses.is_empty():
+		print("No local addresses found at all.")
+		lan_ip_label.text = "Lan IPV4 address: No Addresses"
+	
+	
+	
+	
+	
+	
+	%host.hide()
+	%join.hide()
+	%LineEdit.hide()
 	%LineEdit2.hide()
 	$Sprite3D38.hide()
+	$CanvasLayer/Panel.hide()
 
 
-func _on_join_pressed(address: String = str($CanvasLayer/LineEdit.text)) -> void:
+func _on_join_pressed(address: String = str(%LineEdit.text)) -> void:
 	if address.is_empty() or address == "localhost":
 		address = DEFAULT_SERVER_IP
 	peer.create_client(address, int(%LineEdit2.text))
 	multiplayer.multiplayer_peer = peer
-	$CanvasLayer/host.hide()
-	$CanvasLayer/join.hide()
-	$CanvasLayer/LineEdit.hide()
+	%host.hide()
+	%join.hide()
+	%LineEdit.hide()
 	%LineEdit2.hide()
 	$Sprite3D38.hide()
-	
+	$CanvasLayer/Panel.hide()
 
 func add_player(id: int = 1) -> void:
 	var player: CharacterBody3D = player_scene.instantiate()
@@ -269,3 +322,27 @@ func _on_area_3d_9_body_entered(body: player) -> void:
 	$Area3D9.hide()
 	body.Area3d = $Area3D9
 	bible_verses += 1
+
+func _on_http_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray):
+	if result == HTTPRequest.RESULT_SUCCESS and response_code == 200:
+		# If the request was successful and the HTTP status code is 200 (OK).
+		
+		# Convert the raw byte array body to a UTF-8 string.
+		# .strip_edges() removes any leading/trailing whitespace (like newlines).
+		var public_ip = body.get_string_from_utf8().strip_edges()
+		
+		print("Public WAN IPv4 Address: " + public_ip)
+		public_ip_label.text = "(Use after port forwarding)Public WAN IPv4 Address: " + public_ip # Update the UI label
+	else:
+		# If the request failed or returned a non-200 status code.
+		print("Failed to get public IP.")
+		
+		print("HTTP Response Code: ", response_code) # HTTP status code
+		public_ip_label.text = "Error: Could not get public IP."
+		
+		# You might want to add more specific error handling here based on result and response_code.
+		# For example:
+		# if result == HTTPRequest.RESULT_CANT_RESOLVE:
+		#     print("Error: Could not resolve host (no internet connection or DNS issue).")
+		# if response_code == 404:
+		#     print("Error: Service URL not found.")

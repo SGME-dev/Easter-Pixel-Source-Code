@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://o4g5p50mwj7a"]
+
+[ext_resource type="Script" uid="uid://dy3wvp67r8iax" path="res://server_info_item.gd" id="1_jarc5"]
+
+[node name="server_info_item" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jarc5")
+
+[node name="IpLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="JoinButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 202.0
+offset_bottom = 24.0
+text = "Join"
+
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]

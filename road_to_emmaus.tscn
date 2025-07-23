@@ -689,36 +689,6 @@ player_scene = ExtResource("2_7y0nb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="host" type="Button" parent="CanvasLayer"]
-offset_right = 130.0
-offset_bottom = 68.0
-text = "host"
-metadata/_edit_use_anchors_ = true
-
-[node name="join" type="Button" parent="CanvasLayer"]
-offset_left = 137.0
-offset_top = -1.0
-offset_right = 267.0
-offset_bottom = 67.0
-text = "join"
-metadata/_edit_use_anchors_ = true
-
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
-offset_top = 77.0
-offset_right = 268.0
-offset_bottom = 108.0
-placeholder_text = "Local IPV4 adress:127.0.0.1"
-metadata/_edit_use_anchors_ = true
-
-[node name="LineEdit2" type="LineEdit" parent="CanvasLayer"]
-unique_name_in_owner = true
-offset_left = -1.0
-offset_top = 115.0
-offset_right = 267.0
-offset_bottom = 146.0
-placeholder_text = "Default Port: 15780"
-metadata/_edit_use_anchors_ = true
-
 [node name="Next" type="Button" parent="CanvasLayer"]
 offset_left = 1091.0
 offset_top = 615.0
@@ -891,6 +861,65 @@ wait_time = 5.0
 [node name="Sprite3D" type="Sprite2D" parent="CanvasLayer/TextEdit"]
 position = Vector2(572, 493)
 texture = ExtResource("3_ad37w")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 435.0
+offset_right = 716.0
+offset_bottom = 158.0
+
+[node name="host" type="Button" parent="CanvasLayer/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 138.0
+offset_bottom = 73.0
+text = "host"
+metadata/_edit_use_anchors_ = true
+
+[node name="join" type="Button" parent="CanvasLayer/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 4.0
+offset_right = 275.0
+offset_bottom = 72.0
+text = "join"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 82.0
+offset_right = 276.0
+offset_bottom = 113.0
+placeholder_text = "Local IPV4 adress:127.0.0.1"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 120.0
+offset_right = 275.0
+offset_bottom = 151.0
+placeholder_text = "Default Port: 15780"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 474.0
+offset_top = 414.0
+offset_right = 514.0
+offset_bottom = 437.0
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 474.0
+offset_top = 463.0
+offset_right = 514.0
+offset_bottom = 486.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tftiq")
@@ -2500,8 +2529,6 @@ texture = ExtResource("8_asbai")
 transform = Transform3D(-5.55831e-06, 0, 100, 0, 100, 0, -127.159, 0, -4.37114e-06, 29.3704, 12.8548, -228.984)
 texture = ExtResource("8_asbai")
 
-[connection signal="pressed" from="CanvasLayer/host" to="." method="_on_host_pressed"]
-[connection signal="pressed" from="CanvasLayer/join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CanvasLayer/Next2" to="." method="_on_next_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Next3" to="." method="_on_next_3_pressed"]
@@ -2522,6 +2549,8 @@ texture = ExtResource("8_asbai")
 [connection signal="pressed" from="CanvasLayer/TextEdit/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="CanvasLayer/TextEdit/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
 [connection signal="animation_finished" from="AnimatableBody3D114/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D117/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D112/AnimationPlayer" to="." method="_on_animation2_player_animation_finished"]
