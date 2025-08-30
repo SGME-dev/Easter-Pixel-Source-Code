@@ -30,6 +30,10 @@ window/size/mode=4
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
 
+[editor]
+
+export/convert_text_resources_to_binary=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")

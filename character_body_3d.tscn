@@ -34,6 +34,9 @@ properties/5/replication_mode = 1
 properties/6/path = NodePath(".:visible")
 properties/6/spawn = true
 properties/6/replication_mode = 1
+properties/7/path = NodePath("Label3D2:text")
+properties/7/spawn = true
+properties/7/replication_mode = 1
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 collision_mask = 14

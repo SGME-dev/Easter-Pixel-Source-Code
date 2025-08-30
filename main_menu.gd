@@ -97,3 +97,7 @@ func _on_easteregghunt_pressed() -> void:
 
 func _on_roadtoemmaus_pressed() -> void:
 	get_tree().change_scene_to_file("res://road_to_emmaus.tscn")
+
+
+func _on_resurection_gardens_pressed() -> void:
+	get_tree().change_scene_to_file("res://meaningofeaster.tscn")

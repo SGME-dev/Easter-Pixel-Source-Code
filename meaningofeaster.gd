@@ -66,7 +66,7 @@ func _on_host_pressed() -> void:
 	
 	# Make an HTTP GET request to a service that returns the public IP.
 	# icanhazip.com is a simple service that returns the IP address as plain text.
-	var error = http_request.request("https://icanhazip.com")
+	var error = http_request.request("https://ipv4.icanhazip.com")
 	
 	if error != OK:
 		# If there was an error initiating the request (e.g., invalid URL, no network interface).
