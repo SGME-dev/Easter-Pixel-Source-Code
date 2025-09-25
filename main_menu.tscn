@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwd41ws6yd1el"]
+[gd_scene load_steps=5 format=3 uid="uid://dwd41ws6yd1el"]
 
 [ext_resource type="Script" uid="uid://bd6gq5hkci1mr" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_7vrkn"]
 [ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="3_fu7sn"]
+[ext_resource type="Script" uid="uid://d62t8jvjhf07" path="res://christmas_pixel.gd" id="3_jix8l"]
 
 [node name="main menu" type="Control"]
 layout_mode = 3
@@ -61,6 +62,11 @@ text = "Website"
 [node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Credits
+"
+
+[node name="DLC" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "DLC
 "
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
@@ -153,6 +159,32 @@ offset_right = 51.0
 offset_bottom = 636.0
 text = "Back"
 
+[node name="settings2" type="TextEdit" parent="CanvasLayer"]
+visible = false
+offset_right = 1152.0
+offset_bottom = 639.0
+editable = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings2"]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 305.0
+offset_right = 656.0
+offset_bottom = 345.0
+
+[node name="Christmas Pixel" type="Button" parent="CanvasLayer/settings2/VBoxContainer"]
+layout_mode = 2
+text = "Christmas Pixel"
+script = ExtResource("3_jix8l")
+
+[node name="back" type="Button" parent="CanvasLayer/settings2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 605.0
+offset_right = 51.0
+offset_bottom = 636.0
+text = "Back"
+
 [node name="FPS" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
 anchors_preset = 0
@@ -170,6 +202,7 @@ grow_vertical = 1
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Bible Verses" to="." method="_on_bible_verses_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/website" to="." method="_on_website_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/DLC" to="." method="_on_dlc_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Parkore" to="." method="_on_parkore_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Quiz" to="." method="_on_quiz_pressed"]
@@ -182,3 +215,5 @@ grow_vertical = 1
 [connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/settings/back" to="." method="_on_back2_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" to="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings2/back" to="." method="_on_back2_pressed"]

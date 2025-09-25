@@ -16,7 +16,7 @@ config/tags=PackedStringArray("3d", "christ", "god", "jesus", "network")
 run/main_scene="uid://exkl4xupfkcv"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="easter-pixel"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/image="uid://cnff6ihfrr4m2"
 config/icon="res://icon.svg"
 
@@ -29,6 +29,10 @@ Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 window/size/mode=4
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
+
+[dotnet]
+
+project/assembly_name="Easter Pixel"
 
 [editor]
 
@@ -115,6 +119,5 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 occlusion_culling/use_occlusion_culling=true

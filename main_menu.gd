@@ -101,3 +101,15 @@ func _on_roadtoemmaus_pressed() -> void:
 
 func _on_resurection_gardens_pressed() -> void:
 	get_tree().change_scene_to_file("res://meaningofeaster.tscn")
+
+
+func _on_dlc_pressed() -> void:
+	$CanvasLayer/settings2.show()
+
+
+func _on_christmas_pixel_pressed() -> void:
+	var path = "C:/Users/ezrag/Desktop/Easter Pixel/win/DLC/Christmas Pixel/christmas pixel.dlc"
+	var args = []
+	var output = OS.execute(path, args)
+	print(output)
+	get_tree().quit()

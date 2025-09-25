@@ -7,3 +7,5 @@ Free[[:space:]]Easter[[:space:]]Eggs[[:space:]]3D[[:space:]]Models/Free[[:space:
 Windows filter=lfs diff=lfs merge=lfs -text
 android/build/build/intermediates/merged_jni_libs/standardRelease/out/godot-lib.template_release.aar filter=lfs diff=lfs merge=lfs -text
 android/build/libs/debug/godot-lib.template_debug.aar filter=lfs diff=lfs merge=lfs -text
+Christmas_Pixel_DLC.zip filter=lfs diff=lfs merge=lfs -text
+Christmas_Pixel_DLC/christmas[[:space:]]pixel.pck filter=lfs diff=lfs merge=lfs -text
