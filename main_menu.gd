@@ -6,6 +6,7 @@ var skintrue: bool = false
 
 func _on_play_pressed() -> void:
 	$CanvasLayer/TextEdit.show()
+	
 
 
 func _on_button_pressed() -> void:
@@ -113,3 +114,7 @@ func _on_christmas_pixel_pressed() -> void:
 	var output = OS.execute(path, args)
 	print(output)
 	get_tree().quit()
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.

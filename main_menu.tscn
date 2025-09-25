@@ -177,6 +177,10 @@ layout_mode = 2
 text = "Christmas Pixel"
 script = ExtResource("3_jix8l")
 
+[node name="Timer" type="Timer" parent="CanvasLayer/settings2/VBoxContainer"]
+wait_time = 10.0
+one_shot = true
+
 [node name="back" type="Button" parent="CanvasLayer/settings2"]
 layout_mode = 0
 offset_left = 6.0
@@ -216,4 +220,5 @@ grow_vertical = 1
 [connection signal="pressed" from="CanvasLayer/settings/VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/settings/back" to="." method="_on_back2_pressed"]
 [connection signal="pressed" from="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" to="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" method="_on_pressed"]
+[connection signal="timeout" from="CanvasLayer/settings2/VBoxContainer/Timer" to="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/settings2/back" to="." method="_on_back2_pressed"]
