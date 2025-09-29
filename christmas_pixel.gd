@@ -33,8 +33,14 @@ func extract_all_from_zip():
 
 
 func _on_timer_timeout() -> void:
-	var Exepath = OS.get_executable_path().get_base_dir()
-	var path = Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/christmas pixel.dlc"
-	var args = []
-	OS.execute(path, args)
-	get_tree().quit()
+	var platform_name: String = OS.get_name()
+	if platform_name == "Windows":
+		var Exepath = OS.get_executable_path().get_base_dir()
+		var path = Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/christmas pixel.dlc"
+		var args = []
+		OS.execute(path, args)
+		get_tree().quit()
+	if platform_name == "Linux":
+		var Exepath = OS.get_executable_path().get_base_dir()
+		OS.execute("chmod", ["+x", Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/startdlc.sh"])
+		OS.shell_open(Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/startdlc.sh")
