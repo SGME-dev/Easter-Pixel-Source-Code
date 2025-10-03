@@ -12,31 +12,28 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_iwpo4"]
 material = ExtResource("2_c7tqt")
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_iwpo4"]
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_obynr"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
-properties/1/path = NodePath("MeshInstance3D:rotation")
+properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
-properties/2/path = NodePath(".:rotation")
+properties/2/path = NodePath(".:visible")
 properties/2/spawn = true
 properties/2/replication_mode = 1
-properties/3/path = NodePath("CollisionShape3D:disabled")
+properties/3/path = NodePath("MeshInstance3D:rotation")
 properties/3/spawn = true
 properties/3/replication_mode = 1
-properties/4/path = NodePath("Label3D:text")
+properties/4/path = NodePath("MeshInstance3D:skeleton")
 properties/4/spawn = true
 properties/4/replication_mode = 1
-properties/5/path = NodePath("MeshInstance3D:skeleton")
+properties/5/path = NodePath("Label3D:text")
 properties/5/spawn = true
 properties/5/replication_mode = 1
-properties/6/path = NodePath(".:visible")
+properties/6/path = NodePath("CollisionShape3D:disabled")
 properties/6/spawn = true
 properties/6/replication_mode = 1
-properties/7/path = NodePath("Label3D2:text")
-properties/7/spawn = true
-properties/7/replication_mode = 1
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 collision_mask = 14
@@ -61,9 +58,6 @@ cull_mask = 1048573
 [node name="Camera3D2" type="Camera3D" parent="Camera_Controller/Camera_Target"]
 transform = Transform3D(1, 0, 0, 0, 0.981242, 0.192779, 0, -0.192779, 0.981242, 0, 1.2391, 2.96892)
 cull_mask = 1048573
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_iwpo4")
 
 [node name="Label" type="TextEdit" parent="."]
 visible = false
@@ -117,3 +111,6 @@ transform = Transform3D(41.437, 0, 0, 0, 2.36869, -1.27621, 0, 43.4, 0.0696532, 
 visible = false
 layers = 2
 texture = ExtResource("6_obynr")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_obynr")

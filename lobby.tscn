@@ -4640,7 +4640,7 @@ mesh = SubResource("CapsuleMesh_nu6hm")
 shape = SubResource("CapsuleShape3D_7pn7i")
 
 [node name="AnimatableBody3D114" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -204.97, 0.783819, -114.562)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -204.97, 0.783819, -114.562)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D114"]
@@ -4669,7 +4669,7 @@ visibility_range_end = 100.0
 mesh = SubResource("PrismMesh_7mysc")
 
 [node name="AnimatableBody3D117" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -204.97, 0.783819, -144.796)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -204.97, 0.783819, -144.796)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D117"]
@@ -4698,7 +4698,7 @@ visibility_range_end = 100.0
 mesh = SubResource("PrismMesh_7mysc")
 
 [node name="AnimatableBody3D115" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -204.97, 1.08641, -123.867)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -204.97, 1.08641, -123.867)
 visible = false
 collision_layer = 2
 
@@ -4716,7 +4716,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D116" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -204.97, 1.08641, -127.712)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -204.97, 1.08641, -127.712)
 visible = false
 collision_layer = 2
 
@@ -4751,7 +4751,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D105" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 210.086, 0.344773, 15.0291)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, 210.086, 0.344773, 15.0291)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D105"]
@@ -5513,7 +5513,7 @@ visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_kxcl2")
 
 [node name="AnimatableBody3D86" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-1, -1.26724e-06, -2.16407e-06, 4.5539e-08, 0.853614, -0.520905, 2.50739e-06, -0.520905, -0.853614, 76.0401, 36.9948, -150.426)
+transform = Transform3D(-1, -1.26724e-06, -2.1640667e-06, 4.553897e-08, 0.85361403, -0.5209048, 2.5073923e-06, -0.5209048, -0.85361403, 76.0401, 36.9948, -150.426)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D86"]
@@ -5759,7 +5759,7 @@ visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_hbcig")
 
 [node name="StaticBody3D46" type="StaticBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, -1, 3.61999e-06, 0, -3.61999e-06, -1, 1, -3.61999e-06, 1.31043e-11, 643.566, 2.70309, 20.565)
+transform = Transform3D(-3.6199901e-06, -1, 3.6199901e-06, 0, -3.6199901e-06, -1, 1, -3.6199901e-06, 1.3104328e-11, 643.566, 2.70309, 20.565)
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D46"]
@@ -5834,7 +5834,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D118" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -90.1008, 1.08641, -441.656)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -90.1008, 1.08641, -441.656)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D118"]
@@ -5856,7 +5856,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D119" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -90.1008, 1.08641, -445.501)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -90.1008, 1.08641, -445.501)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D119"]
@@ -6357,8 +6357,8 @@ autoplay = true
 [connection signal="pressed" from="CanvasLayer/TextEdit/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d2_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d_8_body_entered"]
 [connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d2_8_body_entered"]
 [connection signal="animation_finished" from="AnimatableBody3D114/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]

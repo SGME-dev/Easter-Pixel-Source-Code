@@ -42,5 +42,7 @@ func _on_timer_timeout() -> void:
 		get_tree().quit()
 	if platform_name == "Linux":
 		var Exepath = OS.get_executable_path().get_base_dir()
-		OS.execute("chmod", ["+x", Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/startdlc.sh"])
-		OS.shell_open(Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/startdlc.sh")
+		var path = Exepath + "/DLC/Christmas Pixel/Christmas_Pixel_DLC/christmas pixel.dlc"
+		var args = []
+		OS.execute(path, args)
+		get_tree().quit()
