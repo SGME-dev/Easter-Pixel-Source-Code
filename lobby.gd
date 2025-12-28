@@ -11,6 +11,7 @@ var actual_port: int = 15780
 var port: int = 15780
 const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
 const MAX_CONNECTIONS: int = 20
+var user = FileAccess.open("user://username.save", FileAccess.READ).get_line()
 
 
 static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
@@ -103,7 +104,8 @@ func _on_host_pressed() -> void:
 	%LineEdit2.hide()
 	$Sprite3D38.hide()
 	$CanvasLayer/Panel.hide()
-
+	
+	
 
 func _on_join_pressed(address: String = str(%LineEdit.text), port: int = int(%LineEdit2.text)) -> void:
 	if address.is_empty() or address == "localhost":
@@ -120,6 +122,10 @@ func _on_join_pressed(address: String = str(%LineEdit.text), port: int = int(%Li
 	%LineEdit2.hide()
 	$Sprite3D38.hide()
 	$CanvasLayer/Panel.hide()
+	
+	print(user + " joined the game")
+	$CanvasLayer/Timer.start()
+
 
 func add_player(id: int = 1) -> void:
 	var player: CharacterBody3D = player_scene.instantiate()
@@ -337,3 +343,21 @@ func _on_http_request_completed(result: int, response_code: int, headers: Packed
 		#     print("Error: Could not resolve host (no internet connection or DNS issue).")
 		# if response_code == 404:
 		#     print("Error: Service URL not found.")
+
+func _on_button_pressed() -> void:
+	msg_rec.rpc(user, $CanvasLayer/Chat/LineEdit.text)
+	print("\n" + user + ":" + $CanvasLayer/Chat/LineEdit.text)
+
+@rpc("any_peer", "call_local")
+func msg_rec(user: String, msg: String) -> void:
+	$CanvasLayer/Chat.text += str("\n" + user + ":" + msg)
+	
+
+@rpc("any_peer", "call_local")
+func msg_join(name: String) -> void:
+	$CanvasLayer/Chat.text += str(name + " joined the game")
+	
+
+
+func _on_timer_timeout() -> void:
+	msg_join.rpc(str("\n" + user))

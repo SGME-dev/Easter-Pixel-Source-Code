@@ -166,6 +166,33 @@ offset_bottom = 486.0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer"]
 
+[node name="Chat" type="TextEdit" parent="CanvasLayer"]
+offset_left = 833.0
+offset_top = 415.0
+offset_right = 1151.0
+offset_bottom = 583.0
+text = "CHAT:"
+editable = false
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 137.0
+offset_right = 317.0
+offset_bottom = 168.0
+placeholder_text = "MESSAGE"
+
+[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit"]
+layout_mode = 0
+offset_left = 267.0
+offset_right = 318.0
+offset_bottom = 31.0
+text = "SEND"
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+one_shot = true
+
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
 spawn_path = NodePath("..")
@@ -1328,6 +1355,8 @@ mesh = SubResource("BoxMesh_eoagw")
 
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
 [connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]

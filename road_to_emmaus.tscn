@@ -921,6 +921,33 @@ offset_bottom = 486.0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer"]
 
+[node name="Chat" type="TextEdit" parent="CanvasLayer"]
+offset_left = 833.0
+offset_top = 415.0
+offset_right = 1151.0
+offset_bottom = 583.0
+text = "CHAT:"
+editable = false
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 137.0
+offset_right = 317.0
+offset_bottom = 168.0
+placeholder_text = "MESSAGE"
+
+[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit"]
+layout_mode = 0
+offset_left = 267.0
+offset_right = 318.0
+offset_bottom = 31.0
+text = "SEND"
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 3.0
+one_shot = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tftiq")
 
@@ -1585,7 +1612,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -688.7
 collision_layer = 2
 
 [node name="AnimatableBody3D114" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 0.783819, -136.796)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 0.783819, -136.796)
 collision_layer = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D114"]
@@ -1614,7 +1641,7 @@ visibility_range_end = 100.0
 mesh = SubResource("PrismMesh_7mysc")
 
 [node name="AnimatableBody3D117" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 0.783819, -167.03)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 0.783819, -167.03)
 collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D117"]
@@ -1623,7 +1650,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D115" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 1.08641, -146.101)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 1.08641, -146.101)
 visible = false
 collision_layer = 2
 
@@ -1641,7 +1668,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D116" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -1040.54, 1.08641, -149.946)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 1.08641, -149.946)
 visible = false
 collision_layer = 2
 
@@ -1659,7 +1686,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D105" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 210.086, 0.344773, 15.0291)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, 210.086, 0.344773, 15.0291)
 collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D105"]
@@ -1844,7 +1871,7 @@ collision_layer = 2
 environment = SubResource("Environment_g26o6")
 
 [node name="AnimatableBody3D86" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-1, -1.26724e-06, -2.16407e-06, 4.5539e-08, 0.853614, -0.520905, 2.50739e-06, -0.520905, -0.853614, 76.0401, 36.9948, -150.426)
+transform = Transform3D(-1, -1.26724e-06, -2.1640667e-06, 4.553897e-08, 0.85361403, -0.52090484, 2.5073923e-06, -0.52090484, -0.85361403, 76.0401, 36.9948, -150.426)
 collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D86"]
@@ -1906,7 +1933,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D118" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -90.1008, 1.08641, -441.656)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -90.1008, 1.08641, -441.656)
 collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D118"]
@@ -1920,7 +1947,7 @@ libraries = {
 }
 
 [node name="AnimatableBody3D119" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -90.1008, 1.08641, -445.501)
+transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -90.1008, 1.08641, -445.501)
 collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D119"]
@@ -2551,6 +2578,8 @@ texture = ExtResource("8_asbai")
 [connection signal="timeout" from="CanvasLayer/TextEdit/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_buttons_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout2"]
 [connection signal="animation_finished" from="AnimatableBody3D114/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D117/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D112/AnimationPlayer" to="." method="_on_animation2_player_animation_finished"]
