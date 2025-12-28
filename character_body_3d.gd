@@ -100,12 +100,13 @@ func _physics_process(delta: float) -> void:
 			$Label2.show()
 		
 		if Input.is_action_just_pressed("RUN"):
-			if SPEED == 7.25:
-				SPEED = 14.5
-				return
-			if SPEED == 14.5:
-				SPEED = 7.25
-				return
+			if is_multiplayer_authority():
+				if SPEED == 7.25:
+					SPEED = 14.5
+					return
+				if SPEED == 14.5:
+					SPEED = 7.25
+					return
 		
 		if Input.is_action_just_pressed("third_person"):
 			if is_multiplayer_authority():
