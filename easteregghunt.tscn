@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://c8v51s7im220h"]
+[gd_scene load_steps=37 format=4 uid="uid://c8v51s7im220h"]
 
 [ext_resource type="Script" uid="uid://dpv4jqjrirwyx" path="res://easteregghunt.gd" id="1_o7ytj"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_73b3d"]
@@ -221,6 +221,9 @@ properties/15/replication_mode = 2
 properties/16/path = NodePath("Area3D6:visible")
 properties/16/spawn = true
 properties/16/replication_mode = 2
+properties/17/path = NodePath(".:dedserver")
+properties/17/spawn = true
+properties/17/replication_mode = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v4co0"]
 
@@ -229,6 +232,9 @@ albedo_color = Color(100, 100, 100, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_stuii"]
 material = SubResource("StandardMaterial3D_qwngk")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kuvxw"]
+size = Vector3(2.2260132, 4.3442383, 1)
 
 [node name="easteregghunt" type="Node3D"]
 script = ExtResource("1_o7ytj")
@@ -623,6 +629,13 @@ render_target_update_mode = 4
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, -0.339723, 0.940526, 0, -0.940526, -0.339723, 221.62, 941.435, -585.045)
 
+[node name="Area3D15" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
+shape = SubResource("BoxShape3D_kuvxw")
+
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_buttons_pressed"]
@@ -640,3 +653,4 @@ transform = Transform3D(1, 0, 0, 0, -0.339723, 0.940526, 0, -0.940526, -0.339723
 [connection signal="body_entered" from="Area3D9" to="." method="_on_area_3d_9_body_entered"]
 [connection signal="body_entered" from="Area3D6" to="." method="_on_area_3d_6_body_entered"]
 [connection signal="body_entered" from="Area3D13" to="." method="_on_area_3d_13_body_entered"]
+[connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b61lw1qnmic50"]
+[gd_scene load_steps=22 format=3 uid="uid://b61lw1qnmic50"]
 
 [ext_resource type="Script" uid="uid://d2ix02cqc3pe2" path="res://quiz.gd" id="1_kninm"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_k7kv1"]
@@ -44,6 +44,14 @@ albedo_color = Color(100, 100, 100, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rmnlm"]
 material = SubResource("StandardMaterial3D_hk5eo")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hgkws"]
+size = Vector3(2.2260132, 4.3442383, 1)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_hgkws"]
+properties/0/path = NodePath(".:dedserver")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Quiz" type="Node3D"]
 script = ExtResource("1_kninm")
@@ -2022,6 +2030,16 @@ autoplay = true
 
 [node name="FPS" parent="." instance=ExtResource("6_hgkws")]
 
+[node name="Area3D15" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
+shape = SubResource("BoxShape3D_hgkws")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_hgkws")
+
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_buttons_pressed"]
@@ -2038,3 +2056,4 @@ autoplay = true
 [connection signal="body_entered" from="MeshInstance3D10/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D23" to="." method="_on_area_3d_23_body_entered"]
+[connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]

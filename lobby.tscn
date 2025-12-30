@@ -1,4 +1,4 @@
-[gd_scene load_steps=291 format=4 uid="uid://o3a1kb7lx1ux"]
+[gd_scene load_steps=293 format=4 uid="uid://o3a1kb7lx1ux"]
 
 [ext_resource type="Script" uid="uid://byta5gcbtshf6" path="res://lobby.gd" id="1_ll2xe"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_xrgmn"]
@@ -1819,6 +1819,14 @@ _data = {
 }
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l6n5j"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_uick8"]
+properties/0/path = NodePath(".:dedserver")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uick8"]
+size = Vector3(2.2260132, 4.3442383, 1)
 
 [node name="lobby" type="Node3D"]
 script = ExtResource("1_ll2xe")
@@ -6380,6 +6388,18 @@ autoplay = true
 [node name="FPS" parent="." instance=ExtResource("69_uick8")]
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_uick8")
+
+[node name="Area3D15" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
+shape = SubResource("BoxShape3D_uick8")
 
 [connection signal="pressed" from="CanvasLayer/TextEdit/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
@@ -6406,3 +6426,4 @@ autoplay = true
 [connection signal="animation_finished" from="AnimatableBody3D112/AnimationPlayer" to="." method="_on_animation2_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D113/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="Area3D14" to="." method="_on_area_3d_14_body_entered"]
+[connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]

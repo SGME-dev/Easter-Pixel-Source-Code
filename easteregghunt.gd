@@ -12,6 +12,7 @@ var port: int = 15780
 const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
 const MAX_CONNECTIONS: int = 20
 var user = FileAccess.open("user://username.save", FileAccess.READ).get_line()
+@export var dedserver: bool = false
 
 static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 @export var player_scene : PackedScene
@@ -33,6 +34,7 @@ func _ready() -> void:
 		%LineEdit2.hide()
 		$Sprite3D38.hide()
 		$CanvasLayer/Panel.hide()
+		dedserver = true
 
 func _physics_process(delta: float) -> void:
 	if easter_egg == 12:
@@ -288,3 +290,42 @@ func msg_join(name: String) -> void:
 
 func _on_timer_timeout() -> void:
 	msg_join.rpc(str("\n" + user))
+
+@rpc("any_peer", "call_remote", "reliable")
+func save_pos_on_server(pos: Vector3, namer: String) -> void:
+	var Exepath = OS.get_executable_path().get_base_dir()
+	# Double check: Only the server should execute this file logic
+	if dedserver == true:
+		var path = Exepath + "/data/Player/location/" + namer + ".save"
+		var posav = FileAccess.open(path, FileAccess.WRITE)
+		
+		if posav:
+			posav.store_var(pos)
+			
+
+@rpc("any_peer", "call_remote", "reliable")
+func teleport_player(sender_id, new_position):
+	# This runs on the client side
+	get_node(str(sender_id)).global_position = new_position
+	print("Teleported to: ", new_position)
+
+
+@rpc("any_peer", "call_remote", "reliable")
+func load_pos_on_server(namer: String):
+	if not dedserver: return # Safety check
+	
+	var path = OS.get_executable_path().get_base_dir() + "/data/Player/location/" + namer + ".save"
+	
+	if FileAccess.file_exists(path):
+		var file = FileAccess.open(path, FileAccess.READ)
+		var saved_pos = file.get_var(true) # Assuming this is a Vector3 or Vector2
+		file.close()
+		
+		# Find who asked for this and tell THEM to teleport
+		var sender_id = multiplayer.get_remote_sender_id()
+		teleport_player.rpc(sender_id, saved_pos)
+
+
+func _on_area_3d_15_body_entered(body: player, namer: String = str(user)) -> void:
+	load_pos_on_server.rpc_id(1, user)
+	$Area3D15/CollisionShape3D.disabled = true

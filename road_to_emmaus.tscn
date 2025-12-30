@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://cbt1p7wl17yaa"]
+[gd_scene load_steps=129 format=3 uid="uid://cbt1p7wl17yaa"]
 
 [ext_resource type="Script" uid="uid://bsmyn08gtmafe" path="res://road_to_emmaus.gd" id="1_fg6nk"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_7y0nb"]
@@ -682,6 +682,14 @@ size = Vector3(1.58997, 6.22278, 9.27966)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w4n8t"]
 size = Vector3(1, 14.7339, 38.2999)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rp1hg"]
+size = Vector3(2.2260132, 4.3442383, 1)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_rp1hg"]
+properties/0/path = NodePath(".:dedserver")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="lobby" type="Node3D"]
 script = ExtResource("1_fg6nk")
@@ -1871,7 +1879,7 @@ collision_layer = 2
 environment = SubResource("Environment_g26o6")
 
 [node name="AnimatableBody3D86" type="AnimatableBody3D" parent="."]
-transform = Transform3D(-1, -1.26724e-06, -2.1640667e-06, 4.553897e-08, 0.85361403, -0.52090484, 2.5073923e-06, -0.52090484, -0.85361403, 76.0401, 36.9948, -150.426)
+transform = Transform3D(-1, -1.26724e-06, -2.1640667e-06, 4.553897e-08, 0.85361403, -0.5209048, 2.5073923e-06, -0.5209048, -0.85361403, 76.0401, 36.9948, -150.426)
 collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D86"]
@@ -2556,6 +2564,16 @@ texture = ExtResource("8_asbai")
 transform = Transform3D(-5.55831e-06, 0, 100, 0, 100, 0, -127.159, 0, -4.37114e-06, 29.3704, 12.8548, -228.984)
 texture = ExtResource("8_asbai")
 
+[node name="Area3D15" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
+shape = SubResource("BoxShape3D_rp1hg")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_rp1hg")
+
 [connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CanvasLayer/Next2" to="." method="_on_next_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Next3" to="." method="_on_next_3_pressed"]
@@ -2587,3 +2605,4 @@ texture = ExtResource("8_asbai")
 [connection signal="animation_finished" from="AnimatableBody3D126/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="StaticBody3D/Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]

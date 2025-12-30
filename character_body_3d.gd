@@ -30,6 +30,7 @@ const WALL_JUMP_FORCE = 10
 @onready var cam: Camera3D = $Camera_Controller/Camera_Target/Camera3D
 @onready var cam_2: Camera3D = $Camera_Controller/Camera_Target/Camera3D2
 
+
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 	
@@ -43,6 +44,10 @@ func is_dedicated_server():
 
 
 func  _ready() -> void:
+	
+	$Save.start()
+	var pos = $".".global_position
+	print(pos)
 	$Sprite3D.show()
 	cam.current = is_multiplayer_authority()
 	cam_2.current = is_multiplayer_authority()
@@ -80,6 +85,8 @@ static var gravity: float = ProjectSettings.get_setting("physics/3d/default_grav
 
 
 func _physics_process(delta: float) -> void:
+	var player_name: String = name
+	
 	if is_multiplayer_authority():
 		
 		
@@ -214,3 +221,18 @@ func _unhandled_input(event: InputEvent) -> void:
 			cam_2.rotation.x = clamp(cam_2.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 			cam.rotate_x(-event.relative.y * 0.0025)
 			cam.rotation.x = clamp(cam.rotation.x, deg_to_rad(-30), deg_to_rad(60))
+
+func request_save():
+	var my_pos = self.global_position
+	var my_name = str(FileAccess.open("user://username.save", FileAccess.READ).get_line())
+	
+	# Send the data to the server only
+	# .rpc_id(1, ...) means "Send this specifically to the Server"
+	$"../".save_pos_on_server.rpc_id(1, my_pos, my_name)
+
+
+
+
+func _on_save_timeout() -> void:
+	if is_multiplayer_authority() and !OS.has_feature("dedicated_server") and $"../".dedserver == true:
+		request_save()
