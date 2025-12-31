@@ -199,6 +199,34 @@ text = "SEND"
 wait_time = 3.0
 one_shot = true
 
+[node name="ban" type="LineEdit" parent="CanvasLayer"]
+offset_left = 868.0
+offset_top = 378.0
+offset_right = 1150.5625
+offset_bottom = 409.0
+
+[node name="ban" type="Button" parent="CanvasLayer/ban"]
+layout_mode = 0
+offset_left = -68.0
+offset_right = -1.0
+offset_bottom = 31.0
+text = "Ban:"
+
+[node name="ban-ip" type="LineEdit" parent="CanvasLayer"]
+offset_left = 869.0
+offset_top = 345.0
+offset_right = 1151.5625
+offset_bottom = 376.0
+
+[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip"]
+layout_mode = 0
+offset_left = -68.0
+offset_right = -1.0
+offset_bottom = 31.0
+text = "Ban-IP:"
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer"]
+
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
 spawn_path = NodePath("..")
@@ -1370,6 +1398,9 @@ shape = SubResource("BoxShape3D_x1bx4")
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/ban/ban" to="." method="_on_ban_pressed"]
+[connection signal="pressed" from="CanvasLayer/ban-ip/ban-ip" to="." method="_on_banip_pressed"]
+[connection signal="request_completed" from="CanvasLayer/HTTPRequest2" to="." method="_on_http_request_2_request_completed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
 [connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]

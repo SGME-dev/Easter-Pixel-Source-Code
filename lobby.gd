@@ -13,6 +13,7 @@ const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
 const MAX_CONNECTIONS: int = 20
 var user = FileAccess.open("user://username.save", FileAccess.READ).get_line()
 @export var dedserver: bool = false
+var ip: String
 
 
 static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
@@ -38,6 +39,7 @@ func _ready() -> void:
 		%LineEdit2.hide()
 		$Sprite3D38.hide()
 		dedserver = true
+		
 	
 	
 
@@ -145,6 +147,7 @@ func add_player(id: int = 1) -> void:
 func exit_game(id: int) -> void:
 	multiplayer.peer_disconnected.connect(del_player)
 	del_player(id)
+	msg_leave.rpc(str("\n" + user))
 
 
 func del_player(id: int) -> void:
@@ -355,17 +358,22 @@ func _on_http_request_completed(result: int, response_code: int, headers: Packed
 
 func _on_button_pressed() -> void:
 	msg_rec.rpc(user, $CanvasLayer/Chat/LineEdit.text)
-	print("\n" + user + ":" + $CanvasLayer/Chat/LineEdit.text)
+	
 
 @rpc("any_peer", "call_local")
 func msg_rec(user: String, msg: String) -> void:
 	$CanvasLayer/Chat.text += str("\n" + user + ":" + msg)
-	
+	print("\n" + user + ":" + $CanvasLayer/Chat/LineEdit.text)
 
 @rpc("any_peer", "call_local")
 func msg_join(name: String) -> void:
 	$CanvasLayer/Chat.text += str(name + " joined the game")
-	
+	print(name + " joined the game")
+
+@rpc("any_peer", "call_local")
+func msg_leave(name: String) -> void:
+	$CanvasLayer/Chat.text += str(name + " left the game")
+	print(name + " left the game")
 
 
 func _on_timer_timeout() -> void:
@@ -408,4 +416,93 @@ func load_pos_on_server(namer: String):
 
 func _on_area_3d_15_body_entered(body: player, namer: String = str(user)) -> void:
 	load_pos_on_server.rpc_id(1, user)
-	$Area3D15/CollisionShape3D.disabled = true
+	$Area3D15/CollisionShape3D.queue_free()
+
+@rpc("any_peer", "call_remote", "reliable")
+func save_bans_on_server(namer: String) -> void:
+	var Exepath = OS.get_executable_path().get_base_dir()
+	# Double check: Only the server should execute this file logic
+	if dedserver == true:
+		var path = Exepath + "/data/bans/bans.txt"
+		var bans = FileAccess.open(path, FileAccess.READ_WRITE)
+		var nbans = bans.get_as_text()
+		bans.store_string(nbans + "\n" + namer)
+		
+
+@rpc("any_peer", "call_remote", "reliable")
+func save_ban_ips_on_server(namer: String) -> void:
+	var Exepath = OS.get_executable_path().get_base_dir()
+	# Double check: Only the server should execute this file logic
+	if dedserver == true:
+		var path = Exepath + "/data/ban-ips/ban-ips.txt"
+		var bans = FileAccess.open(path, FileAccess.READ_WRITE)
+		var nbans = bans.get_as_text()
+		bans.store_string(nbans + "\n" + namer)
+		
+
+@rpc("any_peer", "call_remote", "reliable")
+func load_bans_on_server():
+	if not dedserver: return # Safety check
+	
+	var path = OS.get_executable_path().get_base_dir() + "/data/bans/bans.txt"
+	
+	if FileAccess.file_exists(path):
+		var file = FileAccess.open(path, FileAccess.READ)
+		var saved_bans = file.get_as_text()
+		file.close()
+		
+		
+		var sender_id = multiplayer.get_remote_sender_id()
+		if user in saved_bans:
+			exit_game(sender_id)
+
+@rpc("any_peer", "call_remote", "reliable")
+func load_ban_ips_on_server():
+	if not dedserver: return # Safety check
+	
+	var path = OS.get_executable_path().get_base_dir() + "/data/ban-ips/ban-ips.txt"
+	
+	if FileAccess.file_exists(path):
+		var file = FileAccess.open(path, FileAccess.READ)
+		var saved_bans = file.get_as_text()
+		file.close()
+		
+		
+		var sender_id = multiplayer.get_remote_sender_id()
+		$CanvasLayer/HTTPRequest2.request("https://ipv4.icanhazip.com")
+		if ip in saved_bans:
+			exit_game(sender_id)
+
+func _on_ban_pressed() -> void:
+	save_bans_on_server.rpc_id(1, $CanvasLayer/ban.text)
+
+
+func _on_banip_pressed() -> void:
+	save_ban_ips_on_server.rpc_id(1, $"CanvasLayer/ban-ip".text)
+
+
+func _on_http_request_2_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
+	if !OS.has_feature("dedicated_server"):
+		if result == HTTPRequest.RESULT_SUCCESS and response_code == 200:
+			# If the request was successful and the HTTP status code is 200 (OK).
+			
+			# Convert the raw byte array body to a UTF-8 string.
+			# .strip_edges() removes any leading/trailing whitespace (like newlines).
+			var public_ip = body.get_string_from_utf8().strip_edges()
+			
+			print("Public WAN IPv4 Address: " + public_ip)
+			ip = public_ip
+		else:
+			# If the request failed or returned a non-200 status code.
+			print("Failed to get public IP.")
+			
+			print("HTTP Response Code: ", response_code) # HTTP status code
+			
+			
+			# You might want to add more specific error handling here based on result and response_code.
+			# For example:
+			# if result == HTTPRequest.RESULT_CANT_RESOLVE:
+			#     print("Error: Could not resolve host (no internet connection or DNS issue).")
+			# if response_code == 404:
+			#     print("Error: Service URL not found.")
+			

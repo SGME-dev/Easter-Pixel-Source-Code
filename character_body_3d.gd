@@ -34,6 +34,7 @@ const WALL_JUMP_FORCE = 10
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 	
+	
 
 func is_dedicated_server():
 	var args = OS.get_cmdline_args()
@@ -46,8 +47,6 @@ func is_dedicated_server():
 func  _ready() -> void:
 	
 	$Save.start()
-	var pos = $".".global_position
-	print(pos)
 	$Sprite3D.show()
 	cam.current = is_multiplayer_authority()
 	cam_2.current = is_multiplayer_authority()
@@ -232,7 +231,10 @@ func request_save():
 
 
 
-
 func _on_save_timeout() -> void:
 	if is_multiplayer_authority() and !OS.has_feature("dedicated_server") and $"../".dedserver == true:
 		request_save()
+
+
+func _on_ban_timeout() -> void:
+	$"../".load_bans_on_server.rpc_id(1)
