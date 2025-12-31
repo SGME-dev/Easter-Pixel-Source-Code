@@ -238,3 +238,4 @@ func _on_save_timeout() -> void:
 
 func _on_ban_timeout() -> void:
 	$"../".load_bans_on_server.rpc_id(1)
+	$"../".load_ban_ips_on_server.rpc_id(1)
