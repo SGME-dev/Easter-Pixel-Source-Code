@@ -109,9 +109,13 @@ func _physics_process(delta: float) -> void:
 			if is_multiplayer_authority():
 				if SPEED == 7.25:
 					SPEED = 14.5
+					$Camera_Controller/Camera_Target/Camera3D2.fov = 100
+					$Camera_Controller/Camera_Target/Camera3D2.fov = 100
 					return
 				if SPEED == 14.5:
 					SPEED = 7.25
+					$Camera_Controller/Camera_Target/Camera3D2.fov = 75
+					$Camera_Controller/Camera_Target/Camera3D2.fov = 75
 					return
 		
 		if Input.is_action_just_pressed("third_person"):
