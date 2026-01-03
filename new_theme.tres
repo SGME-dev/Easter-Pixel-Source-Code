@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cty8o0wfe5t4k"]
+
+[ext_resource type="FontFile" uid="uid://c4t6p8l6egbb" path="res://daydream_3/Daydream DEMO.otf" id="1_amlv4"]
+
+[resource]
+Button/font_sizes/font_size = 10
+Button/fonts/font = ExtResource("1_amlv4")
+Label/font_sizes/font_size = 10
+Label/fonts/font = ExtResource("1_amlv4")
+LineEdit/font_sizes/font_size = 10
+LineEdit/fonts/font = ExtResource("1_amlv4")
+ProgressBar/font_sizes/font_size = 10
+ProgressBar/fonts/font = ExtResource("1_amlv4")
+TabBar/font_sizes/font_size = 10
+TabBar/fonts/font = ExtResource("1_amlv4")
+TabContainer/font_sizes/font_size = 10
+TabContainer/fonts/font = ExtResource("1_amlv4")
+TextEdit/font_sizes/font_size = 10
+TextEdit/fonts/font = ExtResource("1_amlv4")
+Tree/font_sizes/font_size = 10
+Tree/font_sizes/title_button_font_size = 10
+Tree/fonts/font = ExtResource("1_amlv4")
+Tree/fonts/title_button_font = ExtResource("1_amlv4")

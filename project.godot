@@ -46,6 +46,10 @@ enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addon
 
 import/blender/enabled=false
 
+[gui]
+
+theme/custom="uid://cty8o0wfe5t4k"
+
 [input]
 
 ui_left={

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwd41ws6yd1el"]
+[gd_scene load_steps=6 format=3 uid="uid://dwd41ws6yd1el"]
 
 [ext_resource type="Script" uid="uid://bd6gq5hkci1mr" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_7vrkn"]
 [ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="3_fu7sn"]
+[ext_resource type="FontFile" uid="uid://c4t6p8l6egbb" path="res://daydream_3/Daydream DEMO.otf" id="3_glbon"]
 [ext_resource type="Script" uid="uid://d62t8jvjhf07" path="res://christmas_pixel.gd" id="3_jix8l"]
 
 [node name="main menu" type="Control"]
@@ -22,50 +23,59 @@ texture = ExtResource("2_7vrkn")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 445.0
-offset_top = 154.0
-offset_right = 724.0
-offset_bottom = 529.0
+offset_left = 292.0
+offset_top = 60.0
+offset_right = 859.0
+offset_bottom = 574.0
 theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.419608, 1, 1)
+theme_override_fonts/font = ExtResource("3_glbon")
 theme_override_font_sizes/font_size = 50
 text = "Easter Pixel"
 
 [node name="play" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "play"
 
 [node name="support" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "support"
 
 [node name="quit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "quit
 "
 
 [node name="settings" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "settings"
 
 [node name="Bible Verses" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Bible Verses"
 
 [node name="website" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Website"
 
 [node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Credits
 "
 
 [node name="DLC" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "DLC
 "
 
@@ -77,33 +87,39 @@ editable = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextEdit"]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 307.0
-offset_right = 738.0
-offset_bottom = 443.0
+offset_left = 328.0
+offset_top = 223.0
+offset_right = 888.0
+offset_bottom = 447.0
 
 [node name="Button" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "The Easter Story"
 
 [node name="Parkore" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Bible Verse Parkore"
 
 [node name="Quiz" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Easter Bible Parkore Quiz"
 
 [node name="easteregghunt" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Easter Egg Bible verse with poem hunt"
 
 [node name="roadtoemmaus" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Road to emmaus"
 
 [node name="Resurection Gardens" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Resurection Gardens"
 
 [node name="back" type="Button" parent="CanvasLayer/TextEdit"]
@@ -122,33 +138,39 @@ editable = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings"]
 layout_mode = 0
-offset_left = 522.0
-offset_top = 305.0
-offset_right = 656.0
-offset_bottom = 345.0
+offset_left = 482.0
+offset_top = 252.0
+offset_right = 718.0
+offset_bottom = 476.0
 
 [node name="Button" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Log out"
 
 [node name="Button2" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Delete Account"
 
 [node name="username" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 placeholder_text = "username"
 
 [node name="Button3" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "apply username"
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 placeholder_text = "skin texture"
 
 [node name="Button4" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "save skin"
 
 [node name="back" type="Button" parent="CanvasLayer/settings"]
@@ -174,6 +196,7 @@ offset_bottom = 345.0
 
 [node name="Christmas Pixel" type="Button" parent="CanvasLayer/settings2/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_glbon")
 text = "Christmas Pixel"
 script = ExtResource("3_jix8l")
 
