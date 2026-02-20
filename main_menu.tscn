@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwd41ws6yd1el"]
+[gd_scene format=3 uid="uid://dwd41ws6yd1el"]
 
 [ext_resource type="Script" uid="uid://bd6gq5hkci1mr" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_7vrkn"]
@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://c4t6p8l6egbb" path="res://daydream_3/Daydream DEMO.otf" id="3_glbon"]
 [ext_resource type="Script" uid="uid://d62t8jvjhf07" path="res://christmas_pixel.gd" id="3_jix8l"]
 
-[node name="main menu" type="Control"]
+[node name="main menu" type="Control" unique_id=1845569242]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,114 +15,114 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_06t4h")
 
-[node name="Sprite3D" type="Sprite2D" parent="."]
+[node name="Sprite3D" type="Sprite2D" parent="." unique_id=300961873]
 position = Vector2(575.25, 322.25)
 scale = Vector2(10.013, 10.0231)
 texture = ExtResource("2_7vrkn")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=610301611]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=40968411]
 offset_left = 292.0
 offset_top = 60.0
 offset_right = 859.0
 offset_bottom = 574.0
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1097019062]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.419608, 1, 1)
 theme_override_fonts/font = ExtResource("3_glbon")
 theme_override_font_sizes/font_size = 50
 text = "Easter Pixel"
 
-[node name="play" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="play" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1815205711]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "play"
 
-[node name="support" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="support" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1639417126]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "support"
 
-[node name="quit" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="quit" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=820860582]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "quit
 "
 
-[node name="settings" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="settings" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=2100143701]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "settings"
 
-[node name="Bible Verses" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Bible Verses" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1753126428]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Bible Verses"
 
-[node name="website" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="website" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1637927483]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Website"
 
-[node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1669724882]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Credits
 "
 
-[node name="DLC" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="DLC" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=59580651]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "DLC
 "
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer" unique_id=888907211]
 visible = false
 offset_right = 1152.0
 offset_bottom = 639.0
 editable = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextEdit"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextEdit" unique_id=1508873152]
 layout_mode = 0
 offset_left = 328.0
 offset_top = 223.0
 offset_right = 888.0
 offset_bottom = 447.0
 
-[node name="Button" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer" unique_id=1966653336]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "The Easter Story"
 
-[node name="Parkore" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+[node name="Parkore" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer" unique_id=2146547908]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Bible Verse Parkore"
 
-[node name="Quiz" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+[node name="Quiz" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer" unique_id=504285397]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Easter Bible Parkore Quiz"
 
-[node name="easteregghunt" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+[node name="easteregghunt" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer" unique_id=773949804]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Easter Egg Bible verse with poem hunt"
 
-[node name="roadtoemmaus" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+[node name="roadtoemmaus" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer" unique_id=2020461408]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Road to emmaus"
 
-[node name="Resurection Gardens" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer"]
+[node name="Resurection Gardens" type="Button" parent="CanvasLayer/TextEdit/VBoxContainer" unique_id=1110099872]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Resurection Gardens"
 
-[node name="back" type="Button" parent="CanvasLayer/TextEdit"]
+[node name="back" type="Button" parent="CanvasLayer/TextEdit" unique_id=1273639867]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 605.0
@@ -130,50 +130,50 @@ offset_right = 51.0
 offset_bottom = 636.0
 text = "Back"
 
-[node name="settings" type="TextEdit" parent="CanvasLayer"]
+[node name="settings" type="TextEdit" parent="CanvasLayer" unique_id=1243490077]
 visible = false
 offset_right = 1152.0
 offset_bottom = 639.0
 editable = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings" unique_id=1226823042]
 layout_mode = 0
 offset_left = 482.0
 offset_top = 252.0
 offset_right = 718.0
 offset_bottom = 476.0
 
-[node name="Button" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/settings/VBoxContainer" unique_id=629063836]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Log out"
 
-[node name="Button2" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/settings/VBoxContainer" unique_id=846989483]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Delete Account"
 
-[node name="username" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer"]
+[node name="username" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer" unique_id=1381498876]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 placeholder_text = "username"
 
-[node name="Button3" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+[node name="Button3" type="Button" parent="CanvasLayer/settings/VBoxContainer" unique_id=1051735913]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "apply username"
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/settings/VBoxContainer" unique_id=2140525257]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 placeholder_text = "skin texture"
 
-[node name="Button4" type="Button" parent="CanvasLayer/settings/VBoxContainer"]
+[node name="Button4" type="Button" parent="CanvasLayer/settings/VBoxContainer" unique_id=1867385262]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "save skin"
 
-[node name="back" type="Button" parent="CanvasLayer/settings"]
+[node name="back" type="Button" parent="CanvasLayer/settings" unique_id=1800525369]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 605.0
@@ -181,30 +181,30 @@ offset_right = 51.0
 offset_bottom = 636.0
 text = "Back"
 
-[node name="settings2" type="TextEdit" parent="CanvasLayer"]
+[node name="settings2" type="TextEdit" parent="CanvasLayer" unique_id=1826883564]
 visible = false
 offset_right = 1152.0
 offset_bottom = 639.0
 editable = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings2" unique_id=262797638]
 layout_mode = 0
 offset_left = 522.0
 offset_top = 305.0
 offset_right = 656.0
 offset_bottom = 345.0
 
-[node name="Christmas Pixel" type="Button" parent="CanvasLayer/settings2/VBoxContainer"]
+[node name="Christmas Pixel" type="Button" parent="CanvasLayer/settings2/VBoxContainer" unique_id=1241599702]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_glbon")
 text = "Christmas Pixel"
 script = ExtResource("3_jix8l")
 
-[node name="Timer" type="Timer" parent="CanvasLayer/settings2/VBoxContainer"]
+[node name="Timer" type="Timer" parent="CanvasLayer/settings2/VBoxContainer" unique_id=718833721]
 wait_time = 10.0
 one_shot = true
 
-[node name="back" type="Button" parent="CanvasLayer/settings2"]
+[node name="back" type="Button" parent="CanvasLayer/settings2" unique_id=855685204]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 605.0
@@ -212,7 +212,7 @@ offset_right = 51.0
 offset_bottom = 636.0
 text = "Back"
 
-[node name="FPS" parent="." instance=ExtResource("3_fu7sn")]
+[node name="FPS" parent="." unique_id=613465274 instance=ExtResource("3_fu7sn")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0

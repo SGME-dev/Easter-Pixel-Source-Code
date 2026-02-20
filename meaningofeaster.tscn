@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cdnmdfiwsmq10"]
+[gd_scene format=3 uid="uid://cdnmdfiwsmq10"]
 
 [ext_resource type="Script" uid="uid://dp786gfhs2qy" path="res://meaningofeaster.gd" id="1_bqp6u"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_b0vhp"]
@@ -102,23 +102,23 @@ material = SubResource("StandardMaterial3D_x1bx4")
 [sub_resource type="BoxShape3D" id="BoxShape3D_x1bx4"]
 size = Vector3(2.2260132, 4.3442383, 1)
 
-[node name="easteregghunt" type="Node3D"]
+[node name="easteregghunt" type="Node3D" unique_id=518789217]
 script = ExtResource("1_bqp6u")
 player_scene = ExtResource("2_b0vhp")
 
-[node name="Sprite3D38" type="Sprite2D" parent="."]
+[node name="Sprite3D38" type="Sprite2D" parent="." unique_id=206730209]
 position = Vector2(575.25, 322.25)
 scale = Vector2(10.013, 10.0231)
 texture = ExtResource("3_p0biy")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2040285911]
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1103276944]
 offset_left = 435.0
 offset_right = 716.0
 offset_bottom = 158.0
 
-[node name="host" type="Button" parent="CanvasLayer/Panel"]
+[node name="host" type="Button" parent="CanvasLayer/Panel" unique_id=1444970186]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -128,7 +128,7 @@ offset_bottom = 73.0
 text = "host"
 metadata/_edit_use_anchors_ = true
 
-[node name="join" type="Button" parent="CanvasLayer/Panel"]
+[node name="join" type="Button" parent="CanvasLayer/Panel" unique_id=1780710632]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 145.0
@@ -138,7 +138,7 @@ offset_bottom = 72.0
 text = "join"
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel" unique_id=175747665]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -148,7 +148,7 @@ offset_bottom = 113.0
 placeholder_text = "Local IPV4 adress:127.0.0.1"
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel"]
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel" unique_id=541527414]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 7.0
@@ -158,21 +158,21 @@ offset_bottom = 151.0
 placeholder_text = "Default Port: 15780"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=802426976]
 offset_left = 474.0
 offset_top = 414.0
 offset_right = 514.0
 offset_bottom = 437.0
 
-[node name="Label2" type="Label" parent="CanvasLayer"]
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=322510251]
 offset_left = 474.0
 offset_top = 463.0
 offset_right = 514.0
 offset_bottom = 486.0
 
-[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer"]
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer" unique_id=982230819]
 
-[node name="Chat" type="TextEdit" parent="CanvasLayer"]
+[node name="Chat" type="TextEdit" parent="CanvasLayer" unique_id=1467181688]
 offset_left = 833.0
 offset_top = 321.0
 offset_right = 1151.0
@@ -180,7 +180,7 @@ offset_bottom = 489.0
 text = "CHAT:"
 editable = false
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat" unique_id=958930839]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 137.0
@@ -188,89 +188,89 @@ offset_right = 317.0
 offset_bottom = 168.0
 placeholder_text = "MESSAGE"
 
-[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit"]
+[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit" unique_id=1176867920]
 layout_mode = 0
 offset_left = 267.0
 offset_right = 318.0
 offset_bottom = 31.0
 text = "SEND"
 
-[node name="Timer" type="Timer" parent="CanvasLayer"]
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=2039111832]
 wait_time = 3.0
 one_shot = true
 
-[node name="ban" type="LineEdit" parent="CanvasLayer"]
+[node name="ban" type="LineEdit" parent="CanvasLayer" unique_id=101597134]
 offset_left = 868.0
 offset_top = 284.0
 offset_right = 1150.5625
 offset_bottom = 315.0
 
-[node name="ban" type="Button" parent="CanvasLayer/ban"]
+[node name="ban" type="Button" parent="CanvasLayer/ban" unique_id=1015988667]
 layout_mode = 0
 offset_left = -68.0
 offset_right = -1.0
 offset_bottom = 31.0
 text = "Ban:"
 
-[node name="ban-ip" type="LineEdit" parent="CanvasLayer"]
+[node name="ban-ip" type="LineEdit" parent="CanvasLayer" unique_id=1848369035]
 offset_left = 869.0
 offset_top = 251.0
 offset_right = 1151.5625
 offset_bottom = 282.0
 
-[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip"]
+[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip" unique_id=588138124]
 layout_mode = 0
 offset_left = -68.0
 offset_right = -1.0
 offset_bottom = 31.0
 text = "Ban-IP:"
 
-[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer"]
+[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=1012630284]
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1704352642]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
 spawn_path = NodePath("..")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1225357574]
 transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 2, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1764535179]
 environment = SubResource("Environment_t5w83")
 
-[node name="FPS" parent="." instance=ExtResource("5_ci642")]
+[node name="FPS" parent="." unique_id=1635985243 instance=ExtResource("5_ci642")]
 
-[node name="easteregg" type="Node3D" parent="."]
+[node name="easteregg" type="Node3D" parent="." unique_id=2027877655]
 
-[node name="Label3" type="TextEdit" parent="."]
+[node name="Label3" type="TextEdit" parent="." unique_id=359441811]
 visible = false
 offset_right = 353.0
 offset_bottom = 273.0
 text = "Meaning of easter:"
 editable = false
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=577501896]
 replication_config = SubResource("SceneReplicationConfig_v4co0")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1933593091]
 offset_top = 160.0
 offset_right = 40.0
 offset_bottom = 183.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1898521211]
 stream = ExtResource("18_4yko1")
 volume_db = -5.0
 autoplay = true
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=1246388317]
 offset_left = 555.0
 offset_top = 3.0
 offset_right = 595.0
 offset_bottom = 26.0
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Node3D" type="Node3D" parent="." unique_id=473023274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.166, -36.306, -127.21)
 
-[node name="HTerrain" type="Node3D" parent="Node3D"]
+[node name="HTerrain" type="Node3D" parent="Node3D" unique_id=1875275422]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("5_417tr")
 _terrain_data = ExtResource("6_2h63l")
@@ -290,1107 +290,1107 @@ shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
 metadata/_custom_type_script = "uid://37ha5rs7kt0o"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=392747211]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=2112892623]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=1335380963]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=356447109]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D" unique_id=1157061527]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D" unique_id=335580831]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Node3D" unique_id=873161976]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Node3D" unique_id=1287727579]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Node3D" unique_id=84396693]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Node3D" unique_id=1787001584]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D11" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Node3D" unique_id=1643754567]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D12" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Node3D" unique_id=1760342468]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D13" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Node3D" unique_id=1941591250]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D14" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Node3D" unique_id=1074330033]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D15" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Node3D" unique_id=588196117]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D16" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Node3D" unique_id=1333321061]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D17" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Node3D" unique_id=1390067953]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D18" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Node3D" unique_id=419400380]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D19" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Node3D" unique_id=1238755105]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D20" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Node3D" unique_id=1846487553]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D21" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Node3D" unique_id=1180110738]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D22" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Node3D" unique_id=1140529511]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D23" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Node3D" unique_id=1409984743]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D24" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Node3D" unique_id=96302851]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D25" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Node3D" unique_id=633290127]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D26" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Node3D" unique_id=904367015]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D27" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="Node3D" unique_id=1886409608]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D28" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Node3D" unique_id=1788065093]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D29" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="Node3D" unique_id=1740677016]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D30" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="Node3D" unique_id=649127607]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D31" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="Node3D" unique_id=515048177]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D32" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="Node3D" unique_id=944116128]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D33" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="Node3D" unique_id=192862732]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D34" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="Node3D" unique_id=858392372]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Node3D" unique_id=300406465]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D36" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="Node3D" unique_id=883946321]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D37" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="Node3D" unique_id=1508714022]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D38" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="Node3D" unique_id=1930891712]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D39" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="Node3D" unique_id=1456149083]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D40" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="Node3D" unique_id=542482524]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D41" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="Node3D" unique_id=928149420]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D42" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="Node3D" unique_id=1858015210]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D43" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="Node3D" unique_id=194670105]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D44" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="Node3D" unique_id=124324860]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D45" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="Node3D" unique_id=1509363216]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 126.739, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D46" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="Node3D" unique_id=860017853]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D47" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="Node3D" unique_id=83869881]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D48" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="Node3D" unique_id=699299845]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 109.435, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D49" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="Node3D" unique_id=143491271]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D50" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="Node3D" unique_id=1509992456]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D51" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="Node3D" unique_id=1026447999]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 88.6955, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D52" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="Node3D" unique_id=1208936614]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D53" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D53" type="MeshInstance3D" parent="Node3D" unique_id=86506593]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D54" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D54" type="MeshInstance3D" parent="Node3D" unique_id=293454763]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 67.3623, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D55" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D55" type="MeshInstance3D" parent="Node3D" unique_id=586867511]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D56" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D56" type="MeshInstance3D" parent="Node3D" unique_id=141228493]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D57" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D57" type="MeshInstance3D" parent="Node3D" unique_id=88184703]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 49.5584, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D58" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D58" type="MeshInstance3D" parent="Node3D" unique_id=352307988]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D59" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D59" type="MeshInstance3D" parent="Node3D" unique_id=1985607064]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D60" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D60" type="MeshInstance3D" parent="Node3D" unique_id=1036183782]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D61" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D61" type="MeshInstance3D" parent="Node3D" unique_id=1496460310]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D62" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D62" type="MeshInstance3D" parent="Node3D" unique_id=190270806]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D63" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D63" type="MeshInstance3D" parent="Node3D" unique_id=1219743506]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 31.1915, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D64" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D64" type="MeshInstance3D" parent="Node3D" unique_id=1563854055]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D65" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D65" type="MeshInstance3D" parent="Node3D" unique_id=1836842993]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D66" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D66" type="MeshInstance3D" parent="Node3D" unique_id=973192965]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D67" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D67" type="MeshInstance3D" parent="Node3D" unique_id=1098126881]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D68" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D68" type="MeshInstance3D" parent="Node3D" unique_id=1782018120]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D69" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D69" type="MeshInstance3D" parent="Node3D" unique_id=1900542651]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D70" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D70" type="MeshInstance3D" parent="Node3D" unique_id=1589243837]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D71" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D71" type="MeshInstance3D" parent="Node3D" unique_id=1358823965]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D72" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D72" type="MeshInstance3D" parent="Node3D" unique_id=62972674]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D73" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D73" type="MeshInstance3D" parent="Node3D" unique_id=1824729105]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D74" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D74" type="MeshInstance3D" parent="Node3D" unique_id=1368471091]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D75" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D75" type="MeshInstance3D" parent="Node3D" unique_id=797954005]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D76" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D76" type="MeshInstance3D" parent="Node3D" unique_id=629374777]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D77" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D77" type="MeshInstance3D" parent="Node3D" unique_id=1289867510]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D78" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D78" type="MeshInstance3D" parent="Node3D" unique_id=1896205656]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D79" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D79" type="MeshInstance3D" parent="Node3D" unique_id=655294189]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D80" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D80" type="MeshInstance3D" parent="Node3D" unique_id=989220496]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D81" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D81" type="MeshInstance3D" parent="Node3D" unique_id=1026596424]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D82" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D82" type="MeshInstance3D" parent="Node3D" unique_id=17513352]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493338, 128.869)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D83" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D83" type="MeshInstance3D" parent="Node3D" unique_id=826882914]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493329, 111.725)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D84" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D84" type="MeshInstance3D" parent="Node3D" unique_id=904807177]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493343, 144.053)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D85" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D85" type="MeshInstance3D" parent="Node3D" unique_id=518030595]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D86" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D86" type="MeshInstance3D" parent="Node3D" unique_id=531093546]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D87" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D87" type="MeshInstance3D" parent="Node3D" unique_id=2003791559]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D88" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D88" type="MeshInstance3D" parent="Node3D" unique_id=288277661]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D89" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D89" type="MeshInstance3D" parent="Node3D" unique_id=1168557137]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D90" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D90" type="MeshInstance3D" parent="Node3D" unique_id=885200951]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D91" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D91" type="MeshInstance3D" parent="Node3D" unique_id=983363091]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D92" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D92" type="MeshInstance3D" parent="Node3D" unique_id=1730040552]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D93" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D93" type="MeshInstance3D" parent="Node3D" unique_id=175002611]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D94" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D94" type="MeshInstance3D" parent="Node3D" unique_id=675281765]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D95" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D95" type="MeshInstance3D" parent="Node3D" unique_id=1940106645]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D96" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D96" type="MeshInstance3D" parent="Node3D" unique_id=999015343]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D97" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D97" type="MeshInstance3D" parent="Node3D" unique_id=984516557]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D98" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D98" type="MeshInstance3D" parent="Node3D" unique_id=1844723436]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D99" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D99" type="MeshInstance3D" parent="Node3D" unique_id=809111113]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D100" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D100" type="MeshInstance3D" parent="Node3D" unique_id=450557324]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D101" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D101" type="MeshInstance3D" parent="Node3D" unique_id=1738332964]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D102" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D102" type="MeshInstance3D" parent="Node3D" unique_id=1465147816]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D103" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D103" type="MeshInstance3D" parent="Node3D" unique_id=1709769013]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493359, 177.7)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D104" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D104" type="MeshInstance3D" parent="Node3D" unique_id=1266091651]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.049335, 160.557)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D105" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D105" type="MeshInstance3D" parent="Node3D" unique_id=1878488910]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493364, 192.885)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D106" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D106" type="MeshInstance3D" parent="Node3D" unique_id=486731248]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D107" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D107" type="MeshInstance3D" parent="Node3D" unique_id=594305522]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D108" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D108" type="MeshInstance3D" parent="Node3D" unique_id=122950084]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D109" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D109" type="MeshInstance3D" parent="Node3D" unique_id=1317961007]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D110" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D110" type="MeshInstance3D" parent="Node3D" unique_id=1984249972]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D111" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D111" type="MeshInstance3D" parent="Node3D" unique_id=1553466646]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D112" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D112" type="MeshInstance3D" parent="Node3D" unique_id=1735751770]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D113" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D113" type="MeshInstance3D" parent="Node3D" unique_id=2062416409]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D114" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D114" type="MeshInstance3D" parent="Node3D" unique_id=904545631]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D115" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D115" type="MeshInstance3D" parent="Node3D" unique_id=213539979]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D116" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D116" type="MeshInstance3D" parent="Node3D" unique_id=1348528368]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D117" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D117" type="MeshInstance3D" parent="Node3D" unique_id=1884702930]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D118" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D118" type="MeshInstance3D" parent="Node3D" unique_id=906830850]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D119" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D119" type="MeshInstance3D" parent="Node3D" unique_id=989204268]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D120" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D120" type="MeshInstance3D" parent="Node3D" unique_id=423207474]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D121" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D121" type="MeshInstance3D" parent="Node3D" unique_id=253089816]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D122" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D122" type="MeshInstance3D" parent="Node3D" unique_id=2077847041]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D123" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D123" type="MeshInstance3D" parent="Node3D" unique_id=2019893449]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D124" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D124" type="MeshInstance3D" parent="Node3D" unique_id=1424038746]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493318, 83.8503)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D125" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D125" type="MeshInstance3D" parent="Node3D" unique_id=1364215078]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493309, 66.7069)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D126" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D126" type="MeshInstance3D" parent="Node3D" unique_id=717303013]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493323, 99.0352)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D127" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D127" type="MeshInstance3D" parent="Node3D" unique_id=1485001444]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D128" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D128" type="MeshInstance3D" parent="Node3D" unique_id=618459287]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D129" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D129" type="MeshInstance3D" parent="Node3D" unique_id=1515992344]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D130" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D130" type="MeshInstance3D" parent="Node3D" unique_id=1081348023]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D131" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D131" type="MeshInstance3D" parent="Node3D" unique_id=636943946]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D132" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D132" type="MeshInstance3D" parent="Node3D" unique_id=1154008117]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D133" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D133" type="MeshInstance3D" parent="Node3D" unique_id=689818005]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D134" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D134" type="MeshInstance3D" parent="Node3D" unique_id=2127929451]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D135" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D135" type="MeshInstance3D" parent="Node3D" unique_id=1285799868]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D136" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D136" type="MeshInstance3D" parent="Node3D" unique_id=948444197]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D137" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D137" type="MeshInstance3D" parent="Node3D" unique_id=1574956755]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D138" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D138" type="MeshInstance3D" parent="Node3D" unique_id=1113477175]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D139" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D139" type="MeshInstance3D" parent="Node3D" unique_id=2122456304]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D140" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D140" type="MeshInstance3D" parent="Node3D" unique_id=623071328]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D141" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D141" type="MeshInstance3D" parent="Node3D" unique_id=743289779]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D142" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D142" type="MeshInstance3D" parent="Node3D" unique_id=1554106165]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D143" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D143" type="MeshInstance3D" parent="Node3D" unique_id=1715097539]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D144" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D144" type="MeshInstance3D" parent="Node3D" unique_id=726012685]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D145" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D145" type="MeshInstance3D" parent="Node3D" unique_id=2115936464]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D146" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D146" type="MeshInstance3D" parent="Node3D" unique_id=1680585156]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D147" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D147" type="MeshInstance3D" parent="Node3D" unique_id=1396986513]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D148" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D148" type="MeshInstance3D" parent="Node3D" unique_id=967108317]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D149" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D149" type="MeshInstance3D" parent="Node3D" unique_id=426560890]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D150" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D150" type="MeshInstance3D" parent="Node3D" unique_id=791555151]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D151" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D151" type="MeshInstance3D" parent="Node3D" unique_id=167082086]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D152" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D152" type="MeshInstance3D" parent="Node3D" unique_id=561617943]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D153" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D153" type="MeshInstance3D" parent="Node3D" unique_id=1367425020]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D154" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D154" type="MeshInstance3D" parent="Node3D" unique_id=1931072273]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D155" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D155" type="MeshInstance3D" parent="Node3D" unique_id=1988623327]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D156" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D156" type="MeshInstance3D" parent="Node3D" unique_id=1690246328]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D157" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D157" type="MeshInstance3D" parent="Node3D" unique_id=1257373799]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D158" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D158" type="MeshInstance3D" parent="Node3D" unique_id=2124417753]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D159" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D159" type="MeshInstance3D" parent="Node3D" unique_id=379350185]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D160" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D160" type="MeshInstance3D" parent="Node3D" unique_id=362149487]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D161" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D161" type="MeshInstance3D" parent="Node3D" unique_id=876688300]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D162" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D162" type="MeshInstance3D" parent="Node3D" unique_id=830457271]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D163" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D163" type="MeshInstance3D" parent="Node3D" unique_id=659084325]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D164" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D164" type="MeshInstance3D" parent="Node3D" unique_id=766703986]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D165" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D165" type="MeshInstance3D" parent="Node3D" unique_id=2097434192]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D166" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D166" type="MeshInstance3D" parent="Node3D" unique_id=1181300745]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D167" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D167" type="MeshInstance3D" parent="Node3D" unique_id=1831702440]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D168" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D168" type="MeshInstance3D" parent="Node3D" unique_id=923445423]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D169" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D169" type="MeshInstance3D" parent="Node3D" unique_id=1849202899]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D170" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D170" type="MeshInstance3D" parent="Node3D" unique_id=1339754711]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D171" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D171" type="MeshInstance3D" parent="Node3D" unique_id=1147871953]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 243.308, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D172" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D172" type="MeshInstance3D" parent="Node3D" unique_id=1760069263]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D173" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D173" type="MeshInstance3D" parent="Node3D" unique_id=1149060987]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D174" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D174" type="MeshInstance3D" parent="Node3D" unique_id=274670494]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 226.003, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D175" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D175" type="MeshInstance3D" parent="Node3D" unique_id=465604108]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D176" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D176" type="MeshInstance3D" parent="Node3D" unique_id=757171015]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D177" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D177" type="MeshInstance3D" parent="Node3D" unique_id=580456497]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 205.264, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D178" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D178" type="MeshInstance3D" parent="Node3D" unique_id=1703247656]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D179" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D179" type="MeshInstance3D" parent="Node3D" unique_id=1780090291]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D180" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D180" type="MeshInstance3D" parent="Node3D" unique_id=1943806499]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 183.931, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D181" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D181" type="MeshInstance3D" parent="Node3D" unique_id=598551911]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D182" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D182" type="MeshInstance3D" parent="Node3D" unique_id=2530748]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D183" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D183" type="MeshInstance3D" parent="Node3D" unique_id=256538214]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 166.127, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D184" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D184" type="MeshInstance3D" parent="Node3D" unique_id=128971525]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D185" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D185" type="MeshInstance3D" parent="Node3D" unique_id=1661690509]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D186" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D186" type="MeshInstance3D" parent="Node3D" unique_id=374085164]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D187" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D187" type="MeshInstance3D" parent="Node3D" unique_id=1467679132]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D188" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D188" type="MeshInstance3D" parent="Node3D" unique_id=1400449850]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D189" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D189" type="MeshInstance3D" parent="Node3D" unique_id=170106187]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 147.76, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D190" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D190" type="MeshInstance3D" parent="Node3D" unique_id=468894451]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D191" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D191" type="MeshInstance3D" parent="Node3D" unique_id=797036081]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D192" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D192" type="MeshInstance3D" parent="Node3D" unique_id=1743353882]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D193" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D193" type="MeshInstance3D" parent="Node3D" unique_id=825003549]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D194" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D194" type="MeshInstance3D" parent="Node3D" unique_id=1737858445]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D195" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D195" type="MeshInstance3D" parent="Node3D" unique_id=113719233]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D196" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D196" type="MeshInstance3D" parent="Node3D" unique_id=1929847295]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D197" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D197" type="MeshInstance3D" parent="Node3D" unique_id=2024987600]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D198" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D198" type="MeshInstance3D" parent="Node3D" unique_id=1738063435]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D199" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D199" type="MeshInstance3D" parent="Node3D" unique_id=2122426462]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D200" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D200" type="MeshInstance3D" parent="Node3D" unique_id=465596875]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D201" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D201" type="MeshInstance3D" parent="Node3D" unique_id=454701368]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D202" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D202" type="MeshInstance3D" parent="Node3D" unique_id=1634499884]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D203" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D203" type="MeshInstance3D" parent="Node3D" unique_id=1198158861]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D204" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D204" type="MeshInstance3D" parent="Node3D" unique_id=980312136]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D205" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D205" type="MeshInstance3D" parent="Node3D" unique_id=2053893936]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D206" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D206" type="MeshInstance3D" parent="Node3D" unique_id=745919133]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D207" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D207" type="MeshInstance3D" parent="Node3D" unique_id=1557026910]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D208" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D208" type="MeshInstance3D" parent="Node3D" unique_id=1004950459]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493312, 68.3827)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D209" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D209" type="MeshInstance3D" parent="Node3D" unique_id=1374463042]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493302, 51.2393)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D210" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D210" type="MeshInstance3D" parent="Node3D" unique_id=1699199525]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493316, 83.5676)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D211" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D211" type="MeshInstance3D" parent="Node3D" unique_id=771646964]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D212" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D212" type="MeshInstance3D" parent="Node3D" unique_id=1366759348]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D213" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D213" type="MeshInstance3D" parent="Node3D" unique_id=1496147711]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D214" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D214" type="MeshInstance3D" parent="Node3D" unique_id=987734525]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D215" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D215" type="MeshInstance3D" parent="Node3D" unique_id=738700676]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D216" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D216" type="MeshInstance3D" parent="Node3D" unique_id=1396064743]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D217" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D217" type="MeshInstance3D" parent="Node3D" unique_id=1138605877]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D218" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D218" type="MeshInstance3D" parent="Node3D" unique_id=893521609]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D219" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D219" type="MeshInstance3D" parent="Node3D" unique_id=461412393]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D220" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D220" type="MeshInstance3D" parent="Node3D" unique_id=469258107]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D221" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D221" type="MeshInstance3D" parent="Node3D" unique_id=1867133404]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D222" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D222" type="MeshInstance3D" parent="Node3D" unique_id=2006217380]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D223" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D223" type="MeshInstance3D" parent="Node3D" unique_id=1237690905]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D224" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D224" type="MeshInstance3D" parent="Node3D" unique_id=1953914569]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D225" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D225" type="MeshInstance3D" parent="Node3D" unique_id=622916851]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D226" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D226" type="MeshInstance3D" parent="Node3D" unique_id=31154736]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D227" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D227" type="MeshInstance3D" parent="Node3D" unique_id=564829441]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D228" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D228" type="MeshInstance3D" parent="Node3D" unique_id=1271012069]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D229" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D229" type="MeshInstance3D" parent="Node3D" unique_id=1381178622]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493333, 117.214)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D230" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D230" type="MeshInstance3D" parent="Node3D" unique_id=1567991671]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493323, 100.071)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D231" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D231" type="MeshInstance3D" parent="Node3D" unique_id=1182525037]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493338, 132.399)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D232" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D232" type="MeshInstance3D" parent="Node3D" unique_id=295496567]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D233" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D233" type="MeshInstance3D" parent="Node3D" unique_id=440239396]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D234" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D234" type="MeshInstance3D" parent="Node3D" unique_id=460433896]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 128.215, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D235" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D235" type="MeshInstance3D" parent="Node3D" unique_id=709761826]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D236" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D236" type="MeshInstance3D" parent="Node3D" unique_id=1755956433]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D237" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D237" type="MeshInstance3D" parent="Node3D" unique_id=1600080140]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 110.911, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D238" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D238" type="MeshInstance3D" parent="Node3D" unique_id=937325700]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D239" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D239" type="MeshInstance3D" parent="Node3D" unique_id=2066207469]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D240" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D240" type="MeshInstance3D" parent="Node3D" unique_id=1463654482]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 90.1712, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D241" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D241" type="MeshInstance3D" parent="Node3D" unique_id=1774980710]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D242" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D242" type="MeshInstance3D" parent="Node3D" unique_id=866831766]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D243" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D243" type="MeshInstance3D" parent="Node3D" unique_id=1383645031]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 68.8381, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D244" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D244" type="MeshInstance3D" parent="Node3D" unique_id=399386754]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D245" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D245" type="MeshInstance3D" parent="Node3D" unique_id=273920913]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D246" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D246" type="MeshInstance3D" parent="Node3D" unique_id=567022633]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 51.0342, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D247" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D247" type="MeshInstance3D" parent="Node3D" unique_id=289148562]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D248" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D248" type="MeshInstance3D" parent="Node3D" unique_id=582515838]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D249" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D249" type="MeshInstance3D" parent="Node3D" unique_id=615900275]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D250" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D250" type="MeshInstance3D" parent="Node3D" unique_id=1860000791]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493292, 23.3644)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D251" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D251" type="MeshInstance3D" parent="Node3D" unique_id=293142367]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493282, 6.22106)
 mesh = ExtResource("10_p5dat")
 
-[node name="MeshInstance3D252" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D252" type="MeshInstance3D" parent="Node3D" unique_id=1688994262]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 32.6672, 0.0493297, 38.5494)
 mesh = ExtResource("10_p5dat")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=1925138583]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -34.8566, -4.96598)
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=1469068523]
 transform = Transform3D(0.417286, 0, 0, 0, 2.17598, 0, 0, 0, 0.451952, 0, 0, 0)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D" unique_id=1742386406]
 transform = Transform3D(0.417286, 0, 0, 0, -6.42995e-08, 0.451952, 0, -1.471, -1.97555e-08, 0, 0.383267, -1.67531e-08)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=178920032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012207, 0)
 shape = SubResource("BoxShape3D_eoagw")
 
-[node name="Area3D2" type="Area3D" parent="."]
+[node name="Area3D2" type="Area3D" parent="." unique_id=1264438665]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.1082, -12.1578, -28.2854)
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D2" unique_id=1320968526]
 transform = Transform3D(0.417286, 0, 0, 0, 2.17598, 0, 0, 0, 0.451952, 0, 0, 0)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D2"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D2" unique_id=887073349]
 transform = Transform3D(0.417286, 0, 0, 0, -6.42995e-08, 0.451952, 0, -1.471, -1.97555e-08, 0, 0.383267, -1.67531e-08)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=326212960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012207, 0)
 shape = SubResource("BoxShape3D_eoagw")
 
-[node name="Area3D3" type="Area3D" parent="."]
+[node name="Area3D3" type="Area3D" parent="." unique_id=2061731497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5006, -29.3675, -4.56228)
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D3" unique_id=164141025]
 transform = Transform3D(0.417286, 0, 0, 0, 2.17598, 0, 0, 0, 0.451952, 0, 0, 0)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D3"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D3" unique_id=2137360295]
 transform = Transform3D(0.417286, 0, 0, 0, -6.42995e-08, 0.451952, 0, -1.471, -1.97555e-08, 0, 0.383267, -1.67531e-08)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=507031120]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012207, 0)
 shape = SubResource("BoxShape3D_eoagw")
 
-[node name="Area3D4" type="Area3D" parent="."]
+[node name="Area3D4" type="Area3D" parent="." unique_id=38986609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.112, -34.7274, -10.758)
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D4" unique_id=1513495677]
 transform = Transform3D(0.417286, 0, 0, 0, 2.17598, 0, 0, 0, 0.451952, 0, 0, 0)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D4"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D4" unique_id=1027728487]
 transform = Transform3D(0.417286, 0, 0, 0, -6.42995e-08, 0.451952, 0, -1.471, -1.97555e-08, 0, 0.383267, -1.67531e-08)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4" unique_id=727085962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012207, 0)
 shape = SubResource("BoxShape3D_eoagw")
 
-[node name="Area3D5" type="Area3D" parent="."]
+[node name="Area3D5" type="Area3D" parent="." unique_id=1695297859]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.3337, -31.5312, 17.8396)
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D5"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D5" unique_id=971016920]
 transform = Transform3D(0.417286, 0, 0, 0, 2.17598, 0, 0, 0, 0.451952, 0, 0, 0)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D5"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D5" unique_id=1283073384]
 transform = Transform3D(0.417286, 0, 0, 0, -6.42995e-08, 0.451952, 0, -1.471, -1.97555e-08, 0, 0.383267, -1.67531e-08)
 mesh = SubResource("BoxMesh_x1bx4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5" unique_id=702966794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012207, 0)
 shape = SubResource("BoxShape3D_eoagw")
 
-[node name="Area3D6" type="Area3D" parent="."]
+[node name="Area3D6" type="Area3D" parent="." unique_id=239447131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.6376, 74.7364, 119.734)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6" unique_id=1332883395]
 shape = SubResource("BoxShape3D_p5dat")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D6"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D6" unique_id=1209791244]
 mesh = SubResource("BoxMesh_eoagw")
 
-[node name="Area3D15" type="Area3D" parent="."]
+[node name="Area3D15" type="Area3D" parent="." unique_id=2012802134]
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15" unique_id=439935477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
 shape = SubResource("BoxShape3D_x1bx4")
 
