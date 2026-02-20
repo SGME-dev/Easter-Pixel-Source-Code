@@ -1,0 +1,55 @@
+name: Build iOS (Godot 4.6)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows you to run it manually for testing
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true # Good if you have high-res assets for 1.7.0
+
+    - name: Download Godot 4.6
+      run: |
+        wget https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_macos.universal.zip
+        unzip Godot_v4.6-stable_macos.universal.zip
+        sudo mv Godot.app /Applications/Godot.app
+        # In Godot 4, we use the --headless flag for terminal commands
+        sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+
+    - name: Download Export Templates
+      run: |
+        # Godot 4 uses a specific path: ~/Library/Application Support/Godot/export_templates/4.6.stable/
+        mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.6.stable
+        wget https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_export_templates.tpz
+        unzip Godot_v4.6-stable_export_templates.tpz
+        mv templates/* ~/Library/Application\ Support/Godot/export_templates/4.6.stable/
+
+    - name: Build Xcode Project
+      run: |
+        mkdir -p build/ios
+        # Ensure your export preset in Godot is exactly named "iOS"
+        godot --headless --export-release "iOS" build/ios/EasterPixels.xcodeproj
+
+    - name: Compile to IPA (Unsigned)
+      run: |
+        xcodebuild archive \
+          -project build/ios/EasterPixels.xcodeproj \
+          -scheme "EasterPixels" \
+          -configuration Release \
+          -archivePath build/EasterPixels.xcarchive \
+          CODE_SIGNING_ALLOWED=NO \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGN_IDENTITY=""
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: EasterPixels-iOS-Build
+        path: build/EasterPixels.xcarchive
