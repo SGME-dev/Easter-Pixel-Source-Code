@@ -3,7 +3,7 @@ name: Build iOS (Godot 4.6)
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # Allows you to manually trigger the build
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,33 +14,53 @@ jobs:
       uses: actions/checkout@v4
       with:
         lfs: true
-        fetch-depth: 1 # Only gets the latest version to speed up checkout
+        fetch-depth: 1 # Faster checkout for 1.7.0/1.8.0 assets
+
+    - name: Cache Godot Editor and Templates
+      uses: actions/cache@v4
+      with:
+        path: |
+          /Applications/Godot.app
+          ~/Library/Application Support/Godot/export_templates/4.6.stable
+        key: ${{ runner.os }}-godot-4.6-stable
+
+    - name: Cache .godot Import Folder
+      # This stops the constant "Reimporting Daydream DEMO.otf" loop
+      uses: actions/cache@v4
+      with:
+        path: .godot/imported/
+        key: ${{ runner.os }}-godot-import-cache-${{ hashFiles('**/project.godot') }}
+        restore-keys: |
+          ${{ runner.os }}-godot-import-cache-
 
     - name: Download Godot 4.6
       run: |
-        wget https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_macos.universal.zip
-        unzip Godot_v4.6-stable_macos.universal.zip
-        sudo mv Godot.app /Applications/Godot.app
-        # Link the binary so we can use the 'godot' command
-        sudo ln -s /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
+        if [ ! -d "/Applications/Godot.app" ]; then
+          wget https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_macos.universal.zip
+          unzip Godot_v4.6-stable_macos.universal.zip
+          sudo mv Godot.app /Applications/Godot.app
+        fi
+        sudo ln -sf /Applications/Godot.app/Contents/MacOS/Godot /usr/local/bin/godot
 
     - name: Download Export Templates
       run: |
-        # Godot 4.6 uses this specific directory structure on macOS
-        mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.6.stable
-        wget https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_export_templates.tpz
-        unzip Godot_v4.6-stable_export_templates.tpz
-        mv templates/* ~/Library/Application\ Support/Godot/export_templates/4.6.stable/
+        TEMPLATE_PATH=~/Library/Application\ Support/Godot/export_templates/4.6.stable
+        if [ ! -d "$TEMPLATE_PATH" ]; then
+          mkdir -p "$TEMPLATE_PATH"
+          wget https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_export_templates.tpz
+          unzip Godot_v4.6-stable_export_templates.tpz
+          mv templates/* "$TEMPLATE_PATH/"
+        fi
 
     - name: Export Xcode Project
-      # Using --headless because cloud runners don't have a monitor
+      # Headless mode handles the 1.7.0 UI assets efficiently
       run: |
         mkdir -p build/ios
         godot --headless --export-release "iOS" "build/Easter Pixel.xcodeproj"
 
     - name: Build Unsigned Archive
       run: |
-        # We use Manual signing style to prevent 'Conflicting Settings' errors
+        # Manual signing prevents "Conflicting Provisioning" errors in 4.6
         xcodebuild archive \
           -project "build/Easter Pixel.xcodeproj" \
           -scheme "Easter Pixel" \
@@ -54,5 +74,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Easter-Pixel-iOS-Build
+        name: Easter-Pixel-iOS-v1.8.0
         path: build/Easter Pixel.xcarchive
