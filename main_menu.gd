@@ -8,6 +8,27 @@ func _on_play_pressed() -> void:
 	$CanvasLayer/TextEdit.show()
 	
 
+func _ready() -> void:
+	if OS.has_feature("dedicated_server"):
+		# 1. Get all arguments passed to the .exe
+		var args = OS.get_cmdline_args()
+		
+		# 2. Set a default scene in case no argument is provided
+		var target_scene = "res://lobby.tscn"
+		
+		# 3. Look for our custom "map" argument (e.g., map=quiz)
+		for arg in args:
+			if arg.begins_with("map="):
+				var map_name = arg.split("=")[1]
+				target_scene = "res://" + map_name + ".tscn"
+		
+		print("Dedicated Server loading: ", target_scene)
+		
+		# 4. Switch to the requested scene
+		var error = get_tree().change_scene_to_file(target_scene)
+		if error != OK:
+			print("Error: Could not find scene ", target_scene, ". Loading lobby instead.")
+			get_tree().change_scene_to_file("res://lobby.tscn")
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://lobby.tscn")
