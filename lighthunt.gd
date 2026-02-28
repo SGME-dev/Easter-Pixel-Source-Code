@@ -1,23 +1,17 @@
 extends Node3D
 
-class_name lobby
-
-var effect
-var recording
-
-@onready var world_environment: WorldEnvironment = $WorldEnvironment
+class_name lighthunt
+@onready var label_3: TextEdit = $Label3
 @onready var http_request: HTTPRequest = $CanvasLayer/HTTPRequest
 @onready var lan_ip_label: Label = $CanvasLayer/Label
 @onready var public_ip_label: Label = $CanvasLayer/Label2
-var local_addresses = IP.get_local_addresses()
-var actual_port: int = 15780
+@export var lights: int = 0
 var port: int = 15780
 const DEFAULT_SERVER_IP: String = "127.0.0.1" # IPv4 localhost
 var MAX_CONNECTIONS: int = 20
 var user = FileAccess.open("user://username.save", FileAccess.READ).get_line()
 @export var dedserver: bool = false
 var ip: String
-
 
 static var peer: ENetMultiplayerPeer = ENetMultiplayerPeer.new()
 @export var player_scene : PackedScene
@@ -29,32 +23,7 @@ func is_dedicated_server():
 			return true
 	return false
 
-@rpc("any_peer", "call_local", "unreliable")
-func send_rec_data(rec_data):
-	var sample = AudioStreamWAV.new()
-	sample.data = rec_data
-	sample.format = AudioStreamWAV.FORMAT_16_BITS
-	sample.mix_rate = AudioServer.get_mix_rate()*2
-	$AudioStreamPlayer.stream = sample
-	$AudioStreamPlayer.play()
-	print("Received audio packet of size: ", rec_data.size())
-
-func _on_send_recording_timer_timeout():
-	var rec = effect.get_recording()
-	if rec != null:
-		# The line below only works if you are connected to a server
-		if multiplayer.multiplayer_peer != null:
-			rpc("send_rec_data", rec.data)
-	if multiplayer.multiplayer_peer != null:
-		if multiplayer.get_peers().size() > 0:
-			recording = effect.get_recording()
-			effect.set_recording_active(false)
-			rpc("send_rec_data",recording.data)
-			effect.set_recording_active(true)
-
 func _ready() -> void:
-	var Exepath = OS.get_executable_path().get_base_dir()
-	print(Exepath)
 	if OS.has_feature("dedicated_server"):
 		print("Started the server...")
 		_on_host_pressed()
@@ -63,6 +32,7 @@ func _ready() -> void:
 		%LineEdit.hide()
 		%LineEdit2.hide()
 		$Sprite3D38.hide()
+		$CanvasLayer/Panel.hide()
 		dedserver = true
 		var path = OS.get_executable_path().get_base_dir() + "max_players.limit"
 		
@@ -72,22 +42,13 @@ func _ready() -> void:
 			file.close()
 			if int(player_limit) > 0 and int(player_limit) < 101:
 				MAX_CONNECTIONS = int(player_limit)
-	if !OS.has_feature("dedicated_server"):
-		var idx = AudioServer.get_bus_index("record")
-		effect = AudioServer.get_bus_effect(idx,0)
-		print(effect)
-		effect.set_recording_active(true)
-		get_tree().set_auto_accept_quit(false)
-	
-	
 
-func _notification(what: int) -> void:
-	# 2. Check if the user clicked the 'X' or pressed Alt+F4
-	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		print("NA")
-		get_tree().quit()
+func _physics_process(delta: float) -> void:
+	$Label2.text = str(lights, "/21")
+	
 
 func _on_host_pressed() -> void:
+	
 	peer.create_server(port, MAX_CONNECTIONS)
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(add_player)
@@ -140,30 +101,22 @@ func _on_host_pressed() -> void:
 		lan_ip_label.text = "Lan IPV4 address: No Addresses"
 	
 	
-	print(dedserver)
 	
 	
-	# --- Your existing UI/Animation code ---
-	$StaticBody3D16/AnimationPlayer.play("move")
-	$Narrorator/AudioStreamPlayer.play()
+	
 	%host.hide()
 	%join.hide()
 	%LineEdit.hide()
 	%LineEdit2.hide()
 	$Sprite3D38.hide()
 	$CanvasLayer/Panel.hide()
-	
-	
 
-func _on_join_pressed(address: String = str(%LineEdit.text), port: int = int(%LineEdit2.text)) -> void:
+
+func _on_join_pressed(address: String = str(%LineEdit.text)) -> void:
 	if address.is_empty() or address == "localhost":
 		address = DEFAULT_SERVER_IP
-	if %LineEdit2.text.is_empty():
-		port = actual_port
-	peer.create_client(address, port)
+	peer.create_client(address, int(%LineEdit2.text))
 	multiplayer.multiplayer_peer = peer
-	$StaticBody3D16/AnimationPlayer.play("move")
-	
 	%host.hide()
 	%join.hide()
 	%LineEdit.hide()
@@ -187,6 +140,7 @@ func exit_game(id: int) -> void:
 	msg_leave.rpc(str("\n" + user))
 
 
+
 func del_player(id: int) -> void:
 	rpc("_del_player" ,id)
 	
@@ -199,175 +153,11 @@ func _on_connected_fail() -> void:
 	multiplayer.multiplayer_peer = null
 
 
-func _on_area_3d_body_entered(body: AnimatableBody3D) -> void:
-	if body.is_in_group("jesus_donkey"):
-		body.hide()
-
-
-func _on_area_3d2_body_entered(body: player) -> void:
-	set_active_environment($WorldEnvironment2)
-	$CanvasLayer/TextEdit.text = "Later, on the night, Jesus was having a passover meal with his disiples."
-	$Narrorator/AudioStreamPlayer3.play()
-	
-
-
-func _on_area_3d_2_body_entered(body: player) -> void:
-	body.global_position = $HTerrain.global_position
-	$AnimatableBody3D86/AnimationPlayer.play("move")
-	$CanvasLayer/TextEdit.text = "Jesus went to a garden to pray."
-	$Narrorator/AudioStreamPlayer5.play()
-	
-
-
-func _on_area_3d_3_body_entered(body: player) -> void:
-	body.global_position = $Sprite3D30.global_position
-	$CanvasLayer/TextEdit.text = "The pharisies and sadusees asked Jesus alot of questions. They did not care what jesus said, they blamed jesus of blaspymy because he said he was the son of god."
-	$Narrorator/AudioStreamPlayer7.play()
-
-
-func _on_area_3d_4_body_entered(body: player) -> void:
-	body.global_position = $StaticBody3D41.global_position
-	$AnimatableBody3D105/AnimationPlayer.play("move")
-	$CanvasLayer/TextEdit.text = "After that, The pharisies and sadusees sent Jesus to a roman goverer called ponchious pilate. He said 'Jesus did nothing worng', but The pharisies and sadusees kept shouting"
-	$Narrorator/AudioStreamPlayer8.play()
-
-
-func _on_area_3d_5_body_entered(body: player) -> void:
-	body.global_position = $HTerrain2.global_position
-	crusifiction()
-	$CanvasLayer/TextEdit.text = "So Jesus got beaten up and had to carry his cross to the hill. "
-	$Narrorator/AudioStreamPlayer10.play()
-
-func crusifiction():
-	$AnimatableBody3D111/AnimatableBody3D.play("move")
-	$StaticBody3D46/AnimationPlayer.play("move")
-	
-
-
-func _on_area_3d_6_body_entered(body: player) -> void:
-	body.global_position = $StaticBody3D47/Marker3D.global_position
-	$StaticBody3D53/AnimationPlayer.play("move")
-	$AnimatableBody3D113/AnimationPlayer.play("move")
-	$AnimatableBody3D112/AnimationPlayer.play("move")
-	$AnimatableBody3D114/AnimationPlayer.play("move")
-	$AnimatableBody3D117/AnimationPlayer.play("move")
-	$CanvasLayer/TextEdit.text = "Joseph loved jesus so much that he gave his tomb to Jesus. Ponchious Pilate put Guards to guard the tomb."
-	$Narrorator/AudioStreamPlayer12.play()
-
-
-func _on_animation_player_animation_finished(anim_name: StringName = "move") -> void:
-	$AnimatableBody3D113.hide()
-
-
-func _on_animation2_player_animation_finished(anim_name: StringName) -> void:
-	$AnimatableBody3D112.hide()
-
-
-func _on_animation3_player_animation_finished(anim_name: StringName) -> void:
-	$AnimatableBody3D115.show()
-	$AnimatableBody3D116.show()
-
-
-func _on_area_3d_7_body_entered(body: player) -> void:
-	body.global_position = $StaticBody3D54.global_position
-	$AnimatableBody3D118/AnimationPlayer2.play("move")
-	$AnimatableBody3D119/AnimationPlayer2.play("move")
-	set_active_environment($WorldEnvironment)
-	$CanvasLayer/TextEdit.text = "The girls was rushing to tell the disiples that Jesus was alive, But then Jesus appered and said 'Dont be afraid.'"
-	$Narrorator/AudioStreamPlayer14.play()
-
-func set_active_environment(environment: WorldEnvironment):
-	# Set the provided environment as the active environment
-	get_viewport().world_3d.environment = environment.environment
-
-
-func _on_area_3d_8_body_entered(body: AnimatableBody3D) -> void:
-	set_active_environment($WorldEnvironment2)
-	if body.is_in_group("jesus_emmaus"):
-		$AnimatableBody3D121.hide()
-		$AnimatableBody3D122.hide()
-		$AnimatableBody3D123.hide()
-	
-	
-
-
-func _on_area_3d_9_body_entered(body: player) -> void:
-	body.global_position = $StaticBody3D56/MeshInstance3D2.global_position
-	$AnimatableBody3D122/AnimationPlayer.play("move")
-	$AnimatableBody3D123/AnimationPlayer.play("move")
-	$AnimatableBody3D121/AnimationPlayer.play("move")
-	$CanvasLayer/TextEdit.text = "Later two disiples called simon and cleaopas were walking to a village called emmaus. Jesus came and said 'What are you talking about?', Cleaopas said what happened to Jesus but they did not reconise its Jesus."
-	$Narrorator/AudioStreamPlayer15.play()
-
-
-func _on_area_3d2_8_body_entered(body: player) -> void:
-	$AnimatableBody3D126/AnimationPlayer.play("break_bread")
-	$CanvasLayer/TextEdit.text = "When Jesus blessed them by breaking the bread in emmaus and giving it to them, they reconised Jesus, then Jesus vanished"
-	$Narrorator/AudioStreamPlayer17.play()
-
-
-func _on_area_3d_10_body_entered(body: Node3D) -> void:
-	body.global_position = $StaticBody3D67.global_position
-	set_active_environment($WorldEnvironment)
-	$AnimatableBody3D137/AnimationPlayer.play("run")
-	$AnimatableBody3D138/AnimationPlayer.play("run")
-	$CanvasLayer/TextEdit.text = "Then they rushed to the other 10 disiples to tell that Jesus was alive!"
-	$Narrorator/AudioStreamPlayer18.play()
-
-
-func _on_area_3d_11_body_entered(body: player) -> void:
-	body.global_position = $StaticBody3D73.global_position
-	$AnimatableBody3D150/AnimationPlayer.play("rise_to_heaven")
-	$CanvasLayer/TextEdit.text = "Then the disiples saw that Jesus was alive, Jesus went up and up to heaven! THE END"
-	$Narrorator/AudioStreamPlayer19.play()
-
-
-func _on_area_3d_12_body_entered(body: player) -> void:
-	Input.action_press("quit")
-	
-
-
-func _on_next_pressed() -> void:
-	
-	var timer = Timer.new()
-	
-	if $CanvasLayer/TextEdit.text == "Jesus and his disiples entered jurluselem. ":
-		$CanvasLayer/TextEdit.text = "When Jesus entered, people was waving palm branches and said 'Hosanna, Hosanna, Hosanna in the name of the Lord'"
-		$Narrorator/AudioStreamPlayer2.play()
-		
-			
-	if $CanvasLayer/TextEdit.text == "Later, on the night, Jesus was having a passover meal with his disiples.":
-		$CanvasLayer/TextEdit.text = "Jesus said 'One of you is going to betray me', Jesus' disiples wanted to know who could it be?. Jesus gave the bread to the one who was going to betray him"
-		$Narrorator/AudioStreamPlayer4.play()
-		
-	
-	if $CanvasLayer/TextEdit.text == "Jesus went to a garden to pray.":
-		$CanvasLayer/TextEdit.text = "After Jesus finished praying , Judas(One of Jesus' disiples) Led the pharisies and sadusees to Jesus. The pharisies and sadusees arrested Jesus."
-		$Narrorator/AudioStreamPlayer6.play()
-	if $CanvasLayer/TextEdit.text == "After that, The pharisies and sadusees sent Jesus to a roman goverer called ponchious pilate. He said 'Jesus did nothing worng', but The pharisies and sadusees kept shouting":
-		$CanvasLayer/TextEdit.text = "So he sent Jesus to be crusified on a cross."
-		$Narrorator/AudioStreamPlayer9.play()
-	if $CanvasLayer/TextEdit.text == "So Jesus got beaten up and had to carry his cross to the hill. ":
-		$CanvasLayer/TextEdit.text = "Jesus went on the cross and they nailed him on the cross. Jesus said 'Please fogive them, they dont know what they are doing'"
-		$Narrorator/AudioStreamPlayer11.play()
-	if $CanvasLayer/TextEdit.text == "Joseph loved jesus so much that he gave his tomb to Jesus. Ponchious Pilate put Guards to guard the tomb.":
-		$CanvasLayer/TextEdit.text = "Two of two Jesus' friends who were girls came to put spices on Jesus, but they saw that Jesus was gone and the Guards were laying down. An angel said 'Dont worry, Jesus has ressurected from the dead.'"
-		$Narrorator/AudioStreamPlayer13.play()
-	if $CanvasLayer/TextEdit.text == "Later two disiples called simon and cleaopas were walking to a village called emmaus. Jesus came and said 'What are you talking about?', Cleaopas said what happened to Jesus but they did not reconise its Jesus.":
-		$CanvasLayer/TextEdit.text = "Jesus said 'You foolish! Havent you heard what the scriptures said,' and when they were nealy there Jesus went another way so they begged him to come because it was nearly night time."
-		$Narrorator/AudioStreamPlayer16.play()
 
 
 
-
-
-func _on_area_3d_13_body_entered(body: player) -> void:
-	body.global_position = $StaticBody3D23/Marker3D.global_position
-	print(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30 + 31 + 32 + 33 + 34 + 35 + 36 + 37 + 38 + 39 + 40 + 41 + 42 + 43 + 44 + 45 + 46 + 47 + 48 + 49 + 50)
-
-
-func _on_area_3d_14_body_entered(body: player) -> void:
-	body.global_position = Vector3(0, 0, 0)
+func _on_area_3d_6_body_entered(body: Node3D) -> void:
+	pass
 
 func _on_http_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray):
 	if result == HTTPRequest.RESULT_SUCCESS and response_code == 200:
@@ -543,3 +333,166 @@ func _on_http_request_2_request_completed(result: int, response_code: int, heade
 			# if response_code == 404:
 			#     print("Error: Service URL not found.")
 			
+
+
+func _on_area_3d_body_entered(body: player) -> void:
+	$Area3D/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D.hide()
+	$Label3.show()
+	lights += 1
+	$Label3.text += "\nMatthew 4:17: From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand."
+
+
+func _on_area_3d_2_body_entered(body: player) -> void:
+	$Area3D2/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D2.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 2:11: This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory; and his disciples believed on him."
+	lights += 1
+
+func _on_area_3d_3_body_entered(body: player) -> void:
+	$Area3D3/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D3.hide()
+	$Label3.show()
+	$Label3.text += "\nMark 1:17: And Jesus said unto them, Come ye after me, and I will make you to become fishers of men."
+	lights += 1
+
+func _on_area_3d_4_body_entered(body: player) -> void:
+	$Area3D4/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D4.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 5:3: Blessed are the poor in spirit: for theirs is the kingdom of heaven."
+	lights += 1
+
+func _on_area_3d_5_body_entered(body: player) -> void:
+	$Area3D5/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D5.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 5:14: Ye are the light of the world. A city that is set on an hill cannot be hid."
+	lights += 1
+
+
+func _on_area_3d_7_body_entered(body: player) -> void:
+	$Area3D7/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D7.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 6:35: And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger."
+	lights += 1
+
+func _on_area_3d_8_body_entered(body: player) -> void:
+	$Area3D8/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D8.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 8:12: Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness."
+	lights += 1
+
+func _on_area_3d_9_body_entered(body: player) -> void:
+	$Area3D9/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D9.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 10:11: I am the good shepherd: the good shepherd giveth his life for the sheep."
+	lights += 1
+
+func _on_area_3d_10_body_entered(body: player) -> void:
+	$Area3D10/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D10.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 11:28: Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+	lights += 1
+
+func _on_area_3d_11_body_entered(body: player) -> void:
+	$Area3D11/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D11.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 19:14: But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven."
+	lights += 1
+
+
+func _on_area_3d_12_body_entered(body: player) -> void:
+	$Area3D12/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D12.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 22:39: And the second is like unto it, Thou shalt love thy neighbour as thyself."
+	lights += 1
+
+func _on_area_3d_13_body_entered(body: player) -> void:
+	$Area3D13/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D13.hide()
+	$Label3.show()
+	$Label3.text += "\nMark 10:27: And Jesus looking upon them saith, With men it is impossible, but not with God: for with God all things are possible."
+	lights += 1
+
+func _on_area_3d_14_body_entered(body: player) -> void:
+	$Area3D14/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D14.hide()
+	$Label3.show()
+	$Label3.text += "\nLuke 6:31: And as ye would that men should do to you, do ye also to them likewise."
+	lights += 1
+
+
+func _on_area_3d_16_body_entered(body: player) -> void:
+	$Area3D16/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D16.hide()
+	$Label3.show()
+	$Label3.text += "\nLuke 19:10: For the Son of man is come to seek and to save that which was lost."
+	lights += 1
+
+
+func _on_area_3d_17_body_entered(body: player) -> void:
+	$Area3D17/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D17.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 13:34: A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another."
+	lights += 1
+
+
+func _on_area_3d_18_body_entered(body: player) -> void:
+	$Area3D18/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D18.hide()
+	$Label3.show()
+	$Label3.text += "\nLuke 22:42: Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done."
+	lights += 1
+
+
+func _on_area_3d_19_body_entered(body: player) -> void:
+	$Area3D19/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D19.hide()
+	$Label3.show()
+	$Label3.text += "\nLuke 23:34: Then said Jesus, Father, forgive them; for they know not what they do."
+	lights += 1
+
+
+func _on_area_3d_20_body_entered(body: player) -> void:
+	$Area3D20/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D20.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 15:13: Greater love hath no man than this, that a man lay down his life for his friends."
+	lights += 1
+
+
+func _on_area_3d_21_body_entered(body: player) -> void:
+	$Area3D21/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D21.hide()
+	$Label3.show()
+	$Label3.text += "\nJohn 19:30: When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost."
+	lights += 1
+
+
+func _on_area_3d_22_body_entered(body: player) -> void:
+	$Area3D22/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D22.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 28:6: He is not here: for he is risen, as he said. Come, see the place where the Lord lay."
+	lights += 1
+
+
+func _on_area_3d_23_body_entered(body: player) -> void:
+	$Area3D23/CollisionShape3D.set_deferred("disabled", true)
+	$Area3D23.hide()
+	$Label3.show()
+	$Label3.text += "\nMatthew 28:19: Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost."
+	lights += 1
+
+
+func _on_area_3d_24_body_entered(body: player) -> void:
+	body.global_position = Vector3(0, 0, 0)
