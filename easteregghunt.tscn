@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://c8v51s7im220h"]
+[gd_scene format=4 uid="uid://c8v51s7im220h"]
 
 [ext_resource type="Script" uid="uid://dpv4jqjrirwyx" path="res://easteregghunt.gd" id="1_o7ytj"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_73b3d"]
@@ -236,23 +236,23 @@ material = SubResource("StandardMaterial3D_qwngk")
 [sub_resource type="BoxShape3D" id="BoxShape3D_kuvxw"]
 size = Vector3(2.2260132, 4.3442383, 1)
 
-[node name="easteregghunt" type="Node3D"]
+[node name="easteregghunt" type="Node3D" unique_id=1581273986]
 script = ExtResource("1_o7ytj")
 player_scene = ExtResource("2_pxtyn")
 
-[node name="Sprite3D38" type="Sprite2D" parent="."]
+[node name="Sprite3D38" type="Sprite2D" parent="." unique_id=983252231]
 position = Vector2(575.25, 322.25)
 scale = Vector2(10.013, 10.0231)
 texture = ExtResource("2_73b3d")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=227181141]
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2145984023]
 offset_left = 435.0
 offset_right = 716.0
 offset_bottom = 158.0
 
-[node name="host" type="Button" parent="CanvasLayer/Panel"]
+[node name="host" type="Button" parent="CanvasLayer/Panel" unique_id=1341742486]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -262,7 +262,7 @@ offset_bottom = 73.0
 text = "host"
 metadata/_edit_use_anchors_ = true
 
-[node name="join" type="Button" parent="CanvasLayer/Panel"]
+[node name="join" type="Button" parent="CanvasLayer/Panel" unique_id=1478525423]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 145.0
@@ -272,7 +272,7 @@ offset_bottom = 72.0
 text = "join"
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel" unique_id=1184977850]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -282,7 +282,7 @@ offset_bottom = 113.0
 placeholder_text = "Local IPV4 adress:127.0.0.1"
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel"]
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel" unique_id=1552353308]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 7.0
@@ -292,21 +292,21 @@ offset_bottom = 151.0
 placeholder_text = "Default Port: 15780"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1822528820]
 offset_left = 474.0
 offset_top = 414.0
 offset_right = 514.0
 offset_bottom = 437.0
 
-[node name="Label2" type="Label" parent="CanvasLayer"]
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=193206590]
 offset_left = 474.0
 offset_top = 463.0
 offset_right = 514.0
 offset_bottom = 486.0
 
-[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer"]
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer" unique_id=159446969]
 
-[node name="Chat" type="TextEdit" parent="CanvasLayer"]
+[node name="Chat" type="TextEdit" parent="CanvasLayer" unique_id=1389426631]
 offset_left = 829.0
 offset_top = 302.0
 offset_right = 1147.0
@@ -314,7 +314,7 @@ offset_bottom = 470.0
 text = "CHAT:"
 editable = false
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat" unique_id=1537908394]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 137.0
@@ -322,345 +322,348 @@ offset_right = 317.0
 offset_bottom = 168.0
 placeholder_text = "MESSAGE"
 
-[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit"]
+[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit" unique_id=1209275416]
 layout_mode = 0
 offset_left = 267.0
 offset_right = 318.0
 offset_bottom = 31.0
 text = "SEND"
 
-[node name="Timer" type="Timer" parent="CanvasLayer"]
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=125303190]
 wait_time = 3.0
 one_shot = true
 
-[node name="ban" type="LineEdit" parent="CanvasLayer"]
+[node name="ban" type="LineEdit" parent="CanvasLayer" unique_id=1781653215]
 offset_left = 864.0
 offset_top = 265.0
 offset_right = 1146.5625
 offset_bottom = 296.0
 
-[node name="ban" type="Button" parent="CanvasLayer/ban"]
+[node name="ban" type="Button" parent="CanvasLayer/ban" unique_id=231166673]
 layout_mode = 0
 offset_left = -68.0
 offset_right = -1.0
 offset_bottom = 31.0
 text = "Ban:"
 
-[node name="ban-ip" type="LineEdit" parent="CanvasLayer"]
+[node name="ban-ip" type="LineEdit" parent="CanvasLayer" unique_id=1355877518]
 offset_left = 865.0
 offset_top = 232.0
 offset_right = 1147.5625
 offset_bottom = 263.0
 
-[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip"]
+[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip" unique_id=677195942]
 layout_mode = 0
 offset_left = -68.0
 offset_right = -1.0
 offset_bottom = 31.0
 text = "Ban-IP:"
 
-[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer"]
+[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=156026285]
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=2068403128]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
 spawn_path = NodePath("..")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1924540867]
 transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 2, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137062622]
 environment = SubResource("Environment_t5w83")
 
-[node name="jerusalem_1st__temple_period__blmj_museummod" parent="." instance=ExtResource("4_pxtyn")]
+[node name="jerusalem_1st__temple_period__blmj_museummod" parent="." unique_id=882567020 instance=ExtResource("4_pxtyn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 215.887, 0)
 
-[node name="FPS" parent="." instance=ExtResource("5_pbp4j")]
+[node name="CollisionShape3D" parent="jerusalem_1st__temple_period__blmj_museummod/Sketchfab_model/jlm_Reduced_obj_cleaner_materialmerger_gles_001/Object_3_001" index="0"]
+transform = Transform3D(1, 7.450581e-09, 1.4901161e-08, 0, 1, 2.9802322e-08, 7.450581e-09, 0, 1, -0.0113661885, -0.013205528, -0.0057690144)
 
-[node name="easteregg" type="Node3D" parent="."]
+[node name="FPS" parent="." unique_id=1775645320 instance=ExtResource("5_pbp4j")]
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="easteregg" type="Node3D" parent="." unique_id=1463220722]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=870241569]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -150.52, 116)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=200429365]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D"]
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D" unique_id=1448489869]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
 visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D" unique_id=1562051859]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D10" type="Area3D" parent="."]
+[node name="Area3D10" type="Area3D" parent="." unique_id=420024127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.403, -178.064, 185.378)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D10"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D10" unique_id=1263817763]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D10"]
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D10" unique_id=147643041]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
 visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D10"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D10" unique_id=1502114853]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D7" type="Area3D" parent="."]
+[node name="Area3D7" type="Area3D" parent="." unique_id=217765655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61.8662, 425.857)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7" unique_id=1916643812]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D7"]
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D7" unique_id=2038899574]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
 visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D7"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D7" unique_id=81147462]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 50.5884, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D4" type="Area3D" parent="."]
+[node name="Area3D4" type="Area3D" parent="." unique_id=150362860]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2601, -233.246, 275.769)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4" unique_id=88510605]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D4"]
+[node name="Easter Egg Mat1" type="MeshInstance3D" parent="Area3D4" unique_id=1292195832]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.516815, 0)
 visibility_range_end_margin = 10.0
 mesh = SubResource("ArrayMesh_kb5wg")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D4"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D4" unique_id=206884401]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 18.8488, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D2" type="Area3D" parent="."]
+[node name="Area3D2" type="Area3D" parent="." unique_id=201988222]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.52, -101.709, 179.987)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1704459091]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D2"]
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D2" unique_id=948138976]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D2"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D2" unique_id=726337854]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D11" type="Area3D" parent="."]
+[node name="Area3D11" type="Area3D" parent="." unique_id=87264531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 352.594, -75.8692, -142.586)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D11"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D11" unique_id=369475723]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D11"]
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D11" unique_id=251062405]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D11"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D11" unique_id=407529819]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D8" type="Area3D" parent="."]
+[node name="Area3D8" type="Area3D" parent="." unique_id=1732339197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 314.688, -99.7295, 179.987)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D8"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D8" unique_id=890212750]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D8"]
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D8" unique_id=1373533235]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D8"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D8" unique_id=749666731]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D5" type="Area3D" parent="."]
+[node name="Area3D5" type="Area3D" parent="." unique_id=281765090]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.52, -147.243, -83.1735)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D5" unique_id=594961699]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D5"]
+[node name="Easter Egg Mat2" type="MeshInstance3D" parent="Area3D5" unique_id=1071400876]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.519958, 0)
 mesh = SubResource("ArrayMesh_v4co0")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D5"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D5" unique_id=1844962578]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D3" type="Area3D" parent="."]
+[node name="Area3D3" type="Area3D" parent="." unique_id=1097956165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -132.06, 80.2347)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=1207029478]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D3"]
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D3" unique_id=731798897]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D3"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D3" unique_id=247002317]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D12" type="Area3D" parent="."]
+[node name="Area3D12" type="Area3D" parent="." unique_id=1401074745]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -105.429, -188.698)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D12"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D12" unique_id=1025934041]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D12"]
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D12" unique_id=1371976132]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D12"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D12" unique_id=2133820097]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D9" type="Area3D" parent="."]
+[node name="Area3D9" type="Area3D" parent="." unique_id=278980602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 670.331, -152.995, -162.095)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9" unique_id=1907915292]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D9"]
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D9" unique_id=1912574480]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D9"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D9" unique_id=908704352]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Area3D6" type="Area3D" parent="."]
+[node name="Area3D6" type="Area3D" parent="." unique_id=1676233433]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.533, -101.705, -384.091)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6" unique_id=736221276]
 shape = SubResource("BoxShape3D_pbp4j")
 
-[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D6"]
+[node name="Easter Egg Mat3" type="MeshInstance3D" parent="Area3D6" unique_id=1358977561]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -0.413574, 0)
 mesh = SubResource("ArrayMesh_eawch")
 skeleton = NodePath("")
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D6"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D6" unique_id=1623727216]
 transform = Transform3D(39.279, 0, 0, 0, 1.49852, -1.20015, 0, 27.4564, 0.0655018, 0, 0, 0)
 layers = 2
 texture = ExtResource("9_eawch")
 
-[node name="Label3" type="TextEdit" parent="."]
+[node name="Label3" type="TextEdit" parent="." unique_id=1746807730]
 visible = false
 offset_right = 353.0
 offset_bottom = 273.0
 text = "Collected easter eggs:"
 editable = false
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1443707429]
 replication_config = SubResource("SceneReplicationConfig_v4co0")
 
-[node name="Area3D13" type="Area3D" parent="."]
+[node name="Area3D13" type="Area3D" parent="." unique_id=1830739515]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -90.5604, -409.461)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D13"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D13" unique_id=1626641873]
 shape = SubResource("BoxShape3D_v4co0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D13"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D13" unique_id=509263496]
 mesh = SubResource("BoxMesh_stuii")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D13"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D13" unique_id=928701139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 stream = ExtResource("15_stuii")
 volume_db = 20.0
 autoplay = true
 
-[node name="Sprite3D" type="Sprite3D" parent="Area3D13"]
+[node name="Sprite3D" type="Sprite3D" parent="Area3D13" unique_id=2051367699]
 transform = Transform3D(1.76765, 0, 0, 0, 0.0759039, 0.970624, 0, -1.59066, 0.0463167, 0, 3.76358, 0)
 layers = 2
 texture = ExtResource("17_kuvxw")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=63670563]
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=794159618]
 stream = ExtResource("16_eawch")
 volume_db = -5.0
 autoplay = true
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=822528603]
 offset_left = 555.0
 offset_top = 3.0
 offset_right = 595.0
 offset_bottom = 26.0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=925805849]
 offset_left = 847.0
 offset_top = -4.0
 offset_right = 1147.0
 offset_bottom = 296.0
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=508880270]
 handle_input_locally = false
 size = Vector2i(300, 300)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=257066946]
 transform = Transform3D(1, 0, 0, 0, -0.339723, 0.940526, 0, -0.940526, -0.339723, 221.62, 941.435, -585.045)
 
-[node name="Area3D15" type="Area3D" parent="."]
+[node name="Area3D15" type="Area3D" parent="." unique_id=1721134525]
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15" unique_id=651686043]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
 shape = SubResource("BoxShape3D_kuvxw")
 
@@ -685,3 +688,5 @@ shape = SubResource("BoxShape3D_kuvxw")
 [connection signal="body_entered" from="Area3D6" to="." method="_on_area_3d_6_body_entered"]
 [connection signal="body_entered" from="Area3D13" to="." method="_on_area_3d_13_body_entered"]
 [connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]
+
+[editable path="jerusalem_1st__temple_period__blmj_museummod"]

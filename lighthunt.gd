@@ -115,6 +115,8 @@ func _on_host_pressed() -> void:
 func _on_join_pressed(address: String = str(%LineEdit.text)) -> void:
 	if address.is_empty() or address == "localhost":
 		address = DEFAULT_SERVER_IP
+	if %LineEdit2.text.is_empty():
+		%LineEdit2.text = str(port)
 	peer.create_client(address, int(%LineEdit2.text))
 	multiplayer.multiplayer_peer = peer
 	%host.hide()
@@ -156,9 +158,9 @@ func _on_connected_fail() -> void:
 
 
 
-func _on_area_3d_6_body_entered(body: Node3D) -> void:
-	pass
-
+func _on_area_3d_6_body_entered(body: player) -> void:
+	if lights == 21 or lights >= 21:
+		get_tree().quit()
 func _on_http_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray):
 	if result == HTTPRequest.RESULT_SUCCESS and response_code == 200:
 		# If the request was successful and the HTTP status code is 200 (OK).

@@ -378,7 +378,8 @@ offset_right = 595.0
 offset_bottom = 26.0
 
 [node name="Area3D6" type="Area3D" parent="." unique_id=239447131]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.6376, 74.7364, 119.734)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.621105, -55.67192, 119.734)
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6" unique_id=1332883395]
 shape = SubResource("BoxShape3D_p5dat")
