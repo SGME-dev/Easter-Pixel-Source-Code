@@ -178,6 +178,8 @@ properties/27/replication_mode = 1
 [sub_resource type="BoxShape3D" id="BoxShape3D_o7h4h"]
 size = Vector3(2.2260132, 4.3442383, 1)
 
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_o7h4h"]
+
 [node name="Parkore_skills" type="Node3D" unique_id=376812486]
 script = ExtResource("1_hms1p")
 player_scene = ExtResource("2_iovwy")
@@ -1768,6 +1770,22 @@ collision_layer = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
 shape = SubResource("BoxShape3D_o7h4h")
 
+[node name="send_recording_timer" type="Timer" parent="." unique_id=1382887462]
+wait_time = 0.1
+autostart = true
+
+[node name="recs" type="Timer" parent="." unique_id=969283594]
+wait_time = 0.5
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1961779249]
+volume_db = 10.478
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="." unique_id=2085254306]
+stream = SubResource("AudioStreamMicrophone_o7h4h")
+autoplay = true
+bus = &"record"
+
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_buttons_pressed"]
@@ -1804,3 +1822,4 @@ shape = SubResource("BoxShape3D_o7h4h")
 [connection signal="body_entered" from="Area3D24" to="." method="_on_area_3d_24_body_entered"]
 [connection signal="pressed" from="RichTextLabel/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="Area3D15s" to="." method="_on_area_3d_15s_body_entered"]
+[connection signal="timeout" from="send_recording_timer" to="." method="_on_send_recording_timer_timeout"]

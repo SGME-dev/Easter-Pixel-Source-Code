@@ -6228,7 +6228,7 @@ autoplay = true
 [node name="FPS" parent="." unique_id=994752880 instance=ExtResource("69_uick8")]
 
 [node name="send_recording_timer" type="Timer" parent="." unique_id=1531943653]
-wait_time = 0.5
+wait_time = 0.1
 autostart = true
 
 [node name="recs" type="Timer" parent="." unique_id=1458228338]
@@ -6250,7 +6250,6 @@ volume_db = 10.478
 
 [node name="AudioStreamRecord" type="AudioStreamPlayer" parent="." unique_id=60625389]
 stream = SubResource("AudioStreamMicrophone_uick8")
-volume_db = 12.03
 autoplay = true
 bus = &"record"
 
@@ -6262,10 +6261,10 @@ bus = &"record"
 [connection signal="pressed" from="CanvasLayer/ban/ban" to="." method="_on_ban_pressed"]
 [connection signal="pressed" from="CanvasLayer/ban-ip/ban-ip" to="." method="_on_banip_pressed"]
 [connection signal="request_completed" from="CanvasLayer/HTTPRequest2" to="." method="_on_http_request_2_request_completed"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d2_body_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d2_8_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d2_body_entered"]
 [connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d_8_body_entered"]
+[connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d2_8_body_entered"]
 [connection signal="animation_finished" from="AnimatableBody3D114/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D117/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]

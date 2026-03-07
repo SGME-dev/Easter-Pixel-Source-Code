@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://cbt1p7wl17yaa"]
+[gd_scene format=3 uid="uid://cbt1p7wl17yaa"]
 
 [ext_resource type="Script" uid="uid://bsmyn08gtmafe" path="res://road_to_emmaus.gd" id="1_fg6nk"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_7y0nb"]
@@ -691,20 +691,22 @@ properties/0/path = NodePath(".:dedserver")
 properties/0/spawn = true
 properties/0/replication_mode = 1
 
-[node name="lobby" type="Node3D"]
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_rp1hg"]
+
+[node name="lobby" type="Node3D" unique_id=118245090]
 script = ExtResource("1_fg6nk")
 player_scene = ExtResource("2_7y0nb")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=171041161]
 
-[node name="Next" type="Button" parent="CanvasLayer"]
+[node name="Next" type="Button" parent="CanvasLayer" unique_id=1861567261]
 offset_left = 1091.0
 offset_top = 615.0
 offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next2" type="Button" parent="CanvasLayer"]
+[node name="Next2" type="Button" parent="CanvasLayer" unique_id=857648134]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -712,7 +714,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next3" type="Button" parent="CanvasLayer"]
+[node name="Next3" type="Button" parent="CanvasLayer" unique_id=320052962]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -720,7 +722,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next4" type="Button" parent="CanvasLayer"]
+[node name="Next4" type="Button" parent="CanvasLayer" unique_id=2055951882]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -728,7 +730,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next5" type="Button" parent="CanvasLayer"]
+[node name="Next5" type="Button" parent="CanvasLayer" unique_id=6006771]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -736,7 +738,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next6" type="Button" parent="CanvasLayer"]
+[node name="Next6" type="Button" parent="CanvasLayer" unique_id=1704326460]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -744,7 +746,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next7" type="Button" parent="CanvasLayer"]
+[node name="Next7" type="Button" parent="CanvasLayer" unique_id=601393871]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -752,7 +754,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next8" type="Button" parent="CanvasLayer"]
+[node name="Next8" type="Button" parent="CanvasLayer" unique_id=253794388]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -760,7 +762,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next9" type="Button" parent="CanvasLayer"]
+[node name="Next9" type="Button" parent="CanvasLayer" unique_id=1506035158]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -768,7 +770,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next10" type="Button" parent="CanvasLayer"]
+[node name="Next10" type="Button" parent="CanvasLayer" unique_id=1380676516]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -776,7 +778,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next11" type="Button" parent="CanvasLayer"]
+[node name="Next11" type="Button" parent="CanvasLayer" unique_id=1813234177]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -784,7 +786,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next12" type="Button" parent="CanvasLayer"]
+[node name="Next12" type="Button" parent="CanvasLayer" unique_id=2101417067]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -792,7 +794,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next13" type="Button" parent="CanvasLayer"]
+[node name="Next13" type="Button" parent="CanvasLayer" unique_id=1906511797]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -800,7 +802,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next14" type="Button" parent="CanvasLayer"]
+[node name="Next14" type="Button" parent="CanvasLayer" unique_id=1302055748]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -808,7 +810,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next15" type="Button" parent="CanvasLayer"]
+[node name="Next15" type="Button" parent="CanvasLayer" unique_id=1553401508]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -816,7 +818,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next16" type="Button" parent="CanvasLayer"]
+[node name="Next16" type="Button" parent="CanvasLayer" unique_id=1053413159]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -824,7 +826,7 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Next"
 
-[node name="Next17" type="Button" parent="CanvasLayer"]
+[node name="Next17" type="Button" parent="CanvasLayer" unique_id=1799297407]
 visible = false
 offset_left = 1091.0
 offset_top = 615.0
@@ -832,13 +834,13 @@ offset_right = 1144.0
 offset_bottom = 646.0
 text = "Done"
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer" unique_id=451201510]
 visible = false
 offset_right = 1155.0
 offset_bottom = 647.0
 editable = false
 
-[node name="Label" type="Label" parent="CanvasLayer/TextEdit"]
+[node name="Label" type="Label" parent="CanvasLayer/TextEdit" unique_id=833285623]
 layout_mode = 0
 offset_left = 268.0
 offset_top = 144.0
@@ -847,7 +849,7 @@ offset_bottom = 281.0
 theme_override_font_sizes/font_size = 100
 text = "Is this Jesus?"
 
-[node name="Button" type="Button" parent="CanvasLayer/TextEdit"]
+[node name="Button" type="Button" parent="CanvasLayer/TextEdit" unique_id=2132498380]
 layout_mode = 0
 offset_left = 384.0
 offset_top = 304.0
@@ -855,7 +857,7 @@ offset_right = 759.0
 offset_bottom = 335.0
 text = "yes"
 
-[node name="Button2" type="Button" parent="CanvasLayer/TextEdit"]
+[node name="Button2" type="Button" parent="CanvasLayer/TextEdit" unique_id=709574028]
 layout_mode = 0
 offset_left = 382.0
 offset_top = 349.0
@@ -863,19 +865,19 @@ offset_right = 757.0
 offset_bottom = 380.0
 text = "no"
 
-[node name="Timer" type="Timer" parent="CanvasLayer/TextEdit"]
+[node name="Timer" type="Timer" parent="CanvasLayer/TextEdit" unique_id=1612960824]
 wait_time = 5.0
 
-[node name="Sprite3D" type="Sprite2D" parent="CanvasLayer/TextEdit"]
+[node name="Sprite3D" type="Sprite2D" parent="CanvasLayer/TextEdit" unique_id=1165399133]
 position = Vector2(572, 493)
 texture = ExtResource("3_ad37w")
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=2072723415]
 offset_left = 435.0
 offset_right = 716.0
 offset_bottom = 158.0
 
-[node name="host" type="Button" parent="CanvasLayer/Panel"]
+[node name="host" type="Button" parent="CanvasLayer/Panel" unique_id=1140685361]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -885,7 +887,7 @@ offset_bottom = 73.0
 text = "host"
 metadata/_edit_use_anchors_ = true
 
-[node name="join" type="Button" parent="CanvasLayer/Panel"]
+[node name="join" type="Button" parent="CanvasLayer/Panel" unique_id=1162541036]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 145.0
@@ -895,7 +897,7 @@ offset_bottom = 72.0
 text = "join"
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Panel" unique_id=508482878]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -905,7 +907,7 @@ offset_bottom = 113.0
 placeholder_text = "Local IPV4 adress:127.0.0.1"
 metadata/_edit_use_anchors_ = true
 
-[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel"]
+[node name="LineEdit2" type="LineEdit" parent="CanvasLayer/Panel" unique_id=930383423]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 7.0
@@ -915,21 +917,21 @@ offset_bottom = 151.0
 placeholder_text = "Default Port: 15780"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=218101317]
 offset_left = 474.0
 offset_top = 414.0
 offset_right = 514.0
 offset_bottom = 437.0
 
-[node name="Label2" type="Label" parent="CanvasLayer"]
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=880925026]
 offset_left = 474.0
 offset_top = 463.0
 offset_right = 514.0
 offset_bottom = 486.0
 
-[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer"]
+[node name="HTTPRequest" type="HTTPRequest" parent="CanvasLayer" unique_id=646080935]
 
-[node name="Chat" type="TextEdit" parent="CanvasLayer"]
+[node name="Chat" type="TextEdit" parent="CanvasLayer" unique_id=1695147390]
 offset_left = 831.0
 offset_top = 285.0
 offset_right = 1149.0
@@ -937,7 +939,7 @@ offset_bottom = 453.0
 text = "CHAT:"
 editable = false
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Chat" unique_id=463766107]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 137.0
@@ -945,1662 +947,1500 @@ offset_right = 317.0
 offset_bottom = 168.0
 placeholder_text = "MESSAGE"
 
-[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit"]
+[node name="Button" type="Button" parent="CanvasLayer/Chat/LineEdit" unique_id=1265581567]
 layout_mode = 0
 offset_left = 267.0
 offset_right = 318.0
 offset_bottom = 31.0
 text = "SEND"
 
-[node name="Timer" type="Timer" parent="CanvasLayer"]
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=831941869]
 wait_time = 3.0
 one_shot = true
 
-[node name="ban" type="LineEdit" parent="CanvasLayer"]
+[node name="ban" type="LineEdit" parent="CanvasLayer" unique_id=1898205316]
 offset_left = 866.0
 offset_top = 248.0
 offset_right = 1148.5625
 offset_bottom = 279.0
 
-[node name="ban" type="Button" parent="CanvasLayer/ban"]
+[node name="ban" type="Button" parent="CanvasLayer/ban" unique_id=1062963610]
 layout_mode = 0
 offset_left = -68.0
 offset_right = -1.0
 offset_bottom = 31.0
 text = "Ban:"
 
-[node name="ban-ip" type="LineEdit" parent="CanvasLayer"]
+[node name="ban-ip" type="LineEdit" parent="CanvasLayer" unique_id=2101962010]
 offset_left = 867.0
 offset_top = 215.0
 offset_right = 1149.5625
 offset_bottom = 246.0
 
-[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip"]
+[node name="ban-ip" type="Button" parent="CanvasLayer/ban-ip" unique_id=441088398]
 layout_mode = 0
 offset_left = -68.0
 offset_right = -1.0
 offset_bottom = 31.0
 text = "Ban-IP:"
 
-[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer"]
+[node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=1128834667]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1506098378]
 environment = SubResource("Environment_tftiq")
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=143491011]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
 spawn_path = NodePath("..")
 
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=974084385]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -835.567, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D" unique_id=1923936884]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D2" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D2" type="AnimatableBody3D" parent="." unique_id=1776150716]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -833.005, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D2"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D2" unique_id=1596261858]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D3" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D3" type="AnimatableBody3D" parent="." unique_id=512977081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -830.089, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D3"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D3" unique_id=450116294]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D4" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D4" type="AnimatableBody3D" parent="." unique_id=1537934422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -844.431, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D4"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D4" unique_id=276091803]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D5" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D5" type="AnimatableBody3D" parent="." unique_id=1056225528]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -841.868, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D5"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D5" unique_id=1565923368]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D6" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D6" type="AnimatableBody3D" parent="." unique_id=1840219539]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -838.953, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D6"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D6" unique_id=324358948]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D7" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D7" type="AnimatableBody3D" parent="." unique_id=1648682962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -827.692, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D7"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D7" unique_id=2081825357]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D8" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D8" type="AnimatableBody3D" parent="." unique_id=1748375744]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -825.129, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D8"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D8" unique_id=1276501888]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D9" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D9" type="AnimatableBody3D" parent="." unique_id=1471476155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -822.214, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D9"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D9" unique_id=284703856]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D10" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D10" type="AnimatableBody3D" parent="." unique_id=901408482]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -819.348, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D10"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D10" unique_id=1588031361]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D11" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D11" type="AnimatableBody3D" parent="." unique_id=1911048065]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -816.785, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D11"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D11" unique_id=311042175]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D12" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D12" type="AnimatableBody3D" parent="." unique_id=71333678]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -813.87, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D12"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D12" unique_id=1421441775]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D13" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D13" type="AnimatableBody3D" parent="." unique_id=1788584725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -870.158, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D13"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D13" unique_id=1038102845]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D14" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D14" type="AnimatableBody3D" parent="." unique_id=1767749346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -867.595, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D14"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D14" unique_id=740594721]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D15" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D15" type="AnimatableBody3D" parent="." unique_id=1819542512]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -864.68, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D15"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D15" unique_id=1182862607]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D16" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D16" type="AnimatableBody3D" parent="." unique_id=1951549039]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -879.021, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D16"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D16" unique_id=339873782]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D17" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D17" type="AnimatableBody3D" parent="." unique_id=1342636680]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -876.459, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D17"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D17" unique_id=1912329713]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D18" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D18" type="AnimatableBody3D" parent="." unique_id=1911052484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -873.543, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D18"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D18" unique_id=561085552]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D19" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D19" type="AnimatableBody3D" parent="." unique_id=980732747]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -862.282, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D19"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D19" unique_id=975133360]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D20" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D20" type="AnimatableBody3D" parent="." unique_id=472059375]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -859.72, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D20"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D20" unique_id=1519740847]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D21" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D21" type="AnimatableBody3D" parent="." unique_id=1267323793]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -856.804, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D21"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D21" unique_id=1941890638]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D22" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D22" type="AnimatableBody3D" parent="." unique_id=1713782413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -853.939, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D22"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D22" unique_id=1833570871]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D23" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D23" type="AnimatableBody3D" parent="." unique_id=7403779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -851.376, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D23"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D23" unique_id=1892895434]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D24" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D24" type="AnimatableBody3D" parent="." unique_id=951142349]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -848.461, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D24"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D24" unique_id=2054363025]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D25" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D25" type="AnimatableBody3D" parent="." unique_id=1608017264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.464, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D25"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D25" unique_id=2078980099]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D26" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D26" type="AnimatableBody3D" parent="." unique_id=270249662]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -798.901, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D26"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D26" unique_id=1054775571]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D27" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D27" type="AnimatableBody3D" parent="." unique_id=303884307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -795.985, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D27"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D27" unique_id=363896719]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D28" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D28" type="AnimatableBody3D" parent="." unique_id=746300224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -810.327, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D28"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D28" unique_id=101640329]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D29" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D29" type="AnimatableBody3D" parent="." unique_id=1453766210]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -807.764, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D29"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D29" unique_id=1816023679]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D30" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D30" type="AnimatableBody3D" parent="." unique_id=1596479009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -804.849, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D30"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D30" unique_id=47328469]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D31" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D31" type="AnimatableBody3D" parent="." unique_id=1629041451]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -793.588, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D31"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D31" unique_id=597001076]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D32" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D32" type="AnimatableBody3D" parent="." unique_id=1005898005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -791.025, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D32"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D32" unique_id=665977626]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D33" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D33" type="AnimatableBody3D" parent="." unique_id=1655077437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -788.11, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D33"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D33" unique_id=1458148019]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D34" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D34" type="AnimatableBody3D" parent="." unique_id=1330459484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -785.244, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D34"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D34" unique_id=256372776]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D35" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D35" type="AnimatableBody3D" parent="." unique_id=1840391660]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -782.682, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D35"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D35" unique_id=566767235]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D36" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D36" type="AnimatableBody3D" parent="." unique_id=1744507279]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -779.766, 1.14606, -24.1026)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D36"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D36" unique_id=1127475436]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D37" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D37" type="AnimatableBody3D" parent="." unique_id=1113353259]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -835.567, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D37"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D37" unique_id=624915958]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D38" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D38" type="AnimatableBody3D" parent="." unique_id=1395511178]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -833.005, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D38"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D38" unique_id=679204856]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D39" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D39" type="AnimatableBody3D" parent="." unique_id=272176921]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -830.089, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D39"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D39" unique_id=987779694]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D40" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D40" type="AnimatableBody3D" parent="." unique_id=1949325455]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -844.431, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D40"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D40" unique_id=2112991399]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D41" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D41" type="AnimatableBody3D" parent="." unique_id=1467551475]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -841.868, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D41"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D41" unique_id=1169280928]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D42" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D42" type="AnimatableBody3D" parent="." unique_id=383209217]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -838.953, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D42"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D42" unique_id=779292420]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D43" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D43" type="AnimatableBody3D" parent="." unique_id=251301901]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -827.692, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D43"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D43" unique_id=1952831949]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D44" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D44" type="AnimatableBody3D" parent="." unique_id=1237292112]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -825.129, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D44"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D44" unique_id=846607494]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D45" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D45" type="AnimatableBody3D" parent="." unique_id=1396162778]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -822.214, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D45"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D45" unique_id=1060149001]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D46" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D46" type="AnimatableBody3D" parent="." unique_id=2098142802]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -819.348, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D46"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D46" unique_id=206211963]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D47" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D47" type="AnimatableBody3D" parent="." unique_id=2048857271]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -816.785, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D47"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D47" unique_id=1844204314]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D48" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D48" type="AnimatableBody3D" parent="." unique_id=1697355300]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -813.87, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D48"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D48" unique_id=1662590922]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D49" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D49" type="AnimatableBody3D" parent="." unique_id=1956763150]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -870.158, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D49"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D49" unique_id=63707651]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D50" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D50" type="AnimatableBody3D" parent="." unique_id=1519352515]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -867.595, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D50"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D50" unique_id=134488233]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D51" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D51" type="AnimatableBody3D" parent="." unique_id=540079287]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -864.68, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D51"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D51" unique_id=1166331383]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D52" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D52" type="AnimatableBody3D" parent="." unique_id=1980042560]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -879.021, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D52"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D52" unique_id=49341908]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D53" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D53" type="AnimatableBody3D" parent="." unique_id=415289607]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -876.459, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D53"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D53" unique_id=1757043934]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D54" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D54" type="AnimatableBody3D" parent="." unique_id=1649837260]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -873.543, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D54"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D54" unique_id=1287166583]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D55" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D55" type="AnimatableBody3D" parent="." unique_id=1108689217]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -862.282, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D55"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D55" unique_id=1352970102]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D56" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D56" type="AnimatableBody3D" parent="." unique_id=733542276]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -859.72, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D56"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D56" unique_id=1866518971]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D57" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D57" type="AnimatableBody3D" parent="." unique_id=1546766382]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -856.804, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D57"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D57" unique_id=996666464]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D58" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D58" type="AnimatableBody3D" parent="." unique_id=139470639]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -853.939, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D58"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D58" unique_id=643840822]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D59" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D59" type="AnimatableBody3D" parent="." unique_id=1262154822]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -851.376, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D59"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D59" unique_id=820169487]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D60" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D60" type="AnimatableBody3D" parent="." unique_id=119776458]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -848.461, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D60"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D60" unique_id=583363635]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D61" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D61" type="AnimatableBody3D" parent="." unique_id=1750774192]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -801.464, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D61"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D61" unique_id=1056266833]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D62" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D62" type="AnimatableBody3D" parent="." unique_id=142056245]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -798.901, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D62"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D62" unique_id=150309239]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D63" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D63" type="AnimatableBody3D" parent="." unique_id=1879404109]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -795.985, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D63"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D63" unique_id=2029547974]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D64" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D64" type="AnimatableBody3D" parent="." unique_id=1036579415]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -810.327, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D64"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D64" unique_id=1143762500]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D65" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D65" type="AnimatableBody3D" parent="." unique_id=721745937]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -807.764, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D65"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D65" unique_id=1314857903]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D66" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D66" type="AnimatableBody3D" parent="." unique_id=507810416]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -804.849, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D66"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D66" unique_id=65128938]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D67" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D67" type="AnimatableBody3D" parent="." unique_id=1374595875]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -793.588, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D67"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D67" unique_id=1079320307]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D68" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D68" type="AnimatableBody3D" parent="." unique_id=111488504]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -791.025, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D68"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D68" unique_id=1318687991]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D69" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D69" type="AnimatableBody3D" parent="." unique_id=1527666711]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -788.11, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D69"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D69" unique_id=1493510849]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D70" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D70" type="AnimatableBody3D" parent="." unique_id=1895630793]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -785.244, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D70"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D70" unique_id=906783300]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D71" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D71" type="AnimatableBody3D" parent="." unique_id=780308800]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -782.682, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D71"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D71" unique_id=2095639412]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D72" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D72" type="AnimatableBody3D" parent="." unique_id=174516719]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -779.766, 1.14606, 8.86328)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D72"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu6hm")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D72" unique_id=2021442908]
+libraries/ = SubResource("AnimationLibrary_nu6hm")
+autoplay = &"move"
 
-[node name="AnimatableBody3D73" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D73" type="AnimatableBody3D" parent="." unique_id=716283392]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -760.721, 16.6723, -2.28712)
 collision_layer = 2
 
-[node name="AnimatableBody3D96" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D96" type="AnimatableBody3D" parent="." unique_id=1747705976]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -688.76, 1.4806, -5.41892)
 collision_layer = 2
 
-[node name="AnimatableBody3D114" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D114" type="AnimatableBody3D" parent="." unique_id=563989216]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 0.783819, -136.796)
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D114"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D114" unique_id=1960357189]
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_qnk3q")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D114"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D114" unique_id=167890623]
 shape = SubResource("CapsuleShape3D_7pn7i")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D114"]
-libraries = {
-&"": SubResource("AnimationLibrary_2pfoi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D114" unique_id=617122205]
+libraries/ = SubResource("AnimationLibrary_2pfoi")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="AnimatableBody3D114"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="AnimatableBody3D114" unique_id=620175714]
 transform = Transform3D(0.184912, 0, 8.88178e-15, 0, 2.01302, 0, 0, 0, 0.261851, 0.765823, 0.587779, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_mxp0x")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="AnimatableBody3D114"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="AnimatableBody3D114" unique_id=1601844920]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.765823, 2.06789, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("PrismMesh_7mysc")
 
-[node name="AnimatableBody3D117" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D117" type="AnimatableBody3D" parent="." unique_id=528761895]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 0.783819, -167.03)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D117"]
-libraries = {
-&"": SubResource("AnimationLibrary_2pfoi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D117" unique_id=945135994]
+libraries/ = SubResource("AnimationLibrary_2pfoi")
 
-[node name="AnimatableBody3D115" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D115" type="AnimatableBody3D" parent="." unique_id=239312581]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 1.08641, -146.101)
 visible = false
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D115"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D115" unique_id=1816075763]
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_cpd56")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D115"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D115" unique_id=28442534]
 shape = SubResource("CapsuleShape3D_7pn7i")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D115"]
-libraries = {
-&"": SubResource("AnimationLibrary_2pfoi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D115" unique_id=1211296161]
+libraries/ = SubResource("AnimationLibrary_2pfoi")
 
-[node name="AnimatableBody3D116" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D116" type="AnimatableBody3D" parent="." unique_id=1939936713]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -1040.54, 1.08641, -149.946)
 visible = false
 collision_layer = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D116"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D116" unique_id=1160622235]
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_4s2kc")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D116"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D116" unique_id=1024143302]
 shape = SubResource("CapsuleShape3D_7pn7i")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D116"]
-libraries = {
-&"": SubResource("AnimationLibrary_2pfoi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D116" unique_id=1564656302]
+libraries/ = SubResource("AnimationLibrary_2pfoi")
 
-[node name="AnimatableBody3D105" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D105" type="AnimatableBody3D" parent="." unique_id=1223575893]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, 210.086, 0.344773, 15.0291)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D105"]
-libraries = {
-&"": SubResource("AnimationLibrary_1mh2o")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D105" unique_id=1981571688]
+libraries/ = SubResource("AnimationLibrary_1mh2o")
 
-[node name="AnimatableBody3D97" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D97" type="AnimatableBody3D" parent="." unique_id=1302508389]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -682.867, 1.4806, -5.41892)
 collision_layer = 2
 
-[node name="AnimatableBody3D98" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D98" type="AnimatableBody3D" parent="." unique_id=195666852]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -685.089, 1.4806, -5.41892)
 collision_layer = 2
 
-[node name="AnimatableBody3D99" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D99" type="AnimatableBody3D" parent="." unique_id=1963728776]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -691.588, 1.4806, -5.41892)
 collision_layer = 2
 
-[node name="AnimatableBody3D100" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D100" type="AnimatableBody3D" parent="." unique_id=816529908]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -693.585, 1.4806, -5.41892)
 collision_layer = 2
 
-[node name="AnimatableBody3D101" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D101" type="AnimatableBody3D" parent="." unique_id=1116607599]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.77, 0.430739, -0.0066185)
 collision_layer = 2
 
-[node name="AnimatableBody3D102" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D102" type="AnimatableBody3D" parent="." unique_id=1301226248]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.7, 0.430739, -2.22722)
 collision_layer = 2
 
-[node name="AnimatableBody3D103" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D103" type="AnimatableBody3D" parent="." unique_id=2117059042]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.494, 0.430739, -8.72302)
 collision_layer = 2
 
-[node name="AnimatableBody3D104" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D104" type="AnimatableBody3D" parent="." unique_id=308855405]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -647.43, 0.430739, -10.7188)
 collision_layer = 2
 
-[node name="AnimatableBody3D74" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D74" type="AnimatableBody3D" parent="." unique_id=1862325341]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -756.822, 16.6723, -2.28712)
 collision_layer = 2
 
-[node name="AnimatableBody3D75" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D75" type="AnimatableBody3D" parent="." unique_id=1201549791]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -764.776, 16.6723, -2.28712)
 collision_layer = 2
 
-[node name="AnimatableBody3D76" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D76" type="AnimatableBody3D" parent="." unique_id=547564156]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -768.308, 16.6723, -7.33462)
 collision_layer = 2
 
-[node name="AnimatableBody3D77" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D77" type="AnimatableBody3D" parent="." unique_id=481057477]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -768.308, 16.6723, -10.5409)
 collision_layer = 2
 
-[node name="AnimatableBody3D78" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D78" type="AnimatableBody3D" parent="." unique_id=85144671]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -764.702, 16.6723, -12.6104)
 collision_layer = 2
 
-[node name="AnimatableBody3D79" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D79" type="AnimatableBody3D" parent="." unique_id=1609148476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -761.036, 16.6723, -12.6104)
 collision_layer = 2
 
-[node name="AnimatableBody3D80" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D80" type="AnimatableBody3D" parent="." unique_id=1117674245]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -756.53, 16.6723, -12.6104)
 collision_layer = 2
 
-[node name="AnimatableBody3D81" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D81" type="AnimatableBody3D" parent="." unique_id=1869522620]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -10.3506)
 collision_layer = 2
 
-[node name="AnimatableBody3D82" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D82" type="AnimatableBody3D" parent="." unique_id=430130481]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -7.12162)
 collision_layer = 2
 
-[node name="AnimatableBody3D83" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D83" type="AnimatableBody3D" parent="." unique_id=863107463]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -4.13022)
 collision_layer = 2
 
-[node name="AnimatableBody3D84" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D84" type="AnimatableBody3D" parent="." unique_id=249505385]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -753.008, 16.6723, -13.7862)
 collision_layer = 2
 
-[node name="AnimatableBody3D85" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D85" type="AnimatableBody3D" parent="." unique_id=1452383406]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -768.433, 16.6723, -13.3954)
 collision_layer = 2
 
-[node name="AnimatableBody3D127" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D127" type="AnimatableBody3D" parent="." unique_id=87782357]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 133.194, 1.21155, -504.938)
 collision_layer = 2
 
-[node name="AnimatableBody3D128" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D128" type="AnimatableBody3D" parent="." unique_id=1121906896]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 125.241, 1.21155, -504.938)
 collision_layer = 2
 
-[node name="AnimatableBody3D129" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D129" type="AnimatableBody3D" parent="." unique_id=1777883620]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 121.708, 1.21155, -509.985)
 collision_layer = 2
 
-[node name="AnimatableBody3D130" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D130" type="AnimatableBody3D" parent="." unique_id=1178852042]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 121.708, 1.21155, -513.192)
 collision_layer = 2
 
-[node name="AnimatableBody3D131" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D131" type="AnimatableBody3D" parent="." unique_id=239661573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.314, 1.21155, -515.261)
 collision_layer = 2
 
-[node name="AnimatableBody3D132" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D132" type="AnimatableBody3D" parent="." unique_id=643100100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.98, 1.21155, -515.261)
 collision_layer = 2
 
-[node name="AnimatableBody3D133" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D133" type="AnimatableBody3D" parent="." unique_id=1131958841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.486, 1.21155, -515.261)
 collision_layer = 2
 
-[node name="AnimatableBody3D134" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D134" type="AnimatableBody3D" parent="." unique_id=1505065993]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 137.008, 1.21155, -513.001)
 collision_layer = 2
 
-[node name="AnimatableBody3D135" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D135" type="AnimatableBody3D" parent="." unique_id=2060802930]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 137.008, 1.21155, -509.773)
 collision_layer = 2
 
-[node name="AnimatableBody3D136" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D136" type="AnimatableBody3D" parent="." unique_id=278730409]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 137.008, 1.21155, -506.781)
 collision_layer = 2
 
-[node name="AnimatableBody3D139" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D139" type="AnimatableBody3D" parent="." unique_id=881559972]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 572.013, 1.21155, -504.938)
 collision_layer = 2
 
-[node name="AnimatableBody3D140" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D140" type="AnimatableBody3D" parent="." unique_id=1626838294]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 564.063, 1.21155, -504.938)
 collision_layer = 2
 
-[node name="AnimatableBody3D150" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D150" type="AnimatableBody3D" parent="." unique_id=165509370]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1405.39, 1.21155, -488.128)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D150"]
-libraries = {
-&"": SubResource("AnimationLibrary_pfwlc")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D150" unique_id=465170128]
+libraries/ = SubResource("AnimationLibrary_pfwlc")
 
-[node name="AnimatableBody3D141" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D141" type="AnimatableBody3D" parent="." unique_id=1673875359]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 560.533, 1.21155, -509.985)
 collision_layer = 2
 
-[node name="AnimatableBody3D142" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D142" type="AnimatableBody3D" parent="." unique_id=990640083]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 560.533, 1.21155, -513.192)
 collision_layer = 2
 
-[node name="AnimatableBody3D143" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D143" type="AnimatableBody3D" parent="." unique_id=1365457386]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 564.133, 1.21155, -515.261)
 collision_layer = 2
 
-[node name="AnimatableBody3D144" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D144" type="AnimatableBody3D" parent="." unique_id=296642719]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 567.803, 1.21155, -515.261)
 collision_layer = 2
 
-[node name="AnimatableBody3D145" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D145" type="AnimatableBody3D" parent="." unique_id=1178832223]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.313, 1.21155, -515.261)
 collision_layer = 2
 
-[node name="AnimatableBody3D146" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D146" type="AnimatableBody3D" parent="." unique_id=1744652001]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 575.833, 1.21155, -513.001)
 collision_layer = 2
 
-[node name="AnimatableBody3D147" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D147" type="AnimatableBody3D" parent="." unique_id=1337561360]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 575.833, 1.21155, -509.773)
 collision_layer = 2
 
-[node name="AnimatableBody3D148" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D148" type="AnimatableBody3D" parent="." unique_id=514702382]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 575.833, 1.21155, -506.781)
 collision_layer = 2
 
-[node name="AnimatableBody3D95" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D95" type="AnimatableBody3D" parent="." unique_id=2073389561]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -793.144, 0.886573, -239.239)
 collision_layer = 2
 
-[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=992930414]
 environment = SubResource("Environment_g26o6")
 
-[node name="AnimatableBody3D86" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D86" type="AnimatableBody3D" parent="." unique_id=25395165]
 transform = Transform3D(-1, -1.26724e-06, -2.1640667e-06, 4.553897e-08, 0.85361403, -0.5209048, 2.5073923e-06, -0.5209048, -0.85361403, 76.0401, 36.9948, -150.426)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D86"]
-libraries = {
-&"": SubResource("AnimationLibrary_rbflv")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D86" unique_id=1475087871]
+libraries/ = SubResource("AnimationLibrary_rbflv")
 
-[node name="AnimatableBody3D87" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D87" type="AnimatableBody3D" parent="." unique_id=1056815544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -831.293, 0.883191, -25.9056)
 collision_layer = 2
 
-[node name="AnimatableBody3D88" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D88" type="AnimatableBody3D" parent="." unique_id=501058509]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -829.832, 0.883191, -25.9056)
 collision_layer = 2
 
-[node name="AnimatableBody3D89" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D89" type="AnimatableBody3D" parent="." unique_id=1162639078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -828.523, 0.883191, -25.9056)
 collision_layer = 2
 
-[node name="AnimatableBody3D90" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D90" type="AnimatableBody3D" parent="." unique_id=973413254]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -827.203, 0.883191, -25.9056)
 collision_layer = 2
 
-[node name="AnimatableBody3D91" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D91" type="AnimatableBody3D" parent="." unique_id=1190593464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -795.477, 0.883191, -240.487)
 collision_layer = 2
 
-[node name="AnimatableBody3D92" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D92" type="AnimatableBody3D" parent="." unique_id=1195219969]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -794.016, 0.883191, -240.487)
 collision_layer = 2
 
-[node name="AnimatableBody3D93" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D93" type="AnimatableBody3D" parent="." unique_id=651573340]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -792.708, 0.883191, -240.487)
 collision_layer = 2
 
-[node name="AnimatableBody3D94" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D94" type="AnimatableBody3D" parent="." unique_id=956509790]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -791.387, 0.883191, -240.487)
 collision_layer = 2
 
-[node name="AnimatableBody3D106" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D106" type="AnimatableBody3D" parent="." unique_id=37712392]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -616.122, 0.890708, -8.79392)
 
-[node name="AnimatableBody3D112" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D112" type="AnimatableBody3D" parent="." unique_id=393607105]
 transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -204.302, 1.24237, -133.116)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D112"]
-libraries = {
-&"": SubResource("AnimationLibrary_p2c7j")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D112" unique_id=1625015120]
+libraries/ = SubResource("AnimationLibrary_p2c7j")
 
-[node name="AnimatableBody3D113" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D113" type="AnimatableBody3D" parent="." unique_id=1881983767]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -203.333, 1.25863, -133.116)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D113"]
-libraries = {
-&"": SubResource("AnimationLibrary_5tgoa")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D113" unique_id=1170183897]
+libraries/ = SubResource("AnimationLibrary_5tgoa")
 
-[node name="AnimatableBody3D118" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D118" type="AnimatableBody3D" parent="." unique_id=744645070]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -90.1008, 1.08641, -441.656)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D118"]
-libraries = {
-&"": SubResource("AnimationLibrary_2pfoi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D118" unique_id=1255334614]
+libraries/ = SubResource("AnimationLibrary_2pfoi")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="AnimatableBody3D118"]
-libraries = {
-&"": SubResource("AnimationLibrary_qnk3q")
-}
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="AnimatableBody3D118" unique_id=2096192050]
+libraries/ = SubResource("AnimationLibrary_qnk3q")
 
-[node name="AnimatableBody3D119" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D119" type="AnimatableBody3D" parent="." unique_id=1370756047]
 transform = Transform3D(-3.6199901e-06, 0, 1, 0, 1, 0, -1, 0, -3.6199901e-06, -90.1008, 1.08641, -445.501)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D119"]
-libraries = {
-&"": SubResource("AnimationLibrary_2pfoi")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D119" unique_id=909988092]
+libraries/ = SubResource("AnimationLibrary_2pfoi")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="AnimatableBody3D119"]
-libraries = {
-&"": SubResource("AnimationLibrary_cpd56")
-}
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="AnimatableBody3D119" unique_id=1376263866]
+libraries/ = SubResource("AnimationLibrary_cpd56")
 
-[node name="AnimatableBody3D120" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D120" type="AnimatableBody3D" parent="." unique_id=275890035]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -875.611, 1.08641, -465.188)
 collision_layer = 2
 
-[node name="StaticBody3D55" type="StaticBody3D" parent="."]
+[node name="StaticBody3D55" type="StaticBody3D" parent="." unique_id=251888435]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 90.5786, 0, 7.10468)
 collision_layer = 2
 
-[node name="StaticBody3D56" type="StaticBody3D" parent="."]
+[node name="StaticBody3D56" type="StaticBody3D" parent="." unique_id=797695639]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 8.50928, 0, 0)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D56"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D56" unique_id=67762250]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D56"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D56" unique_id=82124283]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D56"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D56" unique_id=1719399114]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D61" type="StaticBody3D" parent="."]
+[node name="StaticBody3D61" type="StaticBody3D" parent="." unique_id=576308695]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 8.50928, 0, -229.28)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D61"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D61" unique_id=1059369962]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D61"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D61" unique_id=1061193716]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D61"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D61" unique_id=57304735]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D65" type="StaticBody3D" parent="."]
+[node name="StaticBody3D65" type="StaticBody3D" parent="." unique_id=163793990]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 48.2778, 27.4295, -229.28)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D65"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D65" unique_id=1888279001]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D65"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D65" unique_id=1140656012]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D65"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D65" unique_id=1540950660]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D67" type="StaticBody3D" parent="."]
+[node name="StaticBody3D67" type="StaticBody3D" parent="." unique_id=1168928184]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 48.2778, -1.22905, -229.28)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D67"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D67" unique_id=404212437]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D67"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D67" unique_id=2109197810]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D67"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D67" unique_id=1082716352]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D68" type="StaticBody3D" parent="."]
+[node name="StaticBody3D68" type="StaticBody3D" parent="." unique_id=366717551]
 transform = Transform3D(0.69189, 0, 0, 0, 1, 0, 0, 0, -0.894159, 46.8243, -0.609586, -222.558)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D68"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D68" unique_id=1133687285]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D68"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D68" unique_id=708704104]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D68"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D68" unique_id=1576565995]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D66" type="StaticBody3D" parent="."]
+[node name="StaticBody3D66" type="StaticBody3D" parent="." unique_id=1539415183]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 48.2778, 27.4295, -229.28)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D66"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D66" unique_id=764468062]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D66"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D66" unique_id=1877286814]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D66"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D66" unique_id=1133352305]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D62" type="StaticBody3D" parent="."]
+[node name="StaticBody3D62" type="StaticBody3D" parent="." unique_id=185568562]
 transform = Transform3D(-1.82714e-07, -1, 0, 4.18, -4.37114e-08, 0, 0, 0, 4.3, 69.053, 9.00089, -229.28)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D62"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D62" unique_id=216186506]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D62"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D62" unique_id=802547414]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D62"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D62" unique_id=2006142894]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D63" type="StaticBody3D" parent="."]
+[node name="StaticBody3D63" type="StaticBody3D" parent="." unique_id=2105573297]
 transform = Transform3D(7.98667e-15, 4.37114e-08, 4.3, 4.18, -4.37114e-08, 0, 1.82714e-07, 1, -1.87959e-07, 49.646, 9.00089, -249.61)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D63"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D63" unique_id=1771621044]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D63"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D63" unique_id=1223189159]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D63"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D63" unique_id=2003079990]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D64" type="StaticBody3D" parent="."]
+[node name="StaticBody3D64" type="StaticBody3D" parent="." unique_id=827538042]
 transform = Transform3D(7.98667e-15, 4.37114e-08, 4.3, 4.18, -4.37114e-08, 0, 1.82714e-07, 1, -1.87959e-07, 49.646, 9.00089, -208.284)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D64"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D64" unique_id=2049556074]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D64"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D64" unique_id=545692818]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D64"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D64" unique_id=2135198884]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 visible = false
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D57" type="StaticBody3D" parent="."]
+[node name="StaticBody3D57" type="StaticBody3D" parent="." unique_id=732416915]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, -25.0131, 0, 0)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D57"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D57" unique_id=662431693]
 shape = SubResource("BoxShape3D_r5v3i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D57"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D57" unique_id=813895622]
 transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_xrgmn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D57"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D57" unique_id=1307873825]
 transform = Transform3D(9.88835, 0, 0, 0, 1, 0, 0, 0, 4.6503, 0, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_cjgvy")
 
-[node name="StaticBody3D58" type="StaticBody3D" parent="."]
+[node name="StaticBody3D58" type="StaticBody3D" parent="." unique_id=702227737]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 213.623, 0, 7.10468)
 collision_layer = 2
 
-[node name="StaticBody3D59" type="StaticBody3D" parent="."]
+[node name="StaticBody3D59" type="StaticBody3D" parent="." unique_id=1641406744]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 172.233, 0, 7.10468)
 collision_layer = 2
 
-[node name="StaticBody3D60" type="StaticBody3D" parent="."]
+[node name="StaticBody3D60" type="StaticBody3D" parent="." unique_id=1203517785]
 transform = Transform3D(4.18, 0, 0, 0, 1, 0, 0, 0, 4.3, 131.172, 0, 7.10468)
 collision_layer = 2
 
-[node name="AnimatableBody3D121" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D121" type="AnimatableBody3D" parent="." unique_id=1674138303]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.196654, 1.56468, -0.936188)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D121"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D121" unique_id=1980468938]
 shape = SubResource("CapsuleShape3D_6bxf5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D121"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D121" unique_id=1928757802]
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_g5omf")
 
-[node name="speech" type="Sprite3D" parent="AnimatableBody3D121"]
+[node name="speech" type="Sprite3D" parent="AnimatableBody3D121" unique_id=736024503]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.62943, 2.16102, -7.45058e-08)
 visible = false
 texture = ExtResource("7_xtvns")
 
-[node name="speech2" type="Sprite3D" parent="AnimatableBody3D121"]
+[node name="speech2" type="Sprite3D" parent="AnimatableBody3D121" unique_id=1053406467]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.62943, 2.16102, -7.45058e-08)
 visible = false
 texture = ExtResource("8_4l5b4")
 
-[node name="speech3" type="Sprite3D" parent="AnimatableBody3D121"]
+[node name="speech3" type="Sprite3D" parent="AnimatableBody3D121" unique_id=672556619]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.28635, 2.16102, -5.96046e-08)
 visible = false
 texture = ExtResource("9_qwspd")
 
-[node name="speech4" type="Sprite3D" parent="AnimatableBody3D121"]
+[node name="speech4" type="Sprite3D" parent="AnimatableBody3D121" unique_id=288793054]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.28635, 2.16102, -5.96046e-08)
 visible = false
 texture = ExtResource("10_lebne")
 
-[node name="speech5" type="Sprite3D" parent="AnimatableBody3D121"]
+[node name="speech5" type="Sprite3D" parent="AnimatableBody3D121" unique_id=1562054845]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.28635, 2.16102, -5.96046e-08)
 visible = false
 texture = ExtResource("11_e3cch")
 
-[node name="speech6" type="Sprite3D" parent="AnimatableBody3D121"]
+[node name="speech6" type="Sprite3D" parent="AnimatableBody3D121" unique_id=1717935949]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.708078, 2.16102, -2.98023e-08)
 visible = false
 texture = ExtResource("12_r5y25")
 
-[node name="AnimatableBody3D123" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D123" type="AnimatableBody3D" parent="." unique_id=2134752897]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.4949, 1.56468, -20.5719)
 visible = false
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D123"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D123" unique_id=589548135]
 shape = SubResource("CapsuleShape3D_6bxf5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D123"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D123" unique_id=2131442328]
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_oxfxo")
 
-[node name="speech" type="Sprite3D" parent="AnimatableBody3D123"]
+[node name="speech" type="Sprite3D" parent="AnimatableBody3D123" unique_id=1159824009]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.40725, 1.91085, 0)
 visible = false
 texture = ExtResource("10_7hi6u")
 
-[node name="speech2" type="Sprite3D" parent="AnimatableBody3D123"]
+[node name="speech2" type="Sprite3D" parent="AnimatableBody3D123" unique_id=1227555808]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.415024, 1.70369, 0)
 visible = false
 texture = ExtResource("11_06dwc")
 
-[node name="speech3" type="Sprite3D" parent="AnimatableBody3D123"]
+[node name="speech3" type="Sprite3D" parent="AnimatableBody3D123" unique_id=91224535]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -1.4761, 1.70369, 0)
 visible = false
 texture = ExtResource("15_cgyjc")
 
-[node name="speech4" type="Sprite3D" parent="AnimatableBody3D123"]
+[node name="speech4" type="Sprite3D" parent="AnimatableBody3D123" unique_id=297310172]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -0.42099, 1.70369, 0)
 visible = false
 texture = ExtResource("17_jihhc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D123"]
-libraries = {
-&"": SubResource("AnimationLibrary_re6rd")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D123" unique_id=1810820356]
+libraries/ = SubResource("AnimationLibrary_re6rd")
 
-[node name="AnimatableBody3D122" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D122" type="AnimatableBody3D" parent="." unique_id=295965042]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.120648, 1.56468, 2.37603)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D122"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D122" unique_id=1902929800]
 shape = SubResource("CapsuleShape3D_6bxf5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D122"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D122" unique_id=1785840752]
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_pfwlc")
 
-[node name="speech" type="Sprite3D" parent="AnimatableBody3D122"]
+[node name="speech" type="Sprite3D" parent="AnimatableBody3D122" unique_id=1468197842]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.32909, 2.26569, -5.96046e-08)
 texture = ExtResource("8_b0g55")
 
-[node name="speech2" type="Sprite3D" parent="AnimatableBody3D122"]
+[node name="speech2" type="Sprite3D" parent="AnimatableBody3D122" unique_id=1334789871]
 transform = Transform3D(-0.25, 0, -3.7749e-08, 0, 0.25, 0, 3.7749e-08, 0, -0.25, -0.917325, 2.26569, -3.72529e-08)
 visible = false
 texture = ExtResource("10_exg8x")
 
-[node name="speech3" type="Sprite3D" parent="AnimatableBody3D122"]
+[node name="speech3" type="Sprite3D" parent="AnimatableBody3D122" unique_id=22414604]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.59555, 2.26569, -6.70552e-08)
 visible = false
 texture = ExtResource("14_oxfxo")
 
-[node name="speech4" type="Sprite3D" parent="AnimatableBody3D122"]
+[node name="speech4" type="Sprite3D" parent="AnimatableBody3D122" unique_id=828481851]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.59555, 2.26569, -6.70552e-08)
 visible = false
 texture = ExtResource("19_l5oa4")
 
-[node name="speech5" type="Sprite3D" parent="AnimatableBody3D122"]
+[node name="speech5" type="Sprite3D" parent="AnimatableBody3D122" unique_id=1672950024]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -1.59555, 2.26569, -6.70552e-08)
 visible = false
 texture = ExtResource("20_cgyjc")
 
-[node name="speech6" type="Sprite3D" parent="AnimatableBody3D122"]
+[node name="speech6" type="Sprite3D" parent="AnimatableBody3D122" unique_id=1354018]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -0.778543, 2.26569, -3.72529e-08)
 visible = false
 texture = ExtResource("22_5d0c8")
 
-[node name="AnimatableBody3D124" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D124" type="AnimatableBody3D" parent="." unique_id=1141488936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.619, -0.184837, -225.782)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D124"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D124" unique_id=1229803280]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
 shape = SubResource("CapsuleShape3D_6bxf5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D124"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D124" unique_id=1391356570]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_g5omf")
 
-[node name="Sprite3D" type="Sprite3D" parent="AnimatableBody3D124"]
+[node name="Sprite3D" type="Sprite3D" parent="AnimatableBody3D124" unique_id=708618665]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.853, 3.12378, 1.62811)
 texture = ExtResource("25_w1ljw")
 
-[node name="Sprite3D2" type="Sprite3D" parent="AnimatableBody3D124"]
+[node name="Sprite3D2" type="Sprite3D" parent="AnimatableBody3D124" unique_id=681600117]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.853, 3.12378, 1.81677)
 visible = false
 texture = ExtResource("26_rp1hg")
 
-[node name="AnimatableBody3D125" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D125" type="AnimatableBody3D" parent="." unique_id=1517143687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.619, -0.184837, -219.487)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D125"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D125" unique_id=1547029889]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
 shape = SubResource("CapsuleShape3D_6bxf5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D125"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D125" unique_id=1528485254]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.489, 0, 0)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_pfwlc")
 
-[node name="Sprite3D" type="Sprite3D" parent="AnimatableBody3D125"]
+[node name="Sprite3D" type="Sprite3D" parent="AnimatableBody3D125" unique_id=1955898771]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.252, 1.5452, 0.310486)
 texture = ExtResource("26_w4n8t")
 
-[node name="Sprite3D2" type="Sprite3D" parent="AnimatableBody3D125"]
+[node name="Sprite3D2" type="Sprite3D" parent="AnimatableBody3D125" unique_id=1114394644]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.252, 1.5452, 1.12022)
 visible = false
 texture = ExtResource("28_ad37w")
 
-[node name="AnimatableBody3D137" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D137" type="AnimatableBody3D" parent="." unique_id=1619794283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 991.279, 1.09743, -492.342)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D137"]
-libraries = {
-&"": SubResource("AnimationLibrary_hvsjf")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D137" unique_id=336475673]
+libraries/ = SubResource("AnimationLibrary_hvsjf")
 
-[node name="AnimatableBody3D149" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D149" type="AnimatableBody3D" parent="." unique_id=667147218]
 transform = Transform3D(-0.884255, 0, -0.467004, 0, 1, 0, 0.467004, 0, -0.884255, 561.553, 1.09743, -507.55)
 collision_layer = 2
 
-[node name="AnimatableBody3D138" type="AnimatableBody3D" parent="."]
+[node name="AnimatableBody3D138" type="AnimatableBody3D" parent="." unique_id=469879155]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 991.279, 1.09743, -486.047)
 collision_layer = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D138"]
-libraries = {
-&"": SubResource("AnimationLibrary_t4ch1")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D138" unique_id=917442599]
+libraries/ = SubResource("AnimationLibrary_t4ch1")
 
-[node name="AnimatableBody3D126" type="AnimatableBody3D" parent="." groups=["jesus_emmaus"]]
+[node name="AnimatableBody3D126" type="AnimatableBody3D" parent="." unique_id=1699389666 groups=["jesus_emmaus"]]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -111.719, -0.184837, -222.675)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D126"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D126" unique_id=1439889203]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-06, 0, -162.489)
 shape = SubResource("CapsuleShape3D_6bxf5")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D126"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D126" unique_id=1237496412]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-06, 0, -162.489)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("CapsuleMesh_37h6q")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="AnimatableBody3D126"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="AnimatableBody3D126" unique_id=292904457]
 transform = Transform3D(1.58275, 1.71347e-09, -2.25544e-10, -7.03724e-09, 0.385377, 0, 3.56977e-10, 3.86459e-19, 1, -0.409195, 0, -160.959)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_6bxf5")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="AnimatableBody3D126"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="AnimatableBody3D126" unique_id=913165920]
 transform = Transform3D(1.58275, 1.71347e-09, -2.25544e-10, -7.03724e-09, 0.385377, 0, 3.56977e-10, 3.86459e-19, 1, 1.02269, 0, -160.959)
 lod_bias = 100.0
 visibility_range_end = 100.0
 mesh = SubResource("BoxMesh_6bxf5")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D126"]
-libraries = {
-&"": SubResource("AnimationLibrary_ad37w")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody3D126" unique_id=1186082882]
+libraries/ = SubResource("AnimationLibrary_ad37w")
 
-[node name="Sprite3D38" type="Sprite2D" parent="."]
+[node name="Sprite3D38" type="Sprite2D" parent="." unique_id=2116353611]
 position = Vector2(575.25, 322.25)
 scale = Vector2(10.013, 10.0231)
 texture = ExtResource("48_17gdj")
 
-[node name="Narrorator" type="Node" parent="."]
+[node name="Narrorator" type="Node" parent="." unique_id=1812597246]
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Narrorator" unique_id=488351125]
 stream = ExtResource("50_fcacx")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Narrorator" unique_id=1997823109]
 stream = ExtResource("51_6ihb1")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Narrorator" unique_id=31572050]
 stream = ExtResource("52_fh6ad")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Narrorator" unique_id=614612029]
 stream = ExtResource("53_mwmgw")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Narrorator" unique_id=1062710434]
 stream = ExtResource("54_3h3xd")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Narrorator" unique_id=1730149843]
 stream = ExtResource("55_o34lb")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="Narrorator" unique_id=378445586]
 stream = ExtResource("56_2xcay")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="Narrorator" unique_id=1307210975]
 stream = ExtResource("57_wuco5")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="Narrorator" unique_id=1405201060]
 stream = ExtResource("58_escsi")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="Narrorator" unique_id=874191659]
 stream = ExtResource("59_mfe65")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="Narrorator" unique_id=675962921]
 stream = ExtResource("60_u8v4m")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="Narrorator" unique_id=1198230979]
 stream = ExtResource("61_fu6lq")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="Narrorator" unique_id=308247803]
 stream = ExtResource("62_5cded")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="Narrorator" unique_id=1002441823]
 stream = ExtResource("63_oja8s")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer16" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer16" type="AudioStreamPlayer" parent="Narrorator" unique_id=1434152889]
 stream = ExtResource("64_opwls")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer17" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer17" type="AudioStreamPlayer" parent="Narrorator" unique_id=683984262]
 stream = ExtResource("65_of057")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer18" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer18" type="AudioStreamPlayer" parent="Narrorator" unique_id=334044916]
 stream = ExtResource("66_r4im7")
 volume_db = 5.0
 
-[node name="AudioStreamPlayer19" type="AudioStreamPlayer" parent="Narrorator"]
+[node name="AudioStreamPlayer19" type="AudioStreamPlayer" parent="Narrorator" unique_id=202210475]
 stream = ExtResource("67_e5ph8")
 volume_db = 5.0
 
-[node name="Music" type="Node" parent="."]
+[node name="Music" type="Node" parent="." unique_id=1904574318]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music" unique_id=268425803]
 stream = ExtResource("68_g1up5")
 volume_db = -10.0
 autoplay = true
 
-[node name="FPS" parent="." instance=ExtResource("69_7o2s4")]
+[node name="FPS" parent="." unique_id=1723238973 instance=ExtResource("69_7o2s4")]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1029748976]
 transform = Transform3D(0.015303, -0.855462, -0.51764, -0.327673, -0.493403, 0.80572, -0.944667, 0.157287, -0.287862, 0, 42.9338, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1624141899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.928759, 0, 0)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1301046117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.499914, 2.61139, 1.35614)
 shape = SubResource("BoxShape3D_vgmv8")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=801499862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51955, 2.61139, 1.35614)
 shape = SubResource("BoxShape3D_vgmv8")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1191951625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80842, 2.61139, -6.8899)
 shape = SubResource("BoxShape3D_vgmv8")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=1125218618]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80842, 2.61139, 8.48258)
 shape = SubResource("BoxShape3D_vgmv8")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1408609893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80842, 7.55433, 0.543833)
 shape = SubResource("BoxShape3D_vgmv8")
 
-[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D" unique_id=20411145]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.91658, 1.53066, 0)
 visible = false
 texture = ExtResource("50_w4n8t")
 
-[node name="Sprite3D2" type="Sprite3D" parent="StaticBody3D"]
+[node name="Sprite3D2" type="Sprite3D" parent="StaticBody3D" unique_id=1098788385]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.78895, 1.53066, 0)
 visible = false
 texture = ExtResource("50_w4n8t")
 
-[node name="Sprite3D3" type="Sprite3D" parent="StaticBody3D"]
+[node name="Sprite3D3" type="Sprite3D" parent="StaticBody3D" unique_id=711429169]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.0282, 1.53066, 0)
 visible = false
 texture = ExtResource("50_w4n8t")
 
-[node name="Sprite3D4" type="Sprite3D" parent="StaticBody3D"]
+[node name="Sprite3D4" type="Sprite3D" parent="StaticBody3D" unique_id=2007405179]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.0282, 1.53066, 0)
 visible = false
 texture = ExtResource("50_w4n8t")
 
-[node name="Area3D" type="Area3D" parent="StaticBody3D"]
+[node name="Area3D" type="Area3D" parent="StaticBody3D" unique_id=1343376825]
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D" unique_id=445919874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8401, 6.24361, -1.76784)
 shape = SubResource("BoxShape3D_w4n8t")
 
-[node name="Area3D2" type="Area3D" parent="StaticBody3D"]
+[node name="Area3D2" type="Area3D" parent="StaticBody3D" unique_id=458593552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56994, 1.13698, -225.813)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D2" unique_id=896722800]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8401, 6.24361, -1.76784)
 shape = SubResource("BoxShape3D_w4n8t")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1603637535]
 transform = Transform3D(-4.37114e-06, 0, 100, 0, 100, 0, -100, 0, -4.37114e-06, 29.3704, 12.8548, -2.5252)
 visible = false
 texture = ExtResource("8_asbai")
 
-[node name="Sprite3D2" type="Sprite3D" parent="."]
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1593952355]
 transform = Transform3D(-5.55831e-06, 0, 100, 0, 100, 0, -127.159, 0, -4.37114e-06, 29.3704, 12.8548, -228.984)
 texture = ExtResource("8_asbai")
 
-[node name="Area3D15" type="Area3D" parent="."]
+[node name="Area3D15" type="Area3D" parent="." unique_id=319022465]
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D15" unique_id=162451484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
 shape = SubResource("BoxShape3D_rp1hg")
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=970499079]
 replication_config = SubResource("SceneReplicationConfig_rp1hg")
+
+[node name="send_recording_timer" type="Timer" parent="." unique_id=146416065]
+wait_time = 0.1
+autostart = true
+
+[node name="recs" type="Timer" parent="." unique_id=522255717]
+wait_time = 0.5
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=453007454]
+volume_db = 10.478
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="." unique_id=316234679]
+stream = SubResource("AudioStreamMicrophone_rp1hg")
+autoplay = true
+bus = &"record"
 
 [connection signal="pressed" from="CanvasLayer/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CanvasLayer/Next2" to="." method="_on_next_2_pressed"]
@@ -2637,3 +2477,4 @@ replication_config = SubResource("SceneReplicationConfig_rp1hg")
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="StaticBody3D/Area3D2" to="." method="_on_area_3d_2_body_entered"]
 [connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]
+[connection signal="timeout" from="send_recording_timer" to="." method="_on_send_recording_timer_timeout"]

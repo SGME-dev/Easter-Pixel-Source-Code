@@ -102,6 +102,8 @@ material = SubResource("StandardMaterial3D_x1bx4")
 [sub_resource type="BoxShape3D" id="BoxShape3D_x1bx4"]
 size = Vector3(2.2260132, 4.3442383, 1)
 
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_p5dat"]
+
 [node name="easteregghunt" type="Node3D" unique_id=518789217]
 script = ExtResource("1_bqp6u")
 player_scene = ExtResource("2_b0vhp")
@@ -257,6 +259,11 @@ offset_right = 40.0
 offset_bottom = 183.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1898521211]
+stream = ExtResource("18_4yko1")
+volume_db = -5.0
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=2070747631]
 stream = ExtResource("18_4yko1")
 volume_db = -5.0
 autoplay = true
@@ -1646,6 +1653,22 @@ collision_layer = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03237915, 1.6721191, 0)
 shape = SubResource("BoxShape3D_x1bx4")
 
+[node name="send_recording_timer" type="Timer" parent="." unique_id=824775768]
+wait_time = 0.1
+autostart = true
+
+[node name="recs" type="Timer" parent="." unique_id=395684962]
+wait_time = 0.5
+autostart = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=5143652]
+volume_db = 10.478
+
+[node name="AudioStreamRecord" type="AudioStreamPlayer" parent="." unique_id=1781923661]
+stream = SubResource("AudioStreamMicrophone_p5dat")
+autoplay = true
+bus = &"record"
+
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Chat/LineEdit/Button" to="." method="_on_button_pressed"]
@@ -1660,3 +1683,4 @@ shape = SubResource("BoxShape3D_x1bx4")
 [connection signal="body_entered" from="Area3D5" to="." method="_on_area_3d_5_body_entered"]
 [connection signal="body_entered" from="Area3D6" to="." method="_on_area_3d_6_body_entered"]
 [connection signal="body_entered" from="Area3D15" to="." method="_on_area_3d_15_body_entered"]
+[connection signal="timeout" from="send_recording_timer" to="." method="_on_send_recording_timer_timeout"]

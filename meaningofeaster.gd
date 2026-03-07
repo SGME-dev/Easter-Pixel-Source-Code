@@ -2,6 +2,9 @@ extends Node3D
 
 class_name easteregghunt_resurect
 
+var effect
+var recording
+
 @onready var label_3: TextEdit = $Label3
 @onready var http_request: HTTPRequest = $CanvasLayer/HTTPRequest
 @onready var lan_ip_label: Label = $CanvasLayer/Label
@@ -24,6 +27,30 @@ func is_dedicated_server():
 			return true
 	return false
 
+@rpc("any_peer", "call_local", "unreliable")
+func send_rec_data(rec_data):
+	var sample = AudioStreamWAV.new()
+	sample.data = rec_data
+	sample.format = AudioStreamWAV.FORMAT_16_BITS
+	sample.mix_rate = AudioServer.get_mix_rate()*2
+	$AudioStreamPlayer.stream = sample
+	$AudioStreamPlayer.play()
+	print("Received audio packet of size: ", rec_data.size())
+
+func _on_send_recording_timer_timeout():
+	var rec = effect.get_recording()
+	if rec != null:
+		# The line below only works if you are connected to a server
+		if multiplayer.multiplayer_peer != null:
+			rpc("send_rec_data", rec.data)
+	if multiplayer.multiplayer_peer != null:
+		if multiplayer.get_peers().size() > 0:
+			recording = effect.get_recording()
+			effect.set_recording_active(false)
+			rpc("send_rec_data",recording.data)
+			effect.set_recording_active(true)
+
+
 func _ready() -> void:
 	if OS.has_feature("dedicated_server"):
 		print("Started the server...")
@@ -43,6 +70,12 @@ func _ready() -> void:
 			file.close()
 			if int(player_limit) > 0 and int(player_limit) < 101:
 				MAX_CONNECTIONS = int(player_limit)
+	if !OS.has_feature("dedicated_server"):
+		var idx = AudioServer.get_bus_index("record")
+		effect = AudioServer.get_bus_effect(idx,0)
+		print(effect)
+		effect.set_recording_active(true)
+		get_tree().set_auto_accept_quit(false)
 
 func _physics_process(delta: float) -> void:
 	if easter_egg >= 5:
