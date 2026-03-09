@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bsmyn08gtmafe" path="res://road_to_emmaus.gd" id="1_fg6nk"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_7y0nb"]
 [ext_resource type="Texture2D" uid="uid://b5cuqrlu7vbav" path="res://Screenshot 2025-06-16 181502.png" id="3_ad37w"]
+[ext_resource type="Texture2D" uid="uid://dw2e8t11witau" path="res://unmute.png" id="4_ad37w"]
 [ext_resource type="Texture2D" uid="uid://bpwydx7uk482m" path="res://pixel-speech-bubble (1).png" id="7_xtvns"]
 [ext_resource type="Texture2D" uid="uid://chfjpljpye8vj" path="res://pixel-speech-bubble (3).png" id="8_4l5b4"]
 [ext_resource type="Texture2D" uid="uid://d0nl3w1j4l1fq" path="res://New Piskel (2).png" id="8_asbai"]
@@ -985,6 +986,23 @@ offset_bottom = 31.0
 text = "Ban-IP:"
 
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=1128834667]
+
+[node name="mute" type="Button" parent="CanvasLayer" unique_id=956110680]
+offset_left = 1126.0
+offset_top = 448.0
+offset_right = 1151.0
+offset_bottom = 480.0
+icon = ExtResource("4_ad37w")
+expand_icon = true
+
+[node name="mute2" type="Button" parent="CanvasLayer" unique_id=1880084144]
+offset_left = 1040.0
+offset_top = 448.0
+offset_right = 1123.0
+offset_bottom = 480.0
+text = "Mute ALL"
+icon = ExtResource("4_ad37w")
+expand_icon = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1506098378]
 environment = SubResource("Environment_tftiq")
@@ -2469,6 +2487,8 @@ bus = &"record"
 [connection signal="pressed" from="CanvasLayer/ban/ban" to="." method="_on_ban_pressed"]
 [connection signal="pressed" from="CanvasLayer/ban-ip/ban-ip" to="." method="_on_banip_pressed"]
 [connection signal="request_completed" from="CanvasLayer/HTTPRequest2" to="." method="_on_http_request_2_request_completed"]
+[connection signal="pressed" from="CanvasLayer/mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="CanvasLayer/mute2" to="." method="_on_mute_2_pressed"]
 [connection signal="animation_finished" from="AnimatableBody3D114/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D117/AnimationPlayer" to="." method="_on_animation3_player_animation_finished"]
 [connection signal="animation_finished" from="AnimatableBody3D112/AnimationPlayer" to="." method="_on_animation2_player_animation_finished"]

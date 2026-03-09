@@ -365,3 +365,46 @@ func _on_http_request_2_request_completed(result: int, response_code: int, heade
 			# if response_code == 404:
 			#     print("Error: Service URL not found.")
 			
+
+var mute: bool = false
+var mute_all: bool = false
+
+
+func _on_mute_pressed() -> void:
+	if mute == false:
+		mute = true
+		effect.set_recording_active(false)
+		$AudioStreamPlayer.volume_db = -80
+		$AudioStreamRecord.volume_db = -80
+		$CanvasLayer/mute.icon = ResourceLoader.load("res://mute.png")
+		return
+	if mute == true:
+		mute = false
+		effect.set_recording_active(true)
+		$AudioStreamPlayer.volume_db = 10.478
+		$AudioStreamRecord.volume_db = 0
+		$CanvasLayer/mute.icon = ResourceLoader.load("res://unmute.png")
+		return
+
+
+func _on_mute_2_pressed() -> void:
+	if mute_all == false:
+		$CanvasLayer/mute2.text = "unmute all"
+		mute_all = true
+		effect.set_recording_active(false)
+		$AudioStreamPlayer.volume_db = -80
+		$AudioStreamRecord.volume_db = -80
+		var bus_idx = AudioServer.get_bus_index("record")
+		AudioServer.set_bus_mute(bus_idx, true)
+		
+		return
+	if mute_all == true:
+		$CanvasLayer/mute2.text = "mute all"
+		mute_all = false
+		effect.set_recording_active(true)
+		$AudioStreamPlayer.volume_db = 10.478
+		$AudioStreamRecord.volume_db = 0
+		var bus_idx = AudioServer.get_bus_index("record")
+		AudioServer.set_bus_mute(bus_idx, false)
+		
+		return

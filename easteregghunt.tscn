@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpv4jqjrirwyx" path="res://easteregghunt.gd" id="1_o7ytj"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_73b3d"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_pxtyn"]
+[ext_resource type="Texture2D" uid="uid://dw2e8t11witau" path="res://unmute.png" id="4_fxkh0"]
 [ext_resource type="PackedScene" uid="uid://bqnw8j1634arq" path="res://jerusalem_1_st__temple_period__blmj_museummod.tscn" id="4_pxtyn"]
 [ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="5_pbp4j"]
 [ext_resource type="Texture2D" uid="uid://4si3s67c6cr4" path="res://Free Easter Eggs 3D Models/Free Easter Eggs 3D Models/Easter Egg Textured_Easter Egg_low_Material 1_BaseColor.png" id="6_kb5wg"]
@@ -363,6 +364,23 @@ text = "Ban-IP:"
 
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=156026285]
 
+[node name="mute" type="Button" parent="CanvasLayer" unique_id=486393939]
+offset_left = 1126.0
+offset_top = 448.0
+offset_right = 1151.0
+offset_bottom = 480.0
+icon = ExtResource("4_fxkh0")
+expand_icon = true
+
+[node name="mute2" type="Button" parent="CanvasLayer" unique_id=1505652530]
+offset_left = 1040.0
+offset_top = 448.0
+offset_right = 1123.0
+offset_bottom = 480.0
+text = "Mute ALL"
+icon = ExtResource("4_fxkh0")
+expand_icon = true
+
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=2068403128]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
 spawn_path = NodePath("..")
@@ -692,6 +710,8 @@ bus = &"record"
 [connection signal="pressed" from="CanvasLayer/ban/ban" to="." method="_on_ban_pressed"]
 [connection signal="pressed" from="CanvasLayer/ban-ip/ban-ip" to="." method="_on_banip_pressed"]
 [connection signal="request_completed" from="CanvasLayer/HTTPRequest2" to="." method="_on_http_request_2_request_completed"]
+[connection signal="pressed" from="CanvasLayer/mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="CanvasLayer/mute2" to="." method="_on_mute_2_pressed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D10" to="." method="_on_area_3d_10_body_entered"]
 [connection signal="body_entered" from="Area3D7" to="." method="_on_area_3d_7_body_entered"]

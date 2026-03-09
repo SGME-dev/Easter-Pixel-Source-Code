@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dxi37fj3in5ww" path="res://New Piskel (1).png" id="4_tftiq"]
 [ext_resource type="Texture2D" uid="uid://d0nl3w1j4l1fq" path="res://New Piskel (2).png" id="5_x4164"]
 [ext_resource type="Texture2D" uid="uid://b1e5t6voowy1o" path="res://New Piskel (3).png" id="6_8ldoj"]
+[ext_resource type="Texture2D" uid="uid://dw2e8t11witau" path="res://unmute.png" id="6_oihhk"]
 [ext_resource type="Texture2D" uid="uid://d4fvtm6yvwj2h" path="res://New Piskel (12).png" id="7_8ldoj"]
 [ext_resource type="Texture2D" uid="uid://b87habpyl6ps6" path="res://donkey_New Piskel (14).png" id="8_g30ku"]
 [ext_resource type="Texture2D" uid="uid://l3ulsasdwshq" path="res://donkey_New Piskel (13).png" id="9_up7ya"]
@@ -2874,6 +2875,23 @@ offset_bottom = 31.0
 text = "Ban-IP:"
 
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=100399239]
+
+[node name="mute" type="Button" parent="CanvasLayer" unique_id=1336963577]
+offset_left = 1126.0
+offset_top = 448.0
+offset_right = 1151.0
+offset_bottom = 480.0
+icon = ExtResource("6_oihhk")
+expand_icon = true
+
+[node name="mute2" type="Button" parent="CanvasLayer" unique_id=393485144]
+offset_left = 1040.0
+offset_top = 448.0
+offset_right = 1123.0
+offset_bottom = 480.0
+text = "Mute ALL"
+icon = ExtResource("6_oihhk")
+expand_icon = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=101959052]
 environment = SubResource("Environment_tftiq")
@@ -6261,6 +6279,8 @@ bus = &"record"
 [connection signal="pressed" from="CanvasLayer/ban/ban" to="." method="_on_ban_pressed"]
 [connection signal="pressed" from="CanvasLayer/ban-ip/ban-ip" to="." method="_on_banip_pressed"]
 [connection signal="request_completed" from="CanvasLayer/HTTPRequest2" to="." method="_on_http_request_2_request_completed"]
+[connection signal="pressed" from="CanvasLayer/mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="CanvasLayer/mute2" to="." method="_on_mute_2_pressed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d2_body_entered"]
 [connection signal="body_entered" from="Area3D8" to="." method="_on_area_3d_8_body_entered"]

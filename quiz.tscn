@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2ix02cqc3pe2" path="res://quiz.gd" id="1_kninm"]
 [ext_resource type="PackedScene" uid="uid://d0vuotcp6ec3s" path="res://character_body_3d.tscn" id="2_k7kv1"]
+[ext_resource type="Texture2D" uid="uid://dw2e8t11witau" path="res://unmute.png" id="3_6id1c"]
 [ext_resource type="Texture2D" uid="uid://dok5p3g7ob8op" path="res://New Piskel (21).png" id="3_i0i4q"]
 [ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="4_rmnlm"]
 [ext_resource type="AudioStream" uid="uid://bx1ww06fett1h" path="res://Screen Recording 2025-03-23 144438.mp3" id="5_ngcn3"]
@@ -174,6 +175,23 @@ offset_bottom = 31.0
 text = "Ban-IP:"
 
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=2002846452]
+
+[node name="mute" type="Button" parent="CanvasLayer" unique_id=1497595357]
+offset_left = 1126.0
+offset_top = 448.0
+offset_right = 1151.0
+offset_bottom = 480.0
+icon = ExtResource("3_6id1c")
+expand_icon = true
+
+[node name="mute2" type="Button" parent="CanvasLayer" unique_id=682792566]
+offset_left = 1040.0
+offset_top = 448.0
+offset_right = 1123.0
+offset_bottom = 480.0
+text = "Mute ALL"
+icon = ExtResource("3_6id1c")
+expand_icon = true
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1914785763]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
@@ -2093,6 +2111,8 @@ bus = &"record"
 [connection signal="pressed" from="CanvasLayer/ban/ban" to="." method="_on_ban_pressed"]
 [connection signal="pressed" from="CanvasLayer/ban-ip/ban-ip" to="." method="_on_banip_pressed"]
 [connection signal="request_completed" from="CanvasLayer/HTTPRequest2" to="." method="_on_http_request_2_request_completed"]
+[connection signal="pressed" from="CanvasLayer/mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="CanvasLayer/mute2" to="." method="_on_mute_2_pressed"]
 [connection signal="body_entered" from="MeshInstance3D2/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="MeshInstance3D3/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="MeshInstance3D13/Area3D" to="." method="_on_area_3d_body_entered"]
