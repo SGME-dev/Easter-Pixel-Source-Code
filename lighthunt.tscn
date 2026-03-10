@@ -344,18 +344,18 @@ text = "Ban-IP:"
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=1012630284]
 
 [node name="mute" type="Button" parent="CanvasLayer" unique_id=528769314]
-offset_left = 1126.0
-offset_top = 448.0
-offset_right = 1151.0
-offset_bottom = 480.0
+offset_left = 1127.0
+offset_top = 488.0
+offset_right = 1152.0
+offset_bottom = 520.0
 icon = ExtResource("4_mtgld")
 expand_icon = true
 
 [node name="mute2" type="Button" parent="CanvasLayer" unique_id=1011481884]
-offset_left = 1040.0
-offset_top = 448.0
-offset_right = 1123.0
-offset_bottom = 480.0
+offset_left = 1041.0
+offset_top = 488.0
+offset_right = 1124.0
+offset_bottom = 520.0
 text = "Mute ALL"
 icon = ExtResource("4_mtgld")
 expand_icon = true

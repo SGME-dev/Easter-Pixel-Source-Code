@@ -365,18 +365,18 @@ text = "Ban-IP:"
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=156026285]
 
 [node name="mute" type="Button" parent="CanvasLayer" unique_id=486393939]
-offset_left = 1126.0
-offset_top = 448.0
-offset_right = 1151.0
-offset_bottom = 480.0
+offset_left = 1124.0
+offset_top = 469.0
+offset_right = 1149.0
+offset_bottom = 501.0
 icon = ExtResource("4_fxkh0")
 expand_icon = true
 
 [node name="mute2" type="Button" parent="CanvasLayer" unique_id=1505652530]
-offset_left = 1040.0
-offset_top = 448.0
-offset_right = 1123.0
-offset_bottom = 480.0
+offset_left = 1038.0
+offset_top = 469.0
+offset_right = 1121.0
+offset_bottom = 501.0
 text = "Mute ALL"
 icon = ExtResource("4_fxkh0")
 expand_icon = true

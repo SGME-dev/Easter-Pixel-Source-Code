@@ -51,8 +51,9 @@ func _on_send_recording_timer_timeout():
 		if multiplayer.get_peers().size() > 0:
 			recording = effect.get_recording()
 			effect.set_recording_active(false)
-			rpc("send_rec_data",recording.data)
-			effect.set_recording_active(true)
+			if recording.data != null:
+				rpc("send_rec_data",recording.data)
+				effect.set_recording_active(true)
 
 
 func _ready() -> void:

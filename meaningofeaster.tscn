@@ -231,21 +231,22 @@ text = "Ban-IP:"
 [node name="HTTPRequest2" type="HTTPRequest" parent="CanvasLayer" unique_id=1012630284]
 
 [node name="mute" type="Button" parent="CanvasLayer" unique_id=387254455]
-offset_left = 1126.0
-offset_top = 448.0
-offset_right = 1151.0
-offset_bottom = 480.0
+offset_left = 1125.0
+offset_top = 489.0
+offset_right = 1150.0
+offset_bottom = 521.0
 icon = ExtResource("4_x1bx4")
 expand_icon = true
 
 [node name="mute2" type="Button" parent="CanvasLayer" unique_id=1425592897]
-offset_left = 1040.0
-offset_top = 448.0
-offset_right = 1123.0
-offset_bottom = 480.0
+offset_left = 1039.0
+offset_top = 489.0
+offset_right = 1122.0
+offset_bottom = 521.0
 text = "Mute ALL"
 icon = ExtResource("4_x1bx4")
 expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1704352642]
 _spawnable_scenes = PackedStringArray("uid://d0vuotcp6ec3s")
