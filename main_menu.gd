@@ -139,3 +139,7 @@ func _on_christmas_pixel_pressed() -> void:
 
 func _on_timer_timeout() -> void:
 	pass # Replace with function body.
+
+
+func _on_l_ighthunt_pressed() -> void:
+	get_tree().change_scene_to_file("res://lighthunt.tscn")

@@ -130,7 +130,11 @@ func _physics_process(delta: float) -> void:
 		
 		
 		
-		
+		if get_tree().current_scene.scene_file_path == "res://lighthunt.tscn":
+			$Camera_Controller/Camera_Target/SpotLight3D.show()
+			$SpotLight3D.show()
+			$SpotLight3D2.show()
+			$SpotLight3D3.show()
 			
 		
 		
