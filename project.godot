@@ -17,12 +17,12 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Easter Pixel"
 config/version="1.7.0"
 config/tags=PackedStringArray("3d", "christ", "god", "jesus", "network")
-run/main_scene="uid://exkl4xupfkcv"
+run/main_scene="uid://u61enbfkbt71"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="easter-pixel"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-boot_splash/image="uid://cnff6ihfrr4m2"
 config/icon="uid://cas877dsoel4p"
+boot_splash/minimum_display_time=10
 
 [audio]
 
