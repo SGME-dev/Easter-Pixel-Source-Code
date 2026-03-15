@@ -1,9 +1,11 @@
 # Whenever a tag push matching pattern "v*" then run the job
 name: "Godot 4.6 Multi-Platform Export"
-on: 
+on:
   push:
+    branches:
+      - main    # Run on regular pushes to main
     tags:
-      - "v*"
+      - "v*"    # Also run when you create a version tag
 
 jobs:
   # job id, can be anything
