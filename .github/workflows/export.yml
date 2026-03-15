@@ -1,4 +1,5 @@
 # Whenever a tag push matching pattern "v*" then run the job
+name: "Godot 4.6 Multi-Platform Export"
 on: 
   push:
     tags:
