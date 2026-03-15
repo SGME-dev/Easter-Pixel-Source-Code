@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Easter Pixel"
-config/version="1.7.0"
+config/version="1.8.0"
 config/tags=PackedStringArray("3d", "christ", "god", "jesus", "network")
 run/main_scene="uid://u61enbfkbt71"
 config/use_custom_user_dir=true

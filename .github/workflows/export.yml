@@ -1,0 +1,26 @@
+name: "Godot 4.6 Multi-Platform Export (No Forward+)"
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  export_all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Export
+        uses: firebelley/godot-export@v5.2.1
+        with:
+          # Using 4.6.1 Stable Headless for the build process
+          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux_headless.64.zip
+          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz
+          relative_project_path: ./
+          archive_output: true
+          
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-exports-4.6
+          path: ${{ steps.export.outputs.archive_directory }}/*
