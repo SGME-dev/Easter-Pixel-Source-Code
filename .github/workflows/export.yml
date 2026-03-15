@@ -33,7 +33,6 @@ jobs:
         godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_export_templates.tpz
         relative_project_path: ./
         archive_output: true
-        archive_output: true
         # This tells Godot to keep going even if scripts fail to parse
         extra_args: --no-window --continue-on-error
 
