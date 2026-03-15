@@ -1,28 +1,42 @@
-name: "Godot 4.6 Multi-Platform Export (No Forward+)"
-on:
+# Whenever a tag push matching pattern "v*" then run the job
+on: 
   push:
-    branches: [ "main" ]
+    tags:
+      - "v*"
 
 jobs:
-  export_all:
+  # job id, can be anything
+  export_game:
+    # Always use ubuntu-latest for this action
     runs-on: ubuntu-latest
+    # Add permission for release creation. Can be made narrower according to your needs
+    permissions:
+      contents: write
+    # Job name, can be anything
+    name: Export Game
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      # Always include the checkout step so that 
+      # your project is available for Godot to export
+    - name: checkout
+      uses: actions/checkout@v5
+  
+    - name: export game
+      id: export
+      # Use latest version (see releases for all versions)
+      uses: firebelley/godot-export@v7.0.0
+      with:
+        # Defining all the required inputs
+        godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_linux.x86_64.zip
+        godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_export_templates.tpz
+        relative_project_path: ./
+        archive_output: true
 
-      - name: Export
-        id: export
-        uses: firebelley/godot-export@v5.2.1
-        with:
-          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux_x86_64.zip
-          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz
-          relative_project_path: ./
-          archive_output: true
-          # ADD THIS: Tells Godot to ignore certain import errors that might hang the build
-          wine_path: /usr/bin/wine
-          
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: all-exports-4.6
-          path: ${{ steps.export.outputs.archive_directory }}/*
+      # This release action has worked well for me. However, you can most likely use any release action of your choosing.
+      # https://github.com/ncipollo/release-action
+    - name: create release
+      uses: ncipollo/release-action@v1.18.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        generateReleaseNotes: true
+        tag: ${{ github.ref_name }}
+        artifacts: ${{ steps.export.outputs.archive_directory }}/*
