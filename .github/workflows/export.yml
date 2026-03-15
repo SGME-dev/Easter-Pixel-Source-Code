@@ -14,11 +14,12 @@ jobs:
         id: export
         uses: firebelley/godot-export@v5.2.1
         with:
-          # Use the standard Linux binary (it handles headless mode automatically in 4.6)
-          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_linux.x86_64.zip
-          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_export_templates.tpz
+          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux_x86_64.zip
+          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz
           relative_project_path: ./
           archive_output: true
+          # ADD THIS: Tells Godot to ignore certain import errors that might hang the build
+          wine_path: /usr/bin/wine
           
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
