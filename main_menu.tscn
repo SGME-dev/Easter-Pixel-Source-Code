@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwd41ws6yd1el"]
 
 [ext_resource type="Script" uid="uid://bd6gq5hkci1mr" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://b5egc5pfxc2eo" path="res://New Piskel (22).png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://bdbm5jqdkw0rn" path="res://Screenshot 2026-03-23 212833.png" id="2_glbon"]
 [ext_resource type="PackedScene" uid="uid://bbgttfso3p6n1" path="res://fps.tscn" id="3_fu7sn"]
 [ext_resource type="FontFile" uid="uid://c4t6p8l6egbb" path="res://daydream_3/Daydream DEMO.otf" id="3_glbon"]
 [ext_resource type="Script" uid="uid://d62t8jvjhf07" path="res://christmas_pixel.gd" id="3_jix8l"]
@@ -16,68 +16,18 @@ grow_vertical = 2
 script = ExtResource("1_06t4h")
 
 [node name="Sprite3D" type="Sprite2D" parent="." unique_id=300961873]
-position = Vector2(575.25, 322.25)
-scale = Vector2(10.013, 10.0231)
-texture = ExtResource("2_7vrkn")
+position = Vector2(578.5, 325.00003)
+scale = Vector2(0.607087, 0.6061168)
+texture = ExtResource("2_glbon")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=610301611]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=40968411]
-offset_left = 292.0
-offset_top = 60.0
-offset_right = 859.0
-offset_bottom = 574.0
+offset_left = 568.0
+offset_top = 79.0
+offset_right = 1135.0
+offset_bottom = 593.0
 theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1097019062]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.419608, 1, 1)
-theme_override_fonts/font = ExtResource("3_glbon")
-theme_override_font_sizes/font_size = 50
-text = "Easter Pixel"
-
-[node name="play" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1815205711]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "play"
-
-[node name="support" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1639417126]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "support"
-
-[node name="quit" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=820860582]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "quit
-"
-
-[node name="settings" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=2100143701]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "settings"
-
-[node name="Bible Verses" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1753126428]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "Bible Verses"
-
-[node name="website" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1637927483]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "Website"
-
-[node name="Credits" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1669724882]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "Credits
-"
-
-[node name="DLC" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=59580651]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_glbon")
-text = "DLC
-"
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer" unique_id=888907211]
 visible = false
@@ -216,24 +166,99 @@ offset_right = 51.0
 offset_bottom = 636.0
 text = "Back"
 
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1097019062]
+offset_left = 800.0
+offset_top = 62.0
+offset_right = 1367.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0.419608, 1, 1)
+theme_override_fonts/font = ExtResource("3_glbon")
+theme_override_font_sizes/font_size = 30
+text = "Easter Pixel"
+
+[node name="play" type="Button" parent="CanvasLayer" unique_id=1815205711]
+offset_left = 805.0
+offset_top = 140.0
+offset_right = 1124.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "play"
+
+[node name="support" type="Button" parent="CanvasLayer" unique_id=1639417126]
+offset_left = 762.0
+offset_top = 174.0
+offset_right = 1129.0
+offset_bottom = 199.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "support"
+
+[node name="quit" type="Button" parent="CanvasLayer" unique_id=820860582]
+offset_left = 746.0
+offset_top = 213.0
+offset_right = 1133.0
+offset_bottom = 238.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "quit
+"
+
+[node name="settings3" type="Button" parent="CanvasLayer" unique_id=2100143701]
+offset_left = 731.0
+offset_top = 251.0
+offset_right = 1136.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "settings"
+
+[node name="Bible Verses" type="Button" parent="CanvasLayer" unique_id=1753126428]
+offset_left = 719.0
+offset_top = 287.0
+offset_right = 1137.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "Bible Verses"
+
+[node name="website" type="Button" parent="CanvasLayer" unique_id=1637927483]
+offset_left = 708.0
+offset_top = 324.0
+offset_right = 1138.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "Website"
+
+[node name="Credits" type="Button" parent="CanvasLayer" unique_id=1669724882]
+offset_left = 700.0
+offset_top = 365.0
+offset_right = 1143.0
+offset_bottom = 390.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "Credits
+"
+
+[node name="DLC" type="Button" parent="CanvasLayer" unique_id=59580651]
+offset_left = 685.0
+offset_top = 407.0
+offset_right = 1142.0
+offset_bottom = 432.0
+theme_override_fonts/font = ExtResource("3_glbon")
+text = "DLC
+"
+
 [node name="FPS" parent="." unique_id=613465274 instance=ExtResource("3_fu7sn")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_right = 1.0
-offset_bottom = 23.0
+offset_left = 34.0
+offset_top = 47.0
+offset_right = 67.0
+offset_bottom = 70.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/support" to="." method="_on_support_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Bible Verses" to="." method="_on_bible_verses_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/website" to="." method="_on_website_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/DLC" to="." method="_on_dlc_pressed"]
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1625544248]
+color = Color(0, 0, 0, 0.83300006)
+polygon = PackedVector2Array(815, -15, 473, 659, 1178, 654, 1167, -10)
+
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Parkore" to="." method="_on_parkore_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextEdit/VBoxContainer/Quiz" to="." method="_on_quiz_pressed"]
@@ -250,3 +275,11 @@ grow_vertical = 1
 [connection signal="pressed" from="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" to="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" method="_on_pressed"]
 [connection signal="timeout" from="CanvasLayer/settings2/VBoxContainer/Timer" to="CanvasLayer/settings2/VBoxContainer/Christmas Pixel" method="_on_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/settings2/back" to="." method="_on_back2_pressed"]
+[connection signal="pressed" from="CanvasLayer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/support" to="." method="_on_support_pressed"]
+[connection signal="pressed" from="CanvasLayer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings3" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/Bible Verses" to="." method="_on_bible_verses_pressed"]
+[connection signal="pressed" from="CanvasLayer/website" to="." method="_on_website_pressed"]
+[connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/DLC" to="." method="_on_dlc_pressed"]
