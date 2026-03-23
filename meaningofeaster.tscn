@@ -10,17 +10,8 @@
 [ext_resource type="Script" uid="uid://cjhewyn1w1awa" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="7_p5dat"]
 [ext_resource type="Texture2D" uid="uid://m57j63ixbsjd" path="res://pixel-background-games-concept-background-resizable-seamless-pattern-grass-vector.jpg" id="8_x1bx4"]
 [ext_resource type="ArrayMesh" uid="uid://bsrege2kl8wnx" path="res://new_array_mesh.tres" id="10_p5dat"]
+[ext_resource type="Texture2D" uid="uid://cqx4dxvnegpb" path="res://clouds2.png" id="12_eoagw"]
 [ext_resource type="AudioStream" uid="uid://bx1ww06fett1h" path="res://Screen Recording 2025-03-23 144438.mp3" id="18_4yko1"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pxtyn"]
-
-[sub_resource type="Sky" id="Sky_pbp4j"]
-sky_material = SubResource("ProceduralSkyMaterial_pxtyn")
-
-[sub_resource type="Environment" id="Environment_t5w83"]
-background_mode = 2
-sky = SubResource("Sky_pbp4j")
-glow_enabled = true
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_v4co0"]
 properties/0/path = NodePath("Label3:text")
@@ -104,6 +95,92 @@ material = SubResource("StandardMaterial3D_x1bx4")
 size = Vector3(2.2260132, 4.3442383, 1)
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_p5dat"]
+
+[sub_resource type="Shader" id="Shader_rtwnq"]
+code = "shader_type sky;
+render_mode use_debanding;
+
+uniform sampler2D clouds : filter_linear, source_color, hint_default_black;
+uniform vec2 cloud_tiling = vec2(4.0, 4.0); // Controls how many clouds appear
+uniform float cloud_speed = 0.05; // Controls movement
+
+uniform vec4 sky_top_color : source_color = vec4(0.385, 0.454, 0.55, 1.0);
+uniform vec4 sky_horizon_color : source_color = vec4(0.646, 0.656, 0.67, 1.0);
+uniform float inv_sky_curve : hint_range(1, 100) = 4.0;
+uniform vec4 ground_bottom_color : source_color = vec4(0.2, 0.169, 0.133, 1.0);
+uniform vec4 ground_horizon_color : source_color = vec4(0.646, 0.656, 0.67, 1.0);
+uniform float inv_ground_curve : hint_range(1, 100) = 30.0;
+uniform float sun_angle_max = 0.877;
+uniform float inv_sun_curve : hint_range(1, 100) = 100;
+uniform float exposure : hint_range(0, 128) = 1.0;
+
+void sky() {
+	float v_angle = clamp(EYEDIR.y, -1.0, 1.0);
+	vec3 sky = mix(sky_top_color.rgb, sky_horizon_color.rgb, clamp(pow(1.0 - v_angle, inv_sky_curve), 0.0, 1.0));
+
+	// --- Sun Logic (Repeated for Lights 0-3) ---
+	if (LIGHT0_ENABLED) {
+		float sun_angle = dot(LIGHT0_DIRECTION, EYEDIR);
+		float sun_size = cos(LIGHT0_SIZE);
+		if (sun_angle > sun_size) {
+			sky = LIGHT0_COLOR * LIGHT0_ENERGY;
+		} else if (sun_angle > sun_angle_max) {
+			float c2 = (sun_size - sun_angle) / (sun_size - sun_angle_max);
+			sky = mix(sky, LIGHT0_COLOR * LIGHT0_ENERGY, clamp(pow(1.0 - c2, inv_sun_curve), 0.0, 1.0));
+		}
+	}
+	// [Remaining Light checks 1-3 go here...]
+
+	vec3 ground = mix(ground_bottom_color.rgb, ground_horizon_color.rgb, clamp(pow(1.0 + v_angle, inv_ground_curve), 0.0, 1.0));
+	
+	// --- IMPROVED PLANAR CLOUDS ---
+	// 1. Calculate a flat plane projection (prevents the 'tunnel' look)
+	vec2 cloud_uv = EYEDIR.xz / max(EYEDIR.y, 0.01); 
+	
+	// 2. Apply tiling and movement
+	cloud_uv *= cloud_tiling * 0.1; // Scale down for planar mapping
+	cloud_uv += TIME * cloud_speed;
+	
+	// 3. Sample the clouds
+	vec4 panorama_sample = texture(clouds, cloud_uv);
+	
+	// 4. Soften the clouds
+	float cloud_alpha = panorama_sample.a;
+	
+	// FADE: This makes clouds disappear near the horizon and prevents 
+	// them from showing up on the ground.
+	float horizon_fade = smoothstep(0.0, 0.3, EYEDIR.y);
+	cloud_alpha *= horizon_fade;
+
+	// 5. Apply the mix
+	vec3 sky_with_panorama = mix(sky, panorama_sample.rgb, cloud_alpha);
+	
+	
+
+	COLOR = mix(ground, sky_with_panorama, step(0.0, EYEDIR.y)) * exposure;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ymll5"]
+shader = SubResource("Shader_rtwnq")
+shader_parameter/clouds = ExtResource("12_eoagw")
+shader_parameter/cloud_tiling = Vector2(4, 4)
+shader_parameter/cloud_speed = 0.05
+shader_parameter/sky_top_color = Color(0.385, 0.454, 0.55, 1)
+shader_parameter/sky_horizon_color = Color(0.6463, 0.6558, 0.6708, 1)
+shader_parameter/inv_sky_curve = 3.999999841054287
+shader_parameter/ground_bottom_color = Color(0.2, 0.169, 0.133, 1)
+shader_parameter/ground_horizon_color = Color(0.6463, 0.6558, 0.6708, 1)
+shader_parameter/inv_ground_curve = 30.000000670552268
+shader_parameter/sun_angle_max = 0.8660254
+shader_parameter/inv_sun_curve = 22.782017
+shader_parameter/exposure = 1.0
+
+[sub_resource type="Sky" id="Sky_3pged"]
+sky_material = SubResource("ShaderMaterial_ymll5")
+
+[sub_resource type="Environment" id="Environment_xssw4"]
+background_mode = 2
+sky = SubResource("Sky_3pged")
 
 [node name="easteregghunt" type="Node3D" unique_id=518789217]
 script = ExtResource("1_bqp6u")
@@ -254,9 +331,6 @@ spawn_path = NodePath("..")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1225357574]
 transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 2, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1764535179]
-environment = SubResource("Environment_t5w83")
 
 [node name="FPS" parent="." unique_id=1635985243 instance=ExtResource("5_ci642")]
 
@@ -1687,6 +1761,9 @@ volume_db = 10.478
 stream = SubResource("AudioStreamMicrophone_p5dat")
 autoplay = true
 bus = &"record"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=601557304]
+environment = SubResource("Environment_xssw4")
 
 [connection signal="pressed" from="CanvasLayer/Panel/host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/join" to="." method="_on_join_pressed"]
